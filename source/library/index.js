@@ -12,3 +12,5 @@ export {
   flattenedConfigPlaceholderLocalRegex,
   flattenedConfigPlaceholderGlobalRegex,
 } from "./constants/regexes.js";
+
+export { commentVariablesData } from "../comment-variables/public.js";

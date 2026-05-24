@@ -4,7 +4,9 @@ import path from "path";
 import { describe, it } from "node:test";
 import assert from "node:assert";
 
-import { resolveConfig } from "../library/index.js";
+import { resolveConfig } from "../../source/library/index.js"; // dev
+// import { resolveConfig } from "../../tsdown/index.mjs"; // prod // DOESN'T WORK BECAUSE OF freshImport. BUNDLING MIGHT NOT BE A GOOD IDEA HERE.
+// This also means I'll need to be selective about the `files` key in `package.json` in order include neither tests nor typedefs.
 
 import { DOT_JS } from "../constants/index.js";
 // import { errorNotStandardized } from "../constants/errors/index.js";

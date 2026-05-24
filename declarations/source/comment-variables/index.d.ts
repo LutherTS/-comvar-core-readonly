@@ -25,22 +25,6 @@ export const errors: {
                 "value": "Invalid config format. The config must only be default-exported as an object.";
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#CONFIGMUSTBEOBJECT";
             };
-            "variationsDataCouldntPreZod": {
-                "value": "The config's `variations` and `data` keys' values could not pass pre-validation from zod together.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#VARIATIONSDATACOULDNTPREZOD";
-            };
-            "variationsDataTogether": {
-                "value": "The config's `variations` and `data` keys' values must either be present or absent together.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#VARIATIONSDATATOGETHER";
-            };
-            "variationsShouldBeObject": {
-                "value": "Invalid `variations` format. The config's `variations` key's value, if provided, should only be an object.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#VARIATIONSSHOULDBEOBJECT";
-            };
-            "dataShouldBeObject": {
-                "value": "Invalid `data` format. The config's `data` key's value, if provided, should only be an object.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#DATASHOULDBEOBJECT";
-            };
         };
         "statuses": {
             "CONFIGPATH_NOT_STRING": {
@@ -67,30 +51,10 @@ export const errors: {
                 "value": "\"Invalid config format. The config must only be default-exported as an object.\"";
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#CONFIG_NOT_OBJECT";
             };
-            "VARIATIONS_DATA_PRE_INVALID": {
-                "value": "\"The config's `variations` and `data` keys' values could not pass pre-validation from zod together.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#VARIATIONS_DATA_PRE_INVALID";
-            };
-            "VARIATIONS_DATA_DISCRIMINATED": {
-                "value": "\"The config's `variations` and `data` keys' values must either be present or absent together.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#VARIATIONS_DATA_DISCRIMINATED";
-            };
-            "VARIATIONS_NOT_OBJECT": {
-                "value": "\"Invalid `variations` format. The config's `variations` key's value, if provided, should only be an object.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#VARIATIONS_NOT_OBJECT";
-            };
-            "DATA_NOT_OBJECT": {
-                "value": "\"Invalid `data` format. The config's `data` key's value, if provided, should only be an object.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#DATA_NOT_OBJECT";
-            };
         };
     };
     config: {
         "messages": {
-            "configEffectivelyEmpty": {
-                "value": "The config is effectively empty. Please provide either the `variations` key coupled with the `data` key, or the `libraries` key, \u2013 or both \u2013 in order to get started.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#CONFIGEFFECTIVELYEMPTY";
-            };
             "librariesCouldntZod": {
                 "value": "The config's `libraries` key's value could not pass validation from zod.";
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESCOULDNTZOD";
@@ -115,60 +79,8 @@ export const errors: {
                 "value": "The config `libraries` key's record's records' values must only be strings (representing the actual values of the external libraries' Comment Variables keys these strings are paired with).";
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESVALUESMUSTBESTRINGS";
             };
-            "lintConfigImportsCouldntZod": {
-                "value": "The config's `lintConfigImports` key's value could not pass validation from zod.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LINTCONFIGIMPORTSCOULDNTZOD";
-            };
-            "lintConfigImportsShouldBeBoolean": {
-                "value": "The config's `lintConfigImports` key's value, if provided, should only be a boolean.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LINTCONFIGIMPORTSSHOULDBEBOOLEAN";
-            };
-            "myIgnoresOnlyCouldntZod": {
-                "value": "The config's `myIgnoresOnly` key's value could not pass validation from zod.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#MYIGNORESONLYCOULDNTZOD";
-            };
-            "myIgnoresOnlyShouldBeBoolean": {
-                "value": "The config's `myIgnoresOnly` key's value, if provided, should only be a boolean.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#MYIGNORESONLYSHOULDBEBOOLEAN";
-            };
-            "ignoresCouldntZod": {
-                "value": "The config's `ignores` key's value could not pass validation from zod.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#IGNORESCOULDNTZOD";
-            };
-            "ignoresShouldBeArray": {
-                "value": "The config's `ignores` key's value, if provided, should only be an array, whether empty or nonempty.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#IGNORESSHOULDBEARRAY";
-            };
-            "ignoresValuesMustBeStrings": {
-                "value": "The config's `ignores` key's array's values must only be strings.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#IGNORESVALUESMUSTBESTRINGS";
-            };
-            "ignoresValuesMustBeUnique": {
-                "value": "The config's `ignores` key's array cannot contain duplicate values.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#IGNORESVALUESMUSTBEUNIQUE";
-            };
-            "composedVariablesExclusivesCouldntZod": {
-                "value": "The config's `composedVariablesExclusives` key's value could not pass validation from zod.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#COMPOSEDVARIABLESEXCLUSIVESCOULDNTZOD";
-            };
-            "composedVariablesExclusivesShouldBeArray": {
-                "value": "The config's `composedVariablesExclusives` key's value, if provided, should only be an array, whether empty or nonempty.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#COMPOSEDVARIABLESEXCLUSIVESSHOULDBEARRAY";
-            };
-            "composedVariablesExclusivesValuesMustBeStrings": {
-                "value": "The config's `composedVariablesExclusives` key's array's values must only be strings.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#COMPOSEDVARIABLESEXCLUSIVESVALUESMUSTBESTRINGS";
-            };
-            "composedVariablesExclusivesValuesMustBeUnique": {
-                "value": "The config's `composedVariablesExclusives` key's array cannot contain duplicate values.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#COMPOSEDVARIABLESEXCLUSIVESVALUESMUSTBEUNIQUE";
-            };
         };
         "statuses": {
-            "CONFIG_EMPTY": {
-                "value": "\"The config is effectively empty. Please provide either the `variations` key coupled with the `data` key, or the `libraries` key, \u2013 or both \u2013 in order to get started.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#CONFIG_EMPTY";
-            };
             "LIBRARIES_INVALID": {
                 "value": "\"The config's `libraries` key's value could not pass validation from zod.\"";
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_INVALID";
@@ -193,63 +105,7 @@ export const errors: {
                 "value": "\"The config `libraries` key's record's records' values must only be strings (representing the actual values of the external libraries' Comment Variables keys these strings are paired with).\"";
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_RECORD_RECORDS_VALUES_NOT_STRINGS";
             };
-            "LINTCONFIGIMPORTS_INVALID": {
-                "value": "\"The config's `lintConfigImports` key's value could not pass validation from zod.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LINTCONFIGIMPORTS_INVALID";
-            };
-            "LINTCONFIGIMPORTS_NOT_BOOLEAN": {
-                "value": "\"The config's `lintConfigImports` key's value, if provided, should only be a boolean.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LINTCONFIGIMPORTS_NOT_BOOLEAN";
-            };
-            "MYIGNORESONLY_INVALID": {
-                "value": "\"The config's `myIgnoresOnly` key's value could not pass validation from zod.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#MYIGNORESONLY_INVALID";
-            };
-            "MYIGNORESONLY_NOT_BOOLEAN": {
-                "value": "\"The config's `myIgnoresOnly` key's value, if provided, should only be a boolean.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#MYIGNORESONLY_NOT_BOOLEAN";
-            };
-            "IGNORES_INVALID": {
-                "value": "\"The config's `ignores` key's value could not pass validation from zod.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#IGNORES_INVALID";
-            };
-            "IGNORES_NOT_ARRAY": {
-                "value": "\"The config's `ignores` key's value, if provided, should only be an array, whether empty or nonempty.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#IGNORES_NOT_ARRAY";
-            };
-            "IGNORES_VALUES_NOT_STRINGS": {
-                "value": "\"The config's `ignores` key's array's values must only be strings.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#IGNORES_VALUES_NOT_STRINGS";
-            };
-            "IGNORES_VALUES_NOT_UNIQUE": {
-                "value": "\"The config's `ignores` key's array cannot contain duplicate values.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#IGNORES_VALUES_NOT_UNIQUE";
-            };
-            "COMPOSEDVARIABLESEXCLUSIVES_INVALID": {
-                "value": "\"The config's `composedVariablesExclusives` key's value could not pass validation from zod.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#COMPOSEDVARIABLESEXCLUSIVES_INVALID";
-            };
-            "COMPOSEDVARIABLESEXCLUSIVES_NOT_ARRAY": {
-                "value": "\"The config's `composedVariablesExclusives` key's value, if provided, should only be an array, whether empty or nonempty.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#COMPOSEDVARIABLESEXCLUSIVES_NOT_ARRAY";
-            };
-            "COMPOSEDVARIABLESEXCLUSIVES_VALUES_NOT_STRINGS": {
-                "value": "\"The config's `composedVariablesExclusives` key's array's values must only be strings.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#COMPOSEDVARIABLESEXCLUSIVES_VALUES_NOT_STRINGS";
-            };
-            "COMPOSEDVARIABLESEXCLUSIVES_VALUES_NOT_UNIQUE": {
-                "value": "\"The config's `composedVariablesExclusives` key's array cannot contain duplicate values.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#COMPOSEDVARIABLESEXCLUSIVES_VALUES_NOT_UNIQUE";
-            };
         };
-    };
-    errorNotStandardized: {
-        "value": "The error encountered is not standardized.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#ERRORNOTSTANDARDIZED";
-    };
-    ERROR_NOT_STANDARDIZED: {
-        "value": "\"The error encountered is not standardized.\"";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#ERROR_NOT_STANDARDIZED";
     };
 };
 export const errorsInputMessages: {
@@ -277,28 +133,8 @@ export const errorsInputMessages: {
         "value": "Invalid config format. The config must only be default-exported as an object.";
         "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#CONFIGMUSTBEOBJECT";
     };
-    variationsDataCouldntPreZod: {
-        "value": "The config's `variations` and `data` keys' values could not pass pre-validation from zod together.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#VARIATIONSDATACOULDNTPREZOD";
-    };
-    variationsDataTogether: {
-        "value": "The config's `variations` and `data` keys' values must either be present or absent together.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#VARIATIONSDATATOGETHER";
-    };
-    variationsShouldBeObject: {
-        "value": "Invalid `variations` format. The config's `variations` key's value, if provided, should only be an object.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#VARIATIONSSHOULDBEOBJECT";
-    };
-    dataShouldBeObject: {
-        "value": "Invalid `data` format. The config's `data` key's value, if provided, should only be an object.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#DATASHOULDBEOBJECT";
-    };
 };
 export const errorsConfigMessages: {
-    configEffectivelyEmpty: {
-        "value": "The config is effectively empty. Please provide either the `variations` key coupled with the `data` key, or the `libraries` key, \u2013 or both \u2013 in order to get started.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#CONFIGEFFECTIVELYEMPTY";
-    };
     librariesCouldntZod: {
         "value": "The config's `libraries` key's value could not pass validation from zod.";
         "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESCOULDNTZOD";
@@ -323,54 +159,6 @@ export const errorsConfigMessages: {
         "value": "The config `libraries` key's record's records' values must only be strings (representing the actual values of the external libraries' Comment Variables keys these strings are paired with).";
         "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESVALUESMUSTBESTRINGS";
     };
-    lintConfigImportsCouldntZod: {
-        "value": "The config's `lintConfigImports` key's value could not pass validation from zod.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LINTCONFIGIMPORTSCOULDNTZOD";
-    };
-    lintConfigImportsShouldBeBoolean: {
-        "value": "The config's `lintConfigImports` key's value, if provided, should only be a boolean.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LINTCONFIGIMPORTSSHOULDBEBOOLEAN";
-    };
-    myIgnoresOnlyCouldntZod: {
-        "value": "The config's `myIgnoresOnly` key's value could not pass validation from zod.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#MYIGNORESONLYCOULDNTZOD";
-    };
-    myIgnoresOnlyShouldBeBoolean: {
-        "value": "The config's `myIgnoresOnly` key's value, if provided, should only be a boolean.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#MYIGNORESONLYSHOULDBEBOOLEAN";
-    };
-    ignoresCouldntZod: {
-        "value": "The config's `ignores` key's value could not pass validation from zod.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#IGNORESCOULDNTZOD";
-    };
-    ignoresShouldBeArray: {
-        "value": "The config's `ignores` key's value, if provided, should only be an array, whether empty or nonempty.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#IGNORESSHOULDBEARRAY";
-    };
-    ignoresValuesMustBeStrings: {
-        "value": "The config's `ignores` key's array's values must only be strings.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#IGNORESVALUESMUSTBESTRINGS";
-    };
-    ignoresValuesMustBeUnique: {
-        "value": "The config's `ignores` key's array cannot contain duplicate values.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#IGNORESVALUESMUSTBEUNIQUE";
-    };
-    composedVariablesExclusivesCouldntZod: {
-        "value": "The config's `composedVariablesExclusives` key's value could not pass validation from zod.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#COMPOSEDVARIABLESEXCLUSIVESCOULDNTZOD";
-    };
-    composedVariablesExclusivesShouldBeArray: {
-        "value": "The config's `composedVariablesExclusives` key's value, if provided, should only be an array, whether empty or nonempty.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#COMPOSEDVARIABLESEXCLUSIVESSHOULDBEARRAY";
-    };
-    composedVariablesExclusivesValuesMustBeStrings: {
-        "value": "The config's `composedVariablesExclusives` key's array's values must only be strings.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#COMPOSEDVARIABLESEXCLUSIVESVALUESMUSTBESTRINGS";
-    };
-    composedVariablesExclusivesValuesMustBeUnique: {
-        "value": "The config's `composedVariablesExclusives` key's array cannot contain duplicate values.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#COMPOSEDVARIABLESEXCLUSIVESVALUESMUSTBEUNIQUE";
-    };
 };
 export const forComposedVariables: {
     variables: {
@@ -383,45 +171,9 @@ export const forComposedVariables: {
 };
 export const composedVariablesExclusives: {
     variables: {
-        "variations": {
-            "value": "variations";
-            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#VARIATIONS";
-        };
-        "data": {
-            "value": "data";
-            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#DATA";
-        };
-        "union": {
-            "value": "union";
-            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#UNION";
-        };
-        "both": {
-            "value": "both";
-            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#BOTH";
-        };
-        "neither": {
-            "value": "neither";
-            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#NEITHER";
-        };
         "libraries": {
             "value": "libraries";
             "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES";
-        };
-        "lintConfigImports": {
-            "value": "lintConfigImports";
-            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LINTCONFIGIMPORTS";
-        };
-        "myIgnoresOnly": {
-            "value": "myIgnoresOnly";
-            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#MYIGNORESONLY";
-        };
-        "ignores": {
-            "value": "ignores";
-            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#IGNORES";
-        };
-        "composedVariablesExclusives": {
-            "value": "composedVariablesExclusives";
-            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#COMPOSEDVARIABLESEXCLUSIVES";
         };
     };
     arguments: {
@@ -465,9 +217,5 @@ export const composedVariablesExclusives: {
     mustOnlyBe: {
         "value": "must only be";
         "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#MUSTONLYBE";
-    };
-    cannotContainDuplicate: {
-        "value": "cannot contain duplicate values";
-        "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#CANNOTCONTAINDUPLICATE";
     };
 };

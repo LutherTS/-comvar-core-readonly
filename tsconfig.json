@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "allowJs": true,
+    "declaration": true,
+    "declarationDir": "declarations",
+    "emitDeclarationOnly": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "types": ["node"]
+  },
+  "files": ["source/library/index.js"]
+}

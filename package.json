@@ -1,0 +1,25 @@
+{
+  "name": "@comvar/core-readonly",
+  "version": "0.1.0",
+  "description": "The shared package at the very heart of the Comment Variables Architecture, powering the ComVar Readonly extension for VS Code.",
+  "keywords": [
+    "comments",
+    "variables",
+    "comment-variables"
+  ],
+  "license": "UNLICENSED",
+  "author": "Luther Tchofo Safo <luther@tchofo-safo-portfolio.me>",
+  "type": "module",
+  "main": "source/library/index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@lutherts/error-handling": "file:packages/lutherts-error-handling-0.1.5.tgz",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "^6.0.3"
+  }
+}

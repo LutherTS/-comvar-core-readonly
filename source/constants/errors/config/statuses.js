@@ -1,0 +1,129 @@
+/* config error statuses */
+
+// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#CONFIG_EMPTY */
+// export const CONFIG_EMPTY = "CONFIG_EMPTY";
+
+/* statuses for static errors - libraries */
+
+/** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_INVALID */
+export const LIBRARIES_INVALID = "LIBRARIES_INVALID";
+
+// zod static error statuses
+
+/** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_NOT_RECORD */
+export const LIBRARIES_NOT_RECORD = "LIBRARIES_NOT_RECORD";
+/** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_NOT_SUBKEY_CONFORM */
+export const LIBRARIES_NOT_SUBKEY_CONFORM = "LIBRARIES_NOT_SUBKEY_CONFORM";
+/** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_RECORD_NOT_RECORDS */
+export const LIBRARIES_RECORD_NOT_RECORDS = "LIBRARIES_RECORD_NOT_RECORDS";
+/** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_NOT_KEY_CONFORM */
+export const LIBRARIES_NOT_KEY_CONFORM = "LIBRARIES_NOT_KEY_CONFORM";
+/** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_RECORD_RECORDS_VALUES_NOT_STRINGS */
+export const LIBRARIES_RECORD_RECORDS_VALUES_NOT_STRINGS =
+  "LIBRARIES_RECORD_RECORDS_VALUES_NOT_STRINGS";
+
+// static error statuses arrays and sets
+
+export const librariesStaticErrorStatuses = /** @type {const} */ ([
+  LIBRARIES_NOT_RECORD,
+  LIBRARIES_NOT_SUBKEY_CONFORM,
+  LIBRARIES_RECORD_NOT_RECORDS,
+  LIBRARIES_NOT_KEY_CONFORM,
+  LIBRARIES_RECORD_RECORDS_VALUES_NOT_STRINGS,
+]);
+export const librariesStaticErrorStatusesSet = new Set(
+  librariesStaticErrorStatuses,
+);
+
+// /* statuses for static errors - lintConfigImports */
+
+// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LINTCONFIGIMPORTS_INVALID */
+// export const LINTCONFIGIMPORTS_INVALID = "LINTCONFIGIMPORTS_INVALID";
+
+// // zod static error statuses
+
+// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LINTCONFIGIMPORTS_NOT_BOOLEAN */
+// export const LINTCONFIGIMPORTS_NOT_BOOLEAN = "LINTCONFIGIMPORTS_NOT_BOOLEAN";
+
+// // static error statuses arrays and sets
+
+// export const lintConfigImportsStaticErrorStatuses = /** @type {const} */ ([
+//   LINTCONFIGIMPORTS_NOT_BOOLEAN,
+// ]);
+// export const lintConfigImportsStaticErrorStatusesSet = new Set(
+//   lintConfigImportsStaticErrorStatuses,
+// );
+
+// /* statuses for static errors - myIgnoresOnly */
+
+// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#MYIGNORESONLY_INVALID */
+// export const MYIGNORESONLY_INVALID = "MYIGNORESONLY_INVALID";
+
+// // zod static error statuses
+
+// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#MYIGNORESONLY_NOT_BOOLEAN */
+// export const MYIGNORESONLY_NOT_BOOLEAN = "MYIGNORESONLY_NOT_BOOLEAN";
+
+// // static error statuses arrays and sets
+
+// export const myIgnoresOnlyStaticErrorStatuses = /** @type {const} */ ([
+//   MYIGNORESONLY_NOT_BOOLEAN,
+// ]);
+// export const myIgnoresOnlyStaticErrorStatusesSet = new Set(
+//   myIgnoresOnlyStaticErrorStatuses,
+// );
+
+// /* statuses for static errors - ignores */
+
+// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#IGNORES_INVALID */
+// export const IGNORES_INVALID = "IGNORES_INVALID";
+
+// // zod static error statuses
+
+// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#IGNORES_NOT_ARRAY */
+// export const IGNORES_NOT_ARRAY = "IGNORES_NOT_ARRAY";
+// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#IGNORES_VALUES_NOT_STRINGS */
+// export const IGNORES_VALUES_NOT_STRINGS = "IGNORES_VALUES_NOT_STRINGS";
+// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#IGNORES_VALUES_NOT_UNIQUE */
+// export const IGNORES_VALUES_NOT_UNIQUE = "IGNORES_VALUES_NOT_UNIQUE";
+
+// // static error statuses arrays and sets
+
+// export const ignoresStaticErrorStatuses = /** @type {const} */ ([
+//   IGNORES_NOT_ARRAY,
+//   IGNORES_VALUES_NOT_STRINGS,
+//   IGNORES_VALUES_NOT_UNIQUE,
+// ]);
+// export const ignoresStaticErrorStatusesSet = new Set(
+//   ignoresStaticErrorStatuses,
+// );
+
+// /* statuses for static errors - composedVariablesExclusives */
+
+// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#COMPOSEDVARIABLESEXCLUSIVES_INVALID */
+// export const COMPOSEDVARIABLESEXCLUSIVES_INVALID =
+//   "COMPOSEDVARIABLESEXCLUSIVES_INVALID";
+
+// // zod static error statuses
+
+// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#COMPOSEDVARIABLESEXCLUSIVES_NOT_ARRAY */
+// export const COMPOSEDVARIABLESEXCLUSIVES_NOT_ARRAY =
+//   "COMPOSEDVARIABLESEXCLUSIVES_NOT_ARRAY";
+// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#COMPOSEDVARIABLESEXCLUSIVES_VALUES_NOT_STRINGS */
+// export const COMPOSEDVARIABLESEXCLUSIVES_VALUES_NOT_STRINGS =
+//   "COMPOSEDVARIABLESEXCLUSIVES_VALUES_NOT_STRINGS";
+// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#COMPOSEDVARIABLESEXCLUSIVES_VALUES_NOT_UNIQUE */
+// export const COMPOSEDVARIABLESEXCLUSIVES_VALUES_NOT_UNIQUE =
+//   "COMPOSEDVARIABLESEXCLUSIVES_VALUES_NOT_UNIQUE";
+
+// // static error statuses arrays and sets
+
+// export const composedVariablesExclusivesStaticErrorStatuses =
+//   /** @type {const} */ ([
+//     COMPOSEDVARIABLESEXCLUSIVES_NOT_ARRAY,
+//     COMPOSEDVARIABLESEXCLUSIVES_VALUES_NOT_STRINGS,
+//     COMPOSEDVARIABLESEXCLUSIVES_VALUES_NOT_UNIQUE,
+//   ]);
+// export const composedVariablesExclusivesStaticErrorStatusesSet = new Set(
+//   composedVariablesExclusivesStaticErrorStatuses,
+// );

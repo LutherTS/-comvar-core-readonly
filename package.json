@@ -13,6 +13,7 @@
   "main": "source/library/index.js",
   "scripts": {
     "types": "tsc",
+    "doc": "comment-variables doc",
     "test": "node --test"
   },
   "dependencies": {

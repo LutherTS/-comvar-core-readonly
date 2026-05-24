@@ -2,12 +2,15 @@
 
 /* general bases */
 
-/** The absolute prefix for every single Comment Variables placeholder. */
+/**
+ * $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT
+ * @public
+ */
 export const $COMMENT = "$COMMENT";
 
 /* process environments */
 
-/** The shared `env` between `fresh-import-a.js` and `fresh-import-b.js` for the `freshImport` utility. */
+/** $COMMENT#TSDOC#SRC#LIB#CONSTS#MODULE_TO_LOAD */
 export const MODULE_TO_LOAD = "MODULE_TO_LOAD";
 
 // /* zod discriminated unions */

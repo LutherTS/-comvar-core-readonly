@@ -17,7 +17,7 @@ import {
 import {
   inputStaticErrorMessages_errorStatuses,
   configPreStaticErrorMessages_errorStatuses,
-  variationsDataPreStaticErrorMessages_errorStatuses,
+  // variationsDataPreStaticErrorMessages_errorStatuses,
 } from "../../constants/errors/input/index.js";
 import {
   configPathSupposedToBeString,
@@ -26,51 +26,51 @@ import {
   configModuleCouldntResolve,
   configCouldntPreZod,
   configStaticPreErrorMessagesSet,
-  variationsDataCouldntPreZod,
-  variationsDataPreStaticErrorMessagesSet,
+  // variationsDataCouldntPreZod,
+  // variationsDataPreStaticErrorMessagesSet,
 } from "../../constants/errors/input/messages.js";
 import {
   CONFIG_PRE_INVALID,
-  VARIATIONS_DATA_PRE_INVALID,
+  // VARIATIONS_DATA_PRE_INVALID,
 } from "../../constants/errors/input/statuses.js";
 import {
-  configStaticErrorMessages_errorStatuses,
-  lintConfigImportsStaticErrorMessages_errorStatuses,
-  myIgnoresOnlyStaticErrorMessages_errorStatuses,
-  ignoresStaticErrorMessages_errorStatuses,
-  composedVariablesExclusivesStaticErrorMessages_errorStatuses,
+  // configStaticErrorMessages_errorStatuses,
+  // lintConfigImportsStaticErrorMessages_errorStatuses,
+  // myIgnoresOnlyStaticErrorMessages_errorStatuses,
+  // ignoresStaticErrorMessages_errorStatuses,
+  // composedVariablesExclusivesStaticErrorMessages_errorStatuses,
   librariesStaticErrorMessages_errorStatuses,
 } from "../../constants/errors/config/index.js";
 import {
   librariesCouldntZod,
   librariesStaticErrorMessagesSet,
-  lintConfigImportsCouldntZod,
-  lintConfigImportsStaticErrorMessagesSet,
-  myIgnoresOnlyCouldntZod,
-  myIgnoresOnlyStaticErrorMessagesSet,
-  ignoresCouldntZod,
-  ignoresStaticErrorMessagesSet,
-  composedVariablesExclusivesCouldntZod,
-  composedVariablesExclusivesStaticErrorMessagesSet,
-  configEffectivelyEmpty,
+  // lintConfigImportsCouldntZod,
+  // lintConfigImportsStaticErrorMessagesSet,
+  // myIgnoresOnlyCouldntZod,
+  // myIgnoresOnlyStaticErrorMessagesSet,
+  // ignoresCouldntZod,
+  // ignoresStaticErrorMessagesSet,
+  // composedVariablesExclusivesCouldntZod,
+  // composedVariablesExclusivesStaticErrorMessagesSet,
+  // configEffectivelyEmpty,
 } from "../../constants/errors/config/messages.js";
 import {
   LIBRARIES_INVALID,
-  LINTCONFIGIMPORTS_INVALID,
-  MYIGNORESONLY_INVALID,
-  IGNORES_INVALID,
-  COMPOSEDVARIABLESEXCLUSIVES_INVALID,
+  // LINTCONFIGIMPORTS_INVALID,
+  // MYIGNORESONLY_INVALID,
+  // IGNORES_INVALID,
+  // COMPOSEDVARIABLESEXCLUSIVES_INVALID,
 } from "../../constants/errors/config/statuses.js";
 
-import { UNION, BOTH, NEITHER } from "../constants/index.js";
+// import { UNION, BOTH, NEITHER } from "../constants/index.js";
 import {
   ConfigPreSchema,
-  VariationsDataPreSchema,
+  // VariationsDataPreSchema,
   ConfigLibrariesSchema,
-  ConfigLintConfigImportsSchema,
-  ConfigMyIgnoresOnlySchema,
-  ConfigIgnoresSchema,
-  ConfigComposedVariablesExclusivesSchema,
+  // ConfigLintConfigImportsSchema,
+  // ConfigMyIgnoresOnlySchema,
+  // ConfigIgnoresSchema,
+  // ConfigComposedVariablesExclusivesSchema,
 } from "../constants/schemas.js";
 
 import { freshImport } from "./fresh-import-a.js";

@@ -1,0 +1,8 @@
+export const CONFIGPATH_NOT_STRING: "CONFIGPATH_NOT_STRING";
+export const CONFIGPATH_NOT_DOT_JS: "CONFIGPATH_NOT_DOT_JS";
+export const CONFIG_FILE_NOT_FOUND: "CONFIG_FILE_NOT_FOUND";
+export const CONFIG_MODULE_NOT_RESOLVED: "CONFIG_MODULE_NOT_RESOLVED";
+export const CONFIG_PRE_INVALID: "CONFIG_PRE_INVALID";
+export const CONFIG_NOT_OBJECT: "CONFIG_NOT_OBJECT";
+export const configStaticErrorStatuses: readonly ["CONFIG_NOT_OBJECT"];
+export const configStaticErrorStatusesSet: Set<"CONFIG_NOT_OBJECT">;

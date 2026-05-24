@@ -14,6 +14,7 @@
   "scripts": {
     "types": "tsc",
     "doc": "comment-variables doc",
+    "api": "api-extractor run",
     "test": "node --test"
   },
   "dependencies": {

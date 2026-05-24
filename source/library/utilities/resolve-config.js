@@ -80,6 +80,7 @@ import { freshImport } from "./fresh-import-a.js";
  * @typedef {import("../../typedefs/index.js").LibrariesStaticErrorMessage} LibrariesStaticErrorMessage
  */
 
+/** @public */
 export const resolveConfig = async (/** @type {string} */ configPath) => {
   // input validations
 

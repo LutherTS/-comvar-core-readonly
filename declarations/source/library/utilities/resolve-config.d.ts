@@ -1,3 +1,4 @@
+/** @public */
 export function resolveConfig(configPath: string): Promise<{
     readonly success: false;
     readonly errors: readonly [{

@@ -171,6 +171,10 @@ export const forComposedVariables: {
 };
 export const composedVariablesExclusives: {
     variables: {
+        "_COMMENT": {
+            "value": "$COMMENT";
+            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT";
+        };
         "libraries": {
             "value": "libraries";
             "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES";

@@ -128,25 +128,25 @@ export const resolvedConfigData: {
                         };
                         "regexes": {
                             "public": {
-                                "configKey": {
-                                    "value": "Ensures config keys should only include lowercase letters (`Ll`), uppercase letters (`Lu`), other letters (`Lo`), dash punctuation (`Pd`), connector punctuation (`Pc`), numbers (`N`) and whitespaces (`s`).";
-                                    "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGKEY";
+                                "configDataKey": {
+                                    "value": "Ensures config `data` keys should only include lowercase letters (`Ll`), uppercase letters (`Lu`), other letters (`Lo`), dash punctuation (`Pd`), connector punctuation (`Pc`), numbers (`N`), and whitespaces (`s`).";
+                                    "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATAKEY";
                                 };
-                                "subKey": {
-                                    "value": "Same as `configKeyRegex` but without lowercase letters (`Ll`) replaced by uppercase letters, and without dash punctuation (`Pd`), connector punctuation (`Pc`), and whitespaces (`s`) replaced by underscores (`_`).";
-                                    "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#SUBKEY";
+                                "configDataSubKey": {
+                                    "value": "Same as `configDataKeyRegex` but without lowercase letters (`Ll`) replaced by uppercase letters, and without dash punctuation (`Pd`), connector punctuation (`Pc`), and whitespaces (`s`) replaced by underscores (`_`).";
+                                    "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY";
                                 };
-                                "flattenedConfigKey": {
-                                    "value": "Same as `subKeyRegex` but with the `#` character that links each subkey together.";
-                                    "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGKEY";
+                                "flattenedConfigDataKey": {
+                                    "value": "Same as `configDataSubKeyRegex` but with the `#` character that links each subkey together.";
+                                    "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY";
                                 };
-                                "flattenedConfigPlaceholderLocal": {
-                                    "value": "Same as `flattenedConfigKeyRegex` but taking the prefix `$COMMENT` and its `#` into consideration, preventing two consecutive `#`'s, while removing the starting `^` and the ending `$` from the capture group.";
-                                    "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGPLACEHOLDERLOCAL";
+                                "flattenedConfigDataPlaceholderLocal": {
+                                    "value": "Same as `flattenedConfigDataKeyRegex` but taking the prefix `$COMMENT` and its `#` into consideration, preventing two consecutive `#`'s, while removing the starting `^` and the ending `$` from the capture group.";
+                                    "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL";
                                 };
-                                "flattenedConfigPlaceholderGlobal": {
-                                    "value": "Same as `flattenedConfigPlaceholderLocalRegex` but globally.";
-                                    "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGPLACEHOLDERGLOBAL";
+                                "flattenedConfigDataPlaceholderGlobal": {
+                                    "value": "Same as `flattenedConfigDataPlaceholderLocalRegex` but globally.";
+                                    "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL";
                                 };
                             };
                         };
@@ -183,7 +183,7 @@ export const resolvedConfigData: {
                         "utils": {
                             "public": {
                                 "resolveConfigReadonly": {
-                                    "value": "The config and its `librariesData`, or lack thereof for the latter via `null`, inside a `{success: true}` object at its `config` and `libraries` keys respectively. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extension for VS Code.";
+                                    "value": "The config and its `libraries` data, or lack thereof for the latter via `null`, inside a `{success: true}` object at its `config` and `libraries` keys respectively. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extension for VS Code.";
                                     "key": "EN#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY";
                                 };
                             };
@@ -245,6 +245,10 @@ export const resolvedConfigData: {
         };
         "composedVariablesExclusives": {
             "variables": {
+                "_COMMENT": {
+                    "value": "$COMMENT";
+                    "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT";
+                };
                 "libraries": {
                     "value": "libraries";
                     "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES";
@@ -311,6 +315,74 @@ export const resolvedConfigData: {
         };
     };
     "fr": {
+        "tsDoc": {
+            "src": {
+                "lib": {
+                    "consts": {
+                        "public": {
+                            "_COMMENT": {
+                                "value": "Le pr\u00E9fixe absolu de tout et chaque substitut Comment Variables.";
+                                "key": "FR#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT";
+                            };
+                        };
+                        "regexes": {
+                            "public": {
+                                "configDataKey": {
+                                    "value": "S'assure que les cl\u00E9s `data` de la config ne doivent inclure que des lettres minuscules (`Ll`), lettres majuscules (`Lu`), d'autres lettres (`Lo`), de la ponctuation tiret (`Pd`), ponctuation connecteur (`Pc`), des chiffres (`N`) et des caract\u00E8res d'espacement (`s`).";
+                                    "key": "FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATAKEY";
+                                };
+                                "configDataSubKey": {
+                                    "value": "Pareil que `configDataKeyRegex` mais sans les lettres minuscules (`Ll`), et sans ponctuation tiret (`Pd`), ponctuation connecteur (`Pc`) et caract\u00E8res d'espacement (`s`) remplac\u00E9s par des tirets bas (`_`).";
+                                    "key": "FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY";
+                                };
+                                "flattenedConfigDataKey": {
+                                    "value": "Pareil que `configDataSubKeyRegex` mais sans le caract\u00E8re `#` qui connecte les sous-cl\u00E9s les unes aux autres.";
+                                    "key": "FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY";
+                                };
+                                "flattenedConfigDataPlaceholderLocal": {
+                                    "value": "Pareil que `flattenedConfigDataKeyRegex` mais prenant en compte le pr\u00E9fixe `$COMMENT` et son caract\u00E8re `#`, emp\u00EAchant la succession de deux `#` cons\u00E9cutifs, tout en enlevant les `^` et `$` du d\u00E9but et de la fin du groupe de capture.";
+                                    "key": "FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL";
+                                };
+                                "flattenedConfigDataPlaceholderGlobal": {
+                                    "value": "Pareil que `flattenedConfigDataPlaceholderLocalRegex` mais global.";
+                                    "key": "FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL";
+                                };
+                            };
+                        };
+                    };
+                    "defs": {
+                        "utils": {
+                            "public": {
+                                "resolveConfigReadonly": {
+                                    "value": "V\u00E9rifie, valide et r\u00E9sout de fa\u00E7on initiale le chemin de la config pour en obtenir la config et en fournir les donn\u00E9es de sa cl\u00E9 `libraries`.";
+                                    "key": "FR#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY";
+                                };
+                            };
+                        };
+                    };
+                    "params": {
+                        "utils": {
+                            "public": {
+                                "configPath": {
+                                    "value": "Le chemin absolu de la config qu'importe la mani\u00E8re dont il est fourni : que ce soit par d\u00E9faut avec `comments.config.js` dans le dossier courant, \u00E0 partir d'un chemin relatif passer via le drapeau `--config` par l'outil ligne de commande, ou d'un chemin relatif entr\u00E9 \u00E0 la cl\u00E9 `config` de l'extension dans `.vscode/settings.json` pour VS Code.";
+                                    "key": "FR#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH";
+                                };
+                            };
+                        };
+                    };
+                    "returns": {
+                        "utils": {
+                            "public": {
+                                "resolveConfigReadonly": {
+                                    "value": "La config et ses donn\u00E9es `libraries`, ou leur absence pour ces derni\u00E8res via `null`, dans un objet `{success: true}` \u00E0 ses cl\u00E9s `config` and `libraries` respectivement. En cas d'erreur, un objet `{success: false}` est retourn\u00E9 \u00E0 la place de sorte que les erreurs puissent \u00EAtre r\u00E9utilis\u00E9es de fa\u00E7ons ad\u00E9quates dans l'outil ligne de commande et dans l'extension pour VS Code.";
+                                    "key": "FR#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY";
+                                };
+                            };
+                        };
+                    };
+                };
+            };
+        };
         "forComposedVariables": {
             "variables": {};
             "arguments": {};

@@ -1,5 +1,5 @@
 import { $COMMENT } from "./constants/index.mjs";
-import { configKeyRegex, flattenedConfigKeyRegex, flattenedConfigPlaceholderGlobalRegex, flattenedConfigPlaceholderLocalRegex, subKeyRegex } from "./constants/regexes.mjs";
+import { configDataKeyRegex, configDataSubKeyRegex, flattenedConfigDataKeyRegex, flattenedConfigDataPlaceholderGlobalRegex, flattenedConfigDataPlaceholderLocalRegex } from "./constants/regexes.mjs";
 import { resolveConfigReadonly } from "./utilities/resolve-config-readonly.mjs";
 import { resolvedPublicData } from "./comments.config.public.mjs";
-export { $COMMENT, resolvedPublicData as commentVariablesData, configKeyRegex, flattenedConfigKeyRegex, flattenedConfigPlaceholderGlobalRegex, flattenedConfigPlaceholderLocalRegex, resolveConfigReadonly, subKeyRegex };
+export { $COMMENT, resolvedPublicData as commentVariablesData, configDataKeyRegex as configKeyRegex, flattenedConfigDataKeyRegex as flattenedConfigKeyRegex, flattenedConfigDataPlaceholderGlobalRegex as flattenedConfigPlaceholderGlobalRegex, flattenedConfigDataPlaceholderLocalRegex as flattenedConfigPlaceholderLocalRegex, resolveConfigReadonly, configDataSubKeyRegex as subKeyRegex };

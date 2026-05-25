@@ -61,7 +61,7 @@ import { commentVariablesData as errorHandlingCommentVariablesData } from "@luth
 
 const libraries = {
   [coreReadonlyCommentVariablesData.libraryKey]:
-    coreReadonlyCommentVariablesData.libraryVariations.EN,
+    coreReadonlyCommentVariablesData.libraryVariations.FR,
 
   [errorHandlingCommentVariablesData.libraryKey]:
     errorHandlingCommentVariablesData.libraryVariations.EN,

@@ -1,10 +1,10 @@
-export type ResolveConfigReturnType = ReturnType<typeof resolveConfig>;
+export type ResolveConfigReadonlyReturnType = ReturnType<typeof resolveConfigReadonly>;
 export type AllStaticErrorMessages_ErrorStatuses__Key = keyof typeof allStaticErrorMessages_errorStatuses;
 export type ConfigPreStaticErrorMessage = (typeof configPreStaticErrorMessages)[number];
 export type ConfigPreStaticErrorStatus = (typeof configPreStaticErrorStatuses)[number];
 export type LibrariesStaticErrorMessage = (typeof librariesStaticErrorMessages)[number];
 export type LibrariesStaticErrorStatus = (typeof librariesStaticErrorStatuses)[number];
-import { resolveConfig } from "../library/index.js";
+import { resolveConfigReadonly } from "../library/index.js";
 import { allStaticErrorMessages_errorStatuses } from "../constants/errors/index.js";
 import { configPreStaticErrorMessages } from "../constants/errors/input/messages.js";
 import { configPreStaticErrorStatuses } from "../constants/errors/input/statuses.js";

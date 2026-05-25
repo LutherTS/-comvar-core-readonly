@@ -17,7 +17,7 @@ import { makeSuccessFalseTypeError, makeSuccessFalseTypeWarning, successFalse, s
 * @typedef {import("../../typedefs/index.js").LibrariesStaticErrorMessage} LibrariesStaticErrorMessage
 */
 /** @public */
-const resolveConfig = async (configPath) => {
+const resolveConfigReadonly = async (configPath) => {
 	if (typeof configPath !== "string") return makeSuccessFalseTypeError(`ERROR. ${configPathSupposedToBeString}`, inputStaticErrorMessages_errorStatuses[configPathSupposedToBeString]);
 	if (path.extname(configPath) !== DOT_JS) return makeSuccessFalseTypeError(`ERROR. ${configPathSupposedToBeDotJs}`, inputStaticErrorMessages_errorStatuses[configPathSupposedToBeDotJs]);
 	if (!fs.existsSync(configPath)) return makeSuccessFalseTypeError(`ERROR. ${noConfigFileFound}`, inputStaticErrorMessages_errorStatuses[noConfigFileFound]);
@@ -73,4 +73,4 @@ const resolveConfig = async (configPath) => {
 	return { ...successTrue };
 };
 //#endregion
-export { resolveConfig };
+export { resolveConfigReadonly };

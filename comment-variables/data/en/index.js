@@ -163,8 +163,8 @@ export const enData = Object.freeze({
   }),
   forComposedVariables: Object.freeze({
     variables: Object.freeze({
-      resolveConfig:
-        "resolveConfig" /* variations: $COMMENT#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIG / core: $COMMENT#EN#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIG */,
+      resolveConfigReadonly:
+        "resolveConfigReadonly" /* variations: $COMMENT#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIGREADONLY / core: $COMMENT#EN#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIGREADONLY */,
     }),
     arguments: Object.freeze({}),
   }),

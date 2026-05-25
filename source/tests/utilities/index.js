@@ -4,14 +4,14 @@ import { allStaticErrorMessages_errorStatuses } from "../../constants/errors/ind
 
 /**
  * @typedef {import("../../typedefs/index.js").AllStaticErrorMessages_ErrorStatuses__Key} AllStaticErrorMessages_ErrorStatuses__Key
- * @typedef {import("../../typedefs/index.js").ResolveConfigReturnType} ResolveConfigReturnType
+ * @typedef {import("../../typedefs/index.js").ResolveConfigReadonlyReturnType} ResolveConfigReadonlyReturnType
  */
 
 /* assert */
 
 export const assertErrorWithMessage =
   /** @template {AllStaticErrorMessages_ErrorStatuses__Key} T */ (
-    /** @type {Awaited<ResolveConfigReturnType>} */ resolveConfigResults,
+    /** @type {Awaited<ResolveConfigReadonlyReturnType>} */ resolveConfigResults,
     /** @type {T} */ expectedMessage,
   ) => {
     assert.strictEqual(resolveConfigResults.success, false);
@@ -27,7 +27,7 @@ export const assertErrorWithMessage =
 
 export const assertFailureWithMessage =
   /** @template {AllStaticErrorMessages_ErrorStatuses__Key} T */ (
-    /** @type {Awaited<ResolveConfigReturnType>} */ resolveConfigResults,
+    /** @type {Awaited<ResolveConfigReadonlyReturnType>} */ resolveConfigResults,
     /** @type {T} */ expectedMessage,
   ) => {
     assert.strictEqual(resolveConfigResults.success, false);
@@ -43,7 +43,7 @@ export const assertFailureWithMessage =
 
 export const assertWarningWithMessage =
   /** @template {AllStaticErrorMessages_ErrorStatuses__Key} T */ (
-    /** @type {Awaited<ResolveConfigReturnType>} */ resolveConfigResults,
+    /** @type {Awaited<ResolveConfigReadonlyReturnType>} */ resolveConfigResults,
     /** @type {T} */ expectedMessage,
   ) => {
     assert.strictEqual(resolveConfigResults.success, false);

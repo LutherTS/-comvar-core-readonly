@@ -162,9 +162,9 @@ export const errorsConfigMessages: {
 };
 export const forComposedVariables: {
     variables: {
-        "resolveConfig": {
-            "value": "resolveConfig";
-            "key": "EN#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIG";
+        "resolveConfigReadonly": {
+            "value": "resolveConfigReadonly";
+            "key": "EN#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIGREADONLY";
         };
     };
     arguments: {};

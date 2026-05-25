@@ -5,9 +5,9 @@ import {
 
 /* primary export names */
 
-/** $COMMENT#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIG */
-export const RESOLVE_CONFIG =
-  forComposedVariables.variables.resolveConfig.value;
+/** $COMMENT#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIGREADONLY */
+export const RESOLVE_CONFIG_READONLY =
+  forComposedVariables.variables.resolveConfigReadonly.value;
 
 export const CONFIG_PATH =
   composedVariablesExclusives.arguments.configPath.value;

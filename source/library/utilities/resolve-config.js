@@ -48,7 +48,9 @@ import { freshImport } from "./fresh-import-a.js";
  */
 
 /** @public */
-export const resolveConfig = async (/** @type {string} */ configPath) => {
+export const resolveConfigReadonly = async (
+  /** @type {string} */ configPath,
+) => {
   // input validations
 
   // Checks if the input argument is a string.

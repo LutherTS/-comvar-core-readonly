@@ -4,7 +4,7 @@ import path from "path";
 import { describe, it } from "node:test";
 import assert from "node:assert";
 
-import { resolveConfig } from "../../source/library/index.js"; // dev
+import { resolveConfigReadonly } from "../../source/library/index.js"; // dev
 // import { resolveConfig } from "../../tsdown/index.mjs"; // prod // DOESN'T WORK BECAUSE OF freshImport. BUNDLING MIGHT NOT BE A GOOD IDEA HERE.
 // This also means being selective about the `files` key in `package.json` in order to include neither tests nor typedefs.
 
@@ -24,7 +24,11 @@ import {
   librariesValuesMustBeStrings,
 } from "../constants/errors/config/messages.js";
 
-import { RESOLVE_CONFIG, CONFIG_PATH, LIBRARIES } from "./constants/index.js";
+import {
+  RESOLVE_CONFIG_READONLY,
+  CONFIG_PATH,
+  LIBRARIES,
+} from "./constants/index.js";
 
 import {
   assertErrorWithMessage,
@@ -65,81 +69,104 @@ const librariesKeyNotStringsPath = path.join(
   "./configs/libraries-key-not-strings.js",
 );
 
-describe(RESOLVE_CONFIG, () => {
+describe(RESOLVE_CONFIG_READONLY, () => {
   // initial tests
 
   it("should be a function", () => {
-    const resolveConfigType = typeof resolveConfig;
-    assert.strictEqual(resolveConfigType, "function");
+    const resolveConfigReadonlyType = typeof resolveConfigReadonly;
+    assert.strictEqual(resolveConfigReadonlyType, "function");
   });
 
-  it(`should be named \`${RESOLVE_CONFIG}\``, () => {
-    const resolveConfigName = resolveConfig.name;
-    assert.strictEqual(resolveConfigName, RESOLVE_CONFIG);
+  it(`should be named \`${RESOLVE_CONFIG_READONLY}\``, () => {
+    const resolveConfigReadonlyName = resolveConfigReadonly.name;
+    assert.strictEqual(resolveConfigReadonlyName, RESOLVE_CONFIG_READONLY);
   });
 
   // input validations tests
 
   it(`should error if \`${CONFIG_PATH}\` param is not a string`, async () => {
-    const resolveConfigResults = await resolveConfig(2);
-    assertErrorWithMessage(resolveConfigResults, configPathSupposedToBeString);
+    const resolveConfigReadonlyResults = await resolveConfigReadonly(2);
+    assertErrorWithMessage(
+      resolveConfigReadonlyResults,
+      configPathSupposedToBeString,
+    );
   });
 
   it(`should error if \`${CONFIG_PATH}\` param does not end with \`${DOT_JS}\``, async () => {
-    const resolveConfigResults = await resolveConfig("not-javascript.ts");
-    assertErrorWithMessage(resolveConfigResults, configPathSupposedToBeDotJs);
+    const resolveConfigReadonlyResults =
+      await resolveConfigReadonly("not-javascript.ts");
+    assertErrorWithMessage(
+      resolveConfigReadonlyResults,
+      configPathSupposedToBeDotJs,
+    );
   });
 
   it(`should error if \`${CONFIG_PATH}\` is not found`, async () => {
-    const resolveConfigResults = await resolveConfig("does-not-exist.js");
-    assertErrorWithMessage(resolveConfigResults, noConfigFileFound);
+    const resolveConfigReadonlyResults =
+      await resolveConfigReadonly("does-not-exist.js");
+    assertErrorWithMessage(resolveConfigReadonlyResults, noConfigFileFound);
   });
 
   // input operations tests
 
   it(`should error if the config module is not resolved`, async () => {
-    const resolveConfigResults = await resolveConfig(configFatalPath);
-    assertErrorWithMessage(resolveConfigResults, configModuleCouldntResolve);
+    const resolveConfigReadonlyResults =
+      await resolveConfigReadonly(configFatalPath);
+    assertErrorWithMessage(
+      resolveConfigReadonlyResults,
+      configModuleCouldntResolve,
+    );
   });
 
   it(`should fail if the default exported config is not an object`, async () => {
-    const resolveConfigResults = await resolveConfig(defaultNotObjectPath);
-    assertFailureWithMessage(resolveConfigResults, configMustBeObject);
+    const resolveConfigReadonlyResults =
+      await resolveConfigReadonly(defaultNotObjectPath);
+    assertFailureWithMessage(resolveConfigReadonlyResults, configMustBeObject);
   });
   it(`should fail the same if the config module doesn't have a default export`, async () => {
-    const resolveConfigResults = await resolveConfig(configNoDefaultPath);
-    assertFailureWithMessage(resolveConfigResults, configMustBeObject);
+    const resolveConfigReadonlyResults =
+      await resolveConfigReadonly(configNoDefaultPath);
+    assertFailureWithMessage(resolveConfigReadonlyResults, configMustBeObject);
   });
 
   // config validations tests
 
   it(`should fail if the config's \`${LIBRARIES}\` key's value, when provided, is not a record`, async () => {
-    const resolveConfigResults = await resolveConfig(librariesKeyNotRecordPath);
-    assertFailureWithMessage(resolveConfigResults, librariesShouldBeRecord);
+    const resolveConfigReadonlyResults = await resolveConfigReadonly(
+      librariesKeyNotRecordPath,
+    );
+    assertFailureWithMessage(
+      resolveConfigReadonlyResults,
+      librariesShouldBeRecord,
+    );
   });
   it(`should fail if the config's \`${LIBRARIES}\` key's record has keys not subkey-conform`, async () => {
-    const resolveConfigResults = await resolveConfig(librariesKeyNotSubkeyPath);
-    assertFailureWithMessage(resolveConfigResults, librariesMustSubKey);
+    const resolveConfigReadonlyResults = await resolveConfigReadonly(
+      librariesKeyNotSubkeyPath,
+    );
+    assertFailureWithMessage(resolveConfigReadonlyResults, librariesMustSubKey);
   });
   it(`should fail if the config's \`${LIBRARIES}\` key's record's values are not records`, async () => {
-    const resolveConfigResults = await resolveConfig(
+    const resolveConfigReadonlyResults = await resolveConfigReadonly(
       librariesKeyNotRecordsPath,
     );
     assertFailureWithMessage(
-      resolveConfigResults,
+      resolveConfigReadonlyResults,
       librariesRecordMustBeRecords,
     );
   });
   it(`should fail if the config's \`${LIBRARIES}\` key's record's records have keys not key-conform`, async () => {
-    const resolveConfigResults = await resolveConfig(librariesKeyNotKeyPath);
-    assertFailureWithMessage(resolveConfigResults, librariesMustKey);
+    const resolveConfigReadonlyResults = await resolveConfigReadonly(
+      librariesKeyNotKeyPath,
+    );
+    assertFailureWithMessage(resolveConfigReadonlyResults, librariesMustKey);
   });
   it(`should fail if the config's \`${LIBRARIES}\` key's record's records' values are not strings`, async () => {
-    const resolveConfigResults = await resolveConfig(
+    const resolveConfigReadonlyResults = await resolveConfigReadonly(
       librariesKeyNotStringsPath,
     );
     assertFailureWithMessage(
-      resolveConfigResults,
+      resolveConfigReadonlyResults,
       librariesValuesMustBeStrings,
     );
   });

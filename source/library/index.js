@@ -1,6 +1,6 @@
 /* primary export */
 
-export { resolveConfig } from "./utilities/resolve-config.js";
+export { resolveConfigReadonly } from "./utilities/resolve-config.js";
 
 /* secondary exports */
 

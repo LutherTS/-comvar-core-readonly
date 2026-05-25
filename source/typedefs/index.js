@@ -1,4 +1,4 @@
-import { resolveConfig } from "../library/index.js";
+import { resolveConfigReadonly } from "../library/index.js";
 
 import { allStaticErrorMessages_errorStatuses } from "../constants/errors/index.js";
 import { configPreStaticErrorMessages } from "../constants/errors/input/messages.js";
@@ -7,7 +7,7 @@ import { librariesStaticErrorMessages } from "../constants/errors/config/message
 import { librariesStaticErrorStatuses } from "../constants/errors/config/statuses.js";
 
 /**
- * @typedef {ReturnType<typeof resolveConfig>} ResolveConfigReturnType
+ * @typedef {ReturnType<typeof resolveConfigReadonly>} ResolveConfigReadonlyReturnType
  */
 /**
  * @typedef {keyof typeof allStaticErrorMessages_errorStatuses} AllStaticErrorMessages_ErrorStatuses__Key

@@ -1,5 +1,5 @@
 /** @public */
-export function resolveConfig(configPath: string): Promise<{
+export function resolveConfigReadonly(configPath: string): Promise<{
     readonly success: false;
     readonly errors: readonly [{
         readonly type: "error";

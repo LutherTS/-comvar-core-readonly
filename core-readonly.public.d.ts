@@ -60,7 +60,7 @@ export declare const flattenedConfigPlaceholderGlobalRegex: RegExp;
 export declare const flattenedConfigPlaceholderLocalRegex: RegExp;
 
 /** @public */
-export declare function resolveConfig(configPath: string): Promise<{
+export declare function resolveConfigReadonly(configPath: string): Promise<{
     readonly success: false;
     readonly errors: readonly [{
         readonly type: "error";

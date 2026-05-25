@@ -6,7 +6,7 @@ import {
   successTrue,
   typeError,
   makeSuccessFalseTypeError,
-  makeSuccessFalseTypeWarning,
+  // makeSuccessFalseTypeWarning,
 } from "@lutherts/error-handling";
 
 import { DOT_JS } from "../../constants/index.js";
@@ -29,13 +29,13 @@ import {
 } from "../../constants/errors/input/messages.js";
 import { CONFIG_PRE_INVALID } from "../../constants/errors/input/statuses.js";
 import {
-  configStaticErrorMessages_errorStatuses,
+  // configStaticErrorMessages_errorStatuses,
   librariesStaticErrorMessages_errorStatuses,
 } from "../../constants/errors/config/index.js";
 import {
   librariesCouldntZod,
   librariesStaticErrorMessagesSet,
-  configEmpty,
+  // configEmpty,
 } from "../../constants/errors/config/messages.js";
 import { LIBRARIES_INVALID } from "../../constants/errors/config/statuses.js";
 
@@ -51,7 +51,14 @@ import { freshImport } from "./fresh-import-a.js";
  * @typedef {import("../../typedefs/index.js").LibrariesStaticErrorMessage} LibrariesStaticErrorMessage
  */
 
-/** @public */
+/**
+ * Initially verifies, validates and resolves the config path to retrieve the config and provide its `libraries` key data.
+ *
+ * @param configPath - The absolute path of the config regardless of the method through which it is provided: be it from the default `comments.config.js` at the current working directory, from a relative path passed via the `--config` flag in the CLI, or from a relative path at the extension's `config` key in `.vscode/settings.json` for VS Code.
+ * @returns The config and its `librariesData`, or lack thereof for the latter via `null`, inside a `{success: true}` object at its `config` and `libraries` keys respectively. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extension for VS Code.
+ *
+ * @public
+ */
 export const resolveConfigReadonly = async (
   /** @type {string} */ configPath,
 ) => {
@@ -169,17 +176,10 @@ export const resolveConfigReadonly = async (
     });
   }
 
-  const librariesSchemaResultsData = librariesSchemaResults.data;
-
-  // Without `libraries`, returns a warning, and depending on the consumer, the warning is either an error (for `lutherts.comvar-readonly` ComVar Readonly) or a warning still (for `@comvar/core`: ignored with variations+data, erroring without to `CONFIG_EFFECTIVELY_EMPTY`).
-  if (!librariesSchemaResultsData) {
-    return makeSuccessFalseTypeWarning(
-      `WARNING. ${configEmpty}`,
-      configStaticErrorMessages_errorStatuses[configEmpty],
-    );
-  }
+  const librariesSchemaResultsData = librariesSchemaResults.data ?? null;
 
   return /** @type {const} */ ({
+    config,
     libraries: librariesSchemaResultsData,
     ...successTrue,
   });

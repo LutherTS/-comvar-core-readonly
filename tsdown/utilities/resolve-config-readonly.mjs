@@ -16,7 +16,14 @@ import { makeSuccessFalseTypeError, makeSuccessFalseTypeWarning, successFalse, s
 * @typedef {import("../../typedefs/index.js").ConfigPreStaticErrorMessage} ConfigPreStaticErrorMessage
 * @typedef {import("../../typedefs/index.js").LibrariesStaticErrorMessage} LibrariesStaticErrorMessage
 */
-/** @public */
+/**
+* Initially verifies, validates and resolves the config path to retrieve the config and provide its `libraries` key data.
+*
+* @param configPath - The absolute path of the config regardless of the method through which it is provided: be it from the default `comments.config.js` at the current working directory, from a relative path passed via the `--config` flag in the CLI, or from a relative path at the extension's `config` key in `.vscode/settings.json` for VS Code.
+* @returns Errors are returned during failures so they can be reused differently on the CLI and in the extension for VS Code.
+*
+* @public
+*/
 const resolveConfigReadonly = async (configPath) => {
 	if (typeof configPath !== "string") return makeSuccessFalseTypeError(`ERROR. ${configPathSupposedToBeString}`, inputStaticErrorMessages_errorStatuses[configPathSupposedToBeString]);
 	if (path.extname(configPath) !== DOT_JS) return makeSuccessFalseTypeError(`ERROR. ${configPathSupposedToBeDotJs}`, inputStaticErrorMessages_errorStatuses[configPathSupposedToBeDotJs]);
@@ -46,7 +53,8 @@ const resolveConfigReadonly = async (configPath) => {
 		})],
 		...successFalse
 	};
-	const librariesRawValue = configPreSchemaResults.data.libraries;
+	const config = configPreSchemaResults.data;
+	const librariesRawValue = config.libraries;
 	const librariesSchemaResults = ConfigLibrariesSchema.safeParse(librariesRawValue);
 	if (!librariesSchemaResults.success) return {
 		errors: [{
@@ -72,6 +80,7 @@ const resolveConfigReadonly = async (configPath) => {
 	const librariesSchemaResultsData = librariesSchemaResults.data;
 	if (!librariesSchemaResultsData) return makeSuccessFalseTypeWarning(`WARNING. ${configEmpty}`, configStaticErrorMessages_errorStatuses[configEmpty]);
 	return {
+		config,
 		libraries: librariesSchemaResultsData,
 		...successTrue
 	};

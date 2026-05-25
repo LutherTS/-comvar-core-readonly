@@ -22,7 +22,7 @@ import {
   librariesRecordMustBeRecords,
   librariesMustKey,
   librariesValuesMustBeStrings,
-  configEmpty,
+  // configEmpty,
 } from "../constants/errors/config/messages.js";
 
 import {
@@ -34,7 +34,7 @@ import {
 import {
   assertErrorWithMessage,
   assertFailureWithMessage,
-  assertWarningWithMessage,
+  // assertWarningWithMessage,
 } from "./utilities/index.js";
 
 const currentDirectoryPath = path.dirname(url.fileURLToPath(import.meta.url));
@@ -71,11 +71,6 @@ const librariesKeyNotStringsPath = path.join(
   "./configs/libraries-key-not-strings.js",
 );
 
-const configEmptyPath = path.join(
-  currentDirectoryPath,
-  "./configs/config-empty.js",
-);
-
 const configSuccessEnPath = path.join(
   currentDirectoryPath,
   "./configs/success-en.js",
@@ -83,6 +78,15 @@ const configSuccessEnPath = path.join(
 const configSuccessFrPath = path.join(
   currentDirectoryPath,
   "./configs/success-fr.js",
+);
+
+const configEmptyPath = path.join(
+  currentDirectoryPath,
+  "./configs/config-empty.js",
+);
+const configOtherThanLibrariesPath = path.join(
+  currentDirectoryPath,
+  "./configs/config-other-than-l.js",
 );
 
 describe(RESOLVE_CONFIG_READONLY, () => {
@@ -187,22 +191,35 @@ describe(RESOLVE_CONFIG_READONLY, () => {
     );
   });
 
-  it(`should warn if the config is empty`, async () => {
-    const resolveConfigReadonlyResults =
-      await resolveConfigReadonly(configEmptyPath);
-    assertWarningWithMessage(resolveConfigReadonlyResults, configEmpty);
-  });
-
   it(`should succeed here (with EN data)`, async () => {
     const resolveConfigReadonlyResults =
       await resolveConfigReadonly(configSuccessEnPath);
     assert.strictEqual(resolveConfigReadonlyResults.success, true);
+    assert.strictEqual(!!resolveConfigReadonlyResults.config, true);
     assert.strictEqual(!!resolveConfigReadonlyResults.libraries, true);
   });
   it(`should succeed here (with FR data)`, async () => {
     const resolveConfigReadonlyResults =
       await resolveConfigReadonly(configSuccessFrPath);
     assert.strictEqual(resolveConfigReadonlyResults.success, true);
+    assert.strictEqual(!!resolveConfigReadonlyResults.config, true);
     assert.strictEqual(!!resolveConfigReadonlyResults.libraries, true);
+  });
+
+  it(`should succeed here if the config is empty`, async () => {
+    const resolveConfigReadonlyResults =
+      await resolveConfigReadonly(configEmptyPath);
+    assert.strictEqual(resolveConfigReadonlyResults.success, true);
+    assert.strictEqual(!!resolveConfigReadonlyResults.config, true);
+    assert.strictEqual(resolveConfigReadonlyResults.libraries, null);
+  });
+
+  it(`should succeed here if the config has other keys than \`${LIBRARIES}\` without \`${LIBRARIES}\``, async () => {
+    const resolveConfigReadonlyResults = await resolveConfigReadonly(
+      configOtherThanLibrariesPath,
+    );
+    assert.strictEqual(resolveConfigReadonlyResults.success, true);
+    assert.strictEqual(!!resolveConfigReadonlyResults.config, true);
+    assert.strictEqual(resolveConfigReadonlyResults.libraries, null);
   });
 });

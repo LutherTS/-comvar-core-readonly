@@ -59,7 +59,14 @@ export declare const flattenedConfigPlaceholderGlobalRegex: RegExp;
  */
 export declare const flattenedConfigPlaceholderLocalRegex: RegExp;
 
-/** @public */
+/**
+ * Initially verifies, validates and resolves the config path to retrieve the config and provide its `libraries` key data.
+ *
+ * @param configPath - The absolute path of the config regardless of the method through which it is provided: be it from the default `comments.config.js` at the current working directory, from a relative path passed via the `--config` flag in the CLI, or from a relative path at the extension's `config` key in `.vscode/settings.json` for VS Code.
+ * @returns Errors are returned during failures so they can be reused differently on the CLI and in the extension for VS Code.
+ *
+ * @public
+ */
 export declare function resolveConfigReadonly(configPath: string): Promise<{
     readonly success: false;
     readonly errors: readonly [{
@@ -127,6 +134,7 @@ export declare function resolveConfigReadonly(configPath: string): Promise<{
     })[]];
 } | {
     readonly success: true;
+    readonly config: Record<string, unknown>;
     readonly libraries: Record<string, Record<string, string>>;
 }>;
 

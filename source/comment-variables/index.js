@@ -8,7 +8,7 @@ export const errorsInputMessages =
 export const errorsConfigMessages =
   commentVariablesData.en.tsDoc.src.consts.errors.config.messages;
 
-/* tests */
+/* generals */
 
 export const forComposedVariables =
   commentVariablesData.en.forComposedVariables;

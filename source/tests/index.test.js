@@ -22,6 +22,7 @@ import {
   librariesRecordMustBeRecords,
   librariesMustKey,
   librariesValuesMustBeStrings,
+  configEmpty,
 } from "../constants/errors/config/messages.js";
 
 import {
@@ -33,6 +34,7 @@ import {
 import {
   assertErrorWithMessage,
   assertFailureWithMessage,
+  assertWarningWithMessage,
 } from "./utilities/index.js";
 
 const currentDirectoryPath = path.dirname(url.fileURLToPath(import.meta.url));
@@ -67,6 +69,11 @@ const librariesKeyNotKeyPath = path.join(
 const librariesKeyNotStringsPath = path.join(
   currentDirectoryPath,
   "./configs/libraries-key-not-strings.js",
+);
+
+const configEmptyPath = path.join(
+  currentDirectoryPath,
+  "./configs/config-empty.js",
 );
 
 describe(RESOLVE_CONFIG_READONLY, () => {
@@ -169,5 +176,11 @@ describe(RESOLVE_CONFIG_READONLY, () => {
       resolveConfigReadonlyResults,
       librariesValuesMustBeStrings,
     );
+  });
+
+  it(`should warn if the config is empty`, async () => {
+    const resolveConfigReadonlyResults =
+      await resolveConfigReadonly(configEmptyPath);
+    assertWarningWithMessage(resolveConfigReadonlyResults, configEmpty);
   });
 });

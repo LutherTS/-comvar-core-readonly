@@ -2,6 +2,8 @@ import { errorsConfigMessages } from "../../../comment-variables/index.js";
 
 /* config error messages */
 
+export const configEmpty = errorsConfigMessages.configEmpty.value;
+
 /* messages for static errors - libraries */
 
 export const librariesCouldntZod =

@@ -1,5 +1,8 @@
 /* config error statuses */
 
+/** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#CONFIG_EMPTY */
+export const CONFIG_EMPTY = "CONFIG_EMPTY";
+
 /* statuses for static errors - libraries */
 
 /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_INVALID */

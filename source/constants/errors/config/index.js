@@ -1,4 +1,5 @@
 import {
+  configEmpty,
   librariesCouldntZod,
   librariesShouldBeRecord,
   librariesMustSubKey,
@@ -7,6 +8,7 @@ import {
   librariesValuesMustBeStrings,
 } from "./messages.js";
 import {
+  CONFIG_EMPTY,
   LIBRARIES_INVALID,
   LIBRARIES_NOT_RECORD,
   LIBRARIES_NOT_SUBKEY_CONFORM,
@@ -28,4 +30,5 @@ export const librariesStaticErrorMessages_errorStatuses = Object.freeze({
 export const configStaticErrorMessages_errorStatuses = Object.freeze({
   ...librariesStaticErrorMessages_errorStatuses,
   ...{ [librariesCouldntZod]: LIBRARIES_INVALID },
+  ...{ [configEmpty]: CONFIG_EMPTY },
 });

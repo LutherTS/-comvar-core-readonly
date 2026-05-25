@@ -28,10 +28,14 @@ import {
   configPreStaticErrorMessagesSet,
 } from "../../constants/errors/input/messages.js";
 import { CONFIG_PRE_INVALID } from "../../constants/errors/input/statuses.js";
-import { librariesStaticErrorMessages_errorStatuses } from "../../constants/errors/config/index.js";
+import {
+  configStaticErrorMessages_errorStatuses,
+  librariesStaticErrorMessages_errorStatuses,
+} from "../../constants/errors/config/index.js";
 import {
   librariesCouldntZod,
   librariesStaticErrorMessagesSet,
+  configEmpty,
 } from "../../constants/errors/config/messages.js";
 import { LIBRARIES_INVALID } from "../../constants/errors/config/statuses.js";
 
@@ -167,11 +171,11 @@ export const resolveConfigReadonly = async (
 
   const librariesSchemaResultsData = librariesSchemaResults.data;
 
-  // Without `libraries`, returns a warning, and depending on the consumer, the warning is either an error (for `lutherts.comvar-readonly` ComVar Readonly) or a warning still (for `@comvar/core`, ignored with variations+data, erroring without to `CONFIG_EFFECTIVELY_EMPTY`).
+  // Without `libraries`, returns a warning, and depending on the consumer, the warning is either an error (for `lutherts.comvar-readonly` ComVar Readonly) or a warning still (for `@comvar/core`: ignored with variations+data, erroring without to `CONFIG_EFFECTIVELY_EMPTY`).
   if (!librariesSchemaResultsData) {
     return makeSuccessFalseTypeWarning(
-      `WARNING. ${"The config is empty. Please provide the `variations` key in order to get started."}`,
-      "CONFIG_EMPTY",
+      `WARNING. ${configEmpty}`,
+      configStaticErrorMessages_errorStatuses[configEmpty],
     );
   }
 

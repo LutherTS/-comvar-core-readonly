@@ -11,7 +11,7 @@ import { freshImport } from "./fresh-import-a.mjs";
 import fs from "fs";
 import path from "path";
 import { makeSuccessFalseTypeError, makeSuccessFalseTypeWarning, successFalse, successTrue, typeError } from "@lutherts/error-handling";
-//#region source/library/utilities/resolve-config.js
+//#region source/library/utilities/resolve-config-readonly.js
 /**
 * @typedef {import("../../typedefs/index.js").ConfigPreStaticErrorMessage} ConfigPreStaticErrorMessage
 * @typedef {import("../../typedefs/index.js").LibrariesStaticErrorMessage} LibrariesStaticErrorMessage

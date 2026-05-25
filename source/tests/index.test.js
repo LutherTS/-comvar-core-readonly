@@ -76,6 +76,15 @@ const configEmptyPath = path.join(
   "./configs/config-empty.js",
 );
 
+const configSuccessEnPath = path.join(
+  currentDirectoryPath,
+  "./configs/success-en.js",
+);
+const configSuccessFrPath = path.join(
+  currentDirectoryPath,
+  "./configs/success-fr.js",
+);
+
 describe(RESOLVE_CONFIG_READONLY, () => {
   // initial tests
 
@@ -182,5 +191,18 @@ describe(RESOLVE_CONFIG_READONLY, () => {
     const resolveConfigReadonlyResults =
       await resolveConfigReadonly(configEmptyPath);
     assertWarningWithMessage(resolveConfigReadonlyResults, configEmpty);
+  });
+
+  it(`should succeed here (with EN data)`, async () => {
+    const resolveConfigReadonlyResults =
+      await resolveConfigReadonly(configSuccessEnPath);
+    assert.strictEqual(resolveConfigReadonlyResults.success, true);
+    assert.strictEqual(!!resolveConfigReadonlyResults.libraries, true);
+  });
+  it(`should succeed here (with FR data)`, async () => {
+    const resolveConfigReadonlyResults =
+      await resolveConfigReadonly(configSuccessFrPath);
+    assert.strictEqual(resolveConfigReadonlyResults.success, true);
+    assert.strictEqual(!!resolveConfigReadonlyResults.libraries, true);
   });
 });

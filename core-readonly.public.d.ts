@@ -41,7 +41,17 @@ export declare const commentVariablesData: {
  *
  * @public
  */
-export declare const configKeyRegex: RegExp;
+export declare const configDataKeyRegex: RegExp;
+
+/**
+ * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY
+ *
+ * @example
+ * `SUB_KEY`
+ *
+ * @public
+ */
+export declare const configDataSubKeyRegex: RegExp;
 
 /**
  * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY
@@ -51,7 +61,7 @@ export declare const configKeyRegex: RegExp;
  *
  * @public
  */
-export declare const flattenedConfigKeyRegex: RegExp;
+export declare const flattenedConfigDataKeyRegex: RegExp;
 
 /**
  * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL
@@ -61,7 +71,7 @@ export declare const flattenedConfigKeyRegex: RegExp;
  *
  * @public
  */
-export declare const flattenedConfigPlaceholderGlobalRegex: RegExp;
+export declare const flattenedConfigDataPlaceholderGlobalRegex: RegExp;
 
 /**
  * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL
@@ -71,7 +81,7 @@ export declare const flattenedConfigPlaceholderGlobalRegex: RegExp;
  *
  * @public
  */
-export declare const flattenedConfigPlaceholderLocalRegex: RegExp;
+export declare const flattenedConfigDataPlaceholderLocalRegex: RegExp;
 
 /**
  * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY
@@ -144,15 +154,5 @@ export declare function resolveConfigReadonly(configPath: string): Promise<{
     readonly config: Record<string, unknown>;
     readonly libraries: Record<string, Record<string, string>> | null;
 }>;
-
-/**
- * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY
- *
- * @example
- * `SUB_KEY`
- *
- * @public
- */
-export declare const subKeyRegex: RegExp;
 
 export { }

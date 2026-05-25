@@ -10,7 +10,7 @@ import { $COMMENT } from "./index.js";
  *
  * @public
  */
-export const configKeyRegex = /^[\p{Ll}\p{Lu}\p{Lo}\p{Pd}\p{Pc}\p{N}\s]+$/u;
+export const configDataKeyRegex = /^[\p{Ll}\p{Lu}\p{Lo}\p{Pd}\p{Pc}\p{N}\s]+$/u;
 
 /**
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#SUBKEY
@@ -20,7 +20,7 @@ export const configKeyRegex = /^[\p{Ll}\p{Lu}\p{Lo}\p{Pd}\p{Pc}\p{N}\s]+$/u;
  *
  * @public
  */
-export const subKeyRegex = /^[\p{Lu}\p{Lo}\p{N}_]+$/u;
+export const configDataSubKeyRegex = /^[\p{Lu}\p{Lo}\p{N}_]+$/u;
 
 /**
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGKEY
@@ -30,7 +30,7 @@ export const subKeyRegex = /^[\p{Lu}\p{Lo}\p{N}_]+$/u;
  *
  * @public
  */
-export const flattenedConfigKeyRegex = /^(?!#)[\p{Lu}\p{Lo}\p{N}_#]+$/u;
+export const flattenedConfigDataKeyRegex = /^(?!#)[\p{Lu}\p{Lo}\p{N}_#]+$/u;
 
 /**
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGPLACEHOLDERLOCAL
@@ -40,7 +40,7 @@ export const flattenedConfigKeyRegex = /^(?!#)[\p{Lu}\p{Lo}\p{N}_#]+$/u;
  *
  * @public
  */
-export const flattenedConfigPlaceholderLocalRegex = new RegExp(
+export const flattenedConfigDataPlaceholderLocalRegex = new RegExp(
   `${escapeRegex($COMMENT)}#(?!#)([\\p{Lu}\\p{Lo}\\p{N}_#]+)`,
   "u",
 );
@@ -53,7 +53,7 @@ export const flattenedConfigPlaceholderLocalRegex = new RegExp(
  *
  * @public
  */
-export const flattenedConfigPlaceholderGlobalRegex = new RegExp(
+export const flattenedConfigDataPlaceholderGlobalRegex = new RegExp(
   `${escapeRegex($COMMENT)}#(?!#)([\\p{Lu}\\p{Lo}\\p{N}_#]+)`,
   "gu",
 );

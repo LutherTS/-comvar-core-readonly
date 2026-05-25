@@ -60,10 +60,6 @@ export const resolvedConfigData: {
                         };
                         "config": {
                             "messages": {
-                                "configEmpty": {
-                                    "value": "The config is empty. Please provide the `variations` key in order to get started.";
-                                    "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#CONFIGEMPTY";
-                                };
                                 "librariesCouldntZod": {
                                     "value": "The config's `libraries` key's value could not pass validation from zod.";
                                     "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESCOULDNTZOD";
@@ -90,10 +86,6 @@ export const resolvedConfigData: {
                                 };
                             };
                             "statuses": {
-                                "CONFIG_EMPTY": {
-                                    "value": "\"The config is empty. Please provide the `variations` key in order to get started.\"";
-                                    "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#CONFIG_EMPTY";
-                                };
                                 "LIBRARIES_INVALID": {
                                     "value": "\"The config's `libraries` key's value could not pass validation from zod.\"";
                                     "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_INVALID";
@@ -159,6 +151,86 @@ export const resolvedConfigData: {
                             };
                         };
                     };
+                    "defs": {
+                        "utils": {
+                            "public": {
+                                "resolveConfigReadonly": {
+                                    "value": "Initially verifies, validates and resolves the config path to retrieve the config and provide its `libraries` key data.";
+                                    "key": "EN#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY";
+                                };
+                            };
+                            "freshImport": {
+                                "value": "Guarantees a fresh import of the config, negating the innate (and hidden) cache of the dynamic `import` utility.";
+                                "key": "EN#TSDOC#SRC#LIB#DEFS#UTILS#FRESHIMPORT";
+                            };
+                        };
+                    };
+                    "params": {
+                        "utils": {
+                            "public": {
+                                "configPath": {
+                                    "value": "The absolute path of the config regardless of the manner through which it is provided: be it from a default `comments.config.js` at the current working directory, from a relative path passed via the `--config` flag in the CLI, or from a relative path at the extension's `config` key in `.vscode/settings.json` for VS Code.";
+                                    "key": "EN#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH";
+                                };
+                            };
+                            "moduleUrl": {
+                                "value": "The absolute path of the module to import.";
+                                "key": "EN#TSDOC#SRC#LIB#PARAMS#UTILS#MODULEURL";
+                            };
+                        };
+                    };
+                    "returns": {
+                        "utils": {
+                            "public": {
+                                "resolveConfigReadonly": {
+                                    "value": "The config and its `librariesData`, or lack thereof for the latter via `null`, inside a `{success: true}` object at its `config` and `libraries` keys respectively. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extension for VS Code.";
+                                    "key": "EN#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY";
+                                };
+                            };
+                            "freshImport": {
+                                "value": "Either an object with its `default` property sets to the default export of the module successfully loaded, or `null` when an error arises. (Debugging is currently manual by looking at the error being caught in the child process.)";
+                                "key": "EN#TSDOC#SRC#LIB#RETURNS#UTILS#FRESHIMPORT";
+                            };
+                        };
+                    };
+                };
+                "tests": {
+                    "defs": {
+                        "utils": {
+                            "assertFailureWithMessage": {
+                                "value": "Asserts that `resolveConfigReadonly` fails when it should, with the message of the error specified and its status inferred.";
+                                "key": "EN#TSDOC#SRC#TESTS#DEFS#UTILS#ASSERTFAILUREWITHMESSAGE";
+                            };
+                            "assertErrorWithMessage": {
+                                "value": "Asserts that `resolveConfigReadonly` fails when it should, with the message of the error specified and its status inferred. Here, the error message is prefixed with `\"ERROR. \"` to specify a leading user-facing error.";
+                                "key": "EN#TSDOC#SRC#TESTS#DEFS#UTILS#ASSERTERRORWITHMESSAGE";
+                            };
+                        };
+                    };
+                    "params": {
+                        "utils": {
+                            "resolveConfigReadonlyResults": {
+                                "value": "The results of the `resolveConfigReadonly` instance called in the test, whose success or failure is evaluated via its `success` key's boolean value.";
+                                "key": "EN#TSDOC#SRC#TESTS#PARAMS#UTILS#RESOLVECONFIGREADONLYRESULTS";
+                            };
+                            "expectedMessage": {
+                                "value": "The expected message of the error that should be encountered during failure, from which the status can be inferred.";
+                                "key": "EN#TSDOC#SRC#TESTS#PARAMS#UTILS#EXPECTEDMESSAGE";
+                            };
+                        };
+                    };
+                    "returns": {
+                        "utils": {
+                            "assertFailureWithMessage": {
+                                "value": "Void.";
+                                "key": "EN#TSDOC#SRC#TESTS#RETURNS#UTILS#ASSERTFAILUREWITHMESSAGE";
+                            };
+                            "assertErrorWithMessage": {
+                                "value": "Void.";
+                                "key": "EN#TSDOC#SRC#TESTS#RETURNS#UTILS#ASSERTERRORWITHMESSAGE";
+                            };
+                        };
+                    };
                 };
             };
         };
@@ -219,6 +291,22 @@ export const resolvedConfigData: {
             "mustOnlyBe": {
                 "value": "must only be";
                 "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#MUSTONLYBE";
+            };
+            "_asserts": {
+                "value": "Asserts";
+                "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#_ASSERTS";
+            };
+            "whenItShould": {
+                "value": "when it should";
+                "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#WHENITSHOULD";
+            };
+            "thatShouldFailure": {
+                "value": "that should be encountered during failure";
+                "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#THATSHOULDFAILURE";
+            };
+            "_void": {
+                "value": "Void";
+                "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#_VOID";
             };
         };
     };

@@ -77,16 +77,16 @@ export const enData = Object.freeze({
             "The shared `env` between `fresh-import-a.js` and `fresh-import-b.js` for the `freshImport` utility." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#MODULE_TO_LOAD / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#MODULE_TO_LOAD */,
           regexes: Object.freeze({
             public: Object.freeze({
-              configKey:
-                "Ensures config keys should only include lowercase letters (`Ll`), uppercase letters (`Lu`), other letters (`Lo`), dash punctuation (`Pd`), connector punctuation (`Pc`), numbers (`N`) and whitespaces (`s`)." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGKEY / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGKEY */,
-              subKey:
-                "Same as `configKeyRegex` but without lowercase letters (`Ll`) replaced by uppercase letters, and without dash punctuation (`Pd`), connector punctuation (`Pc`), and whitespaces (`s`) replaced by underscores (`_`)." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#SUBKEY / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#SUBKEY */,
-              flattenedConfigKey:
-                "Same as `subKeyRegex` but with the `#` character that links each subkey together." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGKEY / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGKEY */,
-              flattenedConfigPlaceholderLocal:
-                "Same as `flattenedConfigKeyRegex` but taking the prefix `$COMMENT` and its `#` into consideration, preventing two consecutive `#`'s, while removing the starting `^` and the ending `$` from the capture group." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGPLACEHOLDERLOCAL / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGPLACEHOLDERLOCAL */,
-              flattenedConfigPlaceholderGlobal:
-                "Same as `flattenedConfigPlaceholderLocalRegex` but globally." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGPLACEHOLDERGLOBAL / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGPLACEHOLDERGLOBAL */,
+              configDataKey:
+                "Ensures config `data` keys should only include lowercase letters (`Ll`), uppercase letters (`Lu`), other letters (`Lo`), dash punctuation (`Pd`), connector punctuation (`Pc`), numbers (`N`), and whitespaces (`s`).",
+              configDataSubKey:
+                "Same as `configDataKeyRegex` but without lowercase letters (`Ll`) replaced by uppercase letters, and without dash punctuation (`Pd`), connector punctuation (`Pc`), and whitespaces (`s`) replaced by underscores (`_`).",
+              flattenedConfigDataKey:
+                "Same as `configDataSubKeyRegex` but with the `#` character that links each subkey together.",
+              flattenedConfigDataPlaceholderLocal:
+                "Same as `flattenedConfigDataKeyRegex` but taking the prefix `$COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT` and its `#` into consideration, preventing two consecutive `#`'s, while removing the starting `^` and the ending `$` from the capture group.",
+              flattenedConfigDataPlaceholderGlobal:
+                "Same as `flattenedConfigDataPlaceholderLocalRegex` but globally.",
             }),
           }),
         }),
@@ -104,7 +104,7 @@ export const enData = Object.freeze({
           utils: Object.freeze({
             public: Object.freeze({
               configPath:
-                "The absolute path of the config regardless of the manner through which it is provided: be it from the default `comments.config.js` at the current working directory, from a relative path passed via the `--config` flag in the CLI, or from a relative path at the extension's `config` key in `.vscode/settings.json` for VS Code." /* variations: $COMMENT#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH / core: $COMMENT#EN#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH */,
+                "The absolute path of the config regardless of the manner through which it is provided: be it from a default `comments.config.js` at the current working directory, from a relative path passed via the `--config` flag in the CLI, or from a relative path at the extension's `config` key in `.vscode/settings.json` for VS Code." /* variations: $COMMENT#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH / core: $COMMENT#EN#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH */,
             }),
             moduleUrl:
               "The absolute path of the module to import." /* variations: $COMMENT#TSDOC#SRC#LIB#PARAMS#UTILS#MODULEURL / core: $COMMENT#EN#TSDOC#SRC#LIB#PARAMS#UTILS#MODULEURL */,
@@ -114,7 +114,7 @@ export const enData = Object.freeze({
           utils: Object.freeze({
             public: Object.freeze({
               resolveConfigReadonly:
-                "The config and its `librariesData`, or lack thereof for the latter via `null`, inside a `{success: true}` object at its `config` and `libraries` keys respectively. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extension for VS Code." /* variations: $COMMENT#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY / core: $COMMENT#EN#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY */,
+                "The config and its `libraries` data, or lack thereof for the latter via `null`, inside a `{success: true}` object at its `config` and `libraries` keys respectively. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extension for VS Code." /* variations: $COMMENT#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY / core: $COMMENT#EN#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY */,
             }),
             freshImport:
               "Either an object with its `default` property sets to the default export of the module successfully loaded, or `null` when an error arises. (Debugging is currently manual by looking at the error being caught in the child process.)" /* variations: $COMMENT#TSDOC#SRC#LIB#RETURNS#UTILS#FRESHIMPORT / core: $COMMENT#EN#TSDOC#SRC#LIB#RETURNS#UTILS#FRESHIMPORT */,
@@ -158,6 +158,8 @@ export const enData = Object.freeze({
   }),
   composedVariablesExclusives: Object.freeze({
     variables: Object.freeze({
+      _COMMENT:
+        "$COMMENT" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT */,
       libraries:
         "libraries" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES */,
     }),

@@ -9,7 +9,10 @@ import {
   librariesValuesMustBeStrings,
 } from "../../constants/errors/config/messages.js";
 
-import { subKeyRegex, flattenedConfigKeyRegex } from "./regexes.js";
+import {
+  configDataSubKeyRegex,
+  flattenedConfigDataKeyRegex,
+} from "./regexes.js";
 
 /* input schemas */
 
@@ -41,7 +44,7 @@ export const ConfigLibrariesSchema = z
       .refine(
         (record) => {
           for (const key of Object.keys(record)) {
-            if (!flattenedConfigKeyRegex.test(key)) return false;
+            if (!flattenedConfigDataKeyRegex.test(key)) return false;
           }
           return true;
         },
@@ -56,7 +59,7 @@ export const ConfigLibrariesSchema = z
   .refine(
     (record) => {
       for (const key of Object.keys(record)) {
-        if (!subKeyRegex.test(key)) return false;
+        if (!configDataSubKeyRegex.test(key)) return false;
       }
       return true;
     },

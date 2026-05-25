@@ -1,4 +1,3 @@
-export const configEmpty: "The config is empty. Please provide the `variations` key in order to get started.";
 export const librariesCouldntZod: "The config's `libraries` key's value could not pass validation from zod.";
 export const librariesShouldBeRecord: "The config `libraries` key's value, if provided, should only be a record (representing library keys paired with their selected variations).";
 export const librariesMustSubKey: "The config `libraries` key's record has one or more keys that do not conform with the Comment Variables subkey (`COMMENTVARIABLES_SUBKEY`) format. This cannot happen when using a `libraryKey` obtained from a conform external library's resolved public Comment Variables data.";

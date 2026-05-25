@@ -55,10 +55,6 @@ export const errors: {
     };
     config: {
         "messages": {
-            "configEmpty": {
-                "value": "The config is empty. Please provide the `variations` key in order to get started.";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#CONFIGEMPTY";
-            };
             "librariesCouldntZod": {
                 "value": "The config's `libraries` key's value could not pass validation from zod.";
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESCOULDNTZOD";
@@ -85,10 +81,6 @@ export const errors: {
             };
         };
         "statuses": {
-            "CONFIG_EMPTY": {
-                "value": "\"The config is empty. Please provide the `variations` key in order to get started.\"";
-                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#CONFIG_EMPTY";
-            };
             "LIBRARIES_INVALID": {
                 "value": "\"The config's `libraries` key's value could not pass validation from zod.\"";
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_INVALID";
@@ -143,10 +135,6 @@ export const errorsInputMessages: {
     };
 };
 export const errorsConfigMessages: {
-    configEmpty: {
-        "value": "The config is empty. Please provide the `variations` key in order to get started.";
-        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#CONFIGEMPTY";
-    };
     librariesCouldntZod: {
         "value": "The config's `libraries` key's value could not pass validation from zod.";
         "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESCOULDNTZOD";
@@ -229,5 +217,21 @@ export const composedVariablesExclusives: {
     mustOnlyBe: {
         "value": "must only be";
         "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#MUSTONLYBE";
+    };
+    _asserts: {
+        "value": "Asserts";
+        "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#_ASSERTS";
+    };
+    whenItShould: {
+        "value": "when it should";
+        "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#WHENITSHOULD";
+    };
+    thatShouldFailure: {
+        "value": "that should be encountered during failure";
+        "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#THATSHOULDFAILURE";
+    };
+    _void: {
+        "value": "Void";
+        "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#_VOID";
     };
 };

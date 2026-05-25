@@ -6,6 +6,6 @@ const noConfigFileFound = errorsInputMessages.noConfigFileFound.value;
 const configModuleCouldntResolve = errorsInputMessages.configModuleCouldntResolve.value;
 const configCouldntPreZod = errorsInputMessages.configCouldntPreZod.value;
 const configMustBeObject = errorsInputMessages.configMustBeObject.value;
-const configStaticPreErrorMessagesSet = new Set([configMustBeObject]);
+const configPreStaticErrorMessagesSet = new Set([configMustBeObject]);
 //#endregion
-export { configCouldntPreZod, configModuleCouldntResolve, configMustBeObject, configPathSupposedToBeDotJs, configPathSupposedToBeString, configStaticPreErrorMessagesSet, noConfigFileFound };
+export { configCouldntPreZod, configModuleCouldntResolve, configMustBeObject, configPathSupposedToBeDotJs, configPathSupposedToBeString, configPreStaticErrorMessagesSet, noConfigFileFound };

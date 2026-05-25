@@ -30,6 +30,13 @@ export function resolveConfig(configPath: string): Promise<{
 } | {
     readonly success: false;
     readonly errors: readonly [{
+        readonly type: "warning";
+        readonly message: "WARNING. The config is empty. Please provide the `variations` key in order to get started.";
+        readonly status: "CONFIG_EMPTY";
+    }];
+} | {
+    readonly success: false;
+    readonly errors: readonly [{
         readonly type: "error";
         readonly message: "ERROR. The config could not pass pre-validation from zod.";
         readonly status: "CONFIG_PRE_INVALID";

@@ -1,5 +1,5 @@
 import { DOT_JS } from "../source/constants/index.mjs";
-import { configCouldntPreZod, configModuleCouldntResolve, configPathSupposedToBeDotJs, configPathSupposedToBeString, configStaticPreErrorMessagesSet, noConfigFileFound } from "../source/constants/errors/input/messages.mjs";
+import { configCouldntPreZod, configModuleCouldntResolve, configPathSupposedToBeDotJs, configPathSupposedToBeString, configPreStaticErrorMessagesSet, noConfigFileFound } from "../source/constants/errors/input/messages.mjs";
 import { CONFIG_PRE_INVALID } from "../source/constants/errors/input/statuses.mjs";
 import { configPreStaticErrorMessages_errorStatuses, inputStaticErrorMessages_errorStatuses } from "../source/constants/errors/input/index.mjs";
 import { librariesCouldntZod, librariesStaticErrorMessagesSet } from "../source/constants/errors/config/messages.mjs";
@@ -10,7 +10,7 @@ import { ConfigLibrariesSchema, ConfigPreSchema } from "../constants/schemas.mjs
 import { freshImport } from "./fresh-import-a.mjs";
 import fs from "fs";
 import path from "path";
-import { makeSuccessFalseTypeError, successFalse, successTrue, typeError } from "@lutherts/error-handling";
+import { makeSuccessFalseTypeError, makeSuccessFalseTypeWarning, successFalse, successTrue, typeError } from "@lutherts/error-handling";
 //#region source/library/utilities/resolve-config.js
 /**
 * @typedef {import("../../typedefs/index.js").ConfigPreStaticErrorMessage} ConfigPreStaticErrorMessage
@@ -31,7 +31,7 @@ const resolveConfig = async (configPath) => {
 			status: CONFIG_PRE_INVALID,
 			...typeError
 		}, ...configPreSchemaResults.error.issues.map((e) => {
-			if (configStaticPreErrorMessagesSet.has(e.message)) {
+			if (configPreStaticErrorMessagesSet.has(e.message)) {
 				const staticErrorMessage = e.message;
 				return {
 					message: staticErrorMessage,
@@ -69,6 +69,7 @@ const resolveConfig = async (configPath) => {
 		})],
 		...successFalse
 	};
+	if (!librariesSchemaResults.data) return makeSuccessFalseTypeWarning(`WARNING. The config is empty. Please provide the \`variations\` key in order to get started.`, "CONFIG_EMPTY");
 	return { ...successTrue };
 };
 //#endregion

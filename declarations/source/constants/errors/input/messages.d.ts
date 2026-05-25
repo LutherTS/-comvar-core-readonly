@@ -5,4 +5,4 @@ export const configModuleCouldntResolve: "Config module could not get resolved. 
 export const configCouldntPreZod: "The config could not pass pre-validation from zod.";
 export const configMustBeObject: "Invalid config format. The config must only be default-exported as an object.";
 export const configPreStaticErrorMessages: readonly ["Invalid config format. The config must only be default-exported as an object."];
-export const configStaticPreErrorMessagesSet: Set<"Invalid config format. The config must only be default-exported as an object.">;
+export const configPreStaticErrorMessagesSet: Set<"Invalid config format. The config must only be default-exported as an object.">;

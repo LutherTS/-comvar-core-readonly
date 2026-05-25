@@ -37,8 +37,6 @@ export const enData = Object.freeze({
           }),
           config: Object.freeze({
             messages: Object.freeze({
-              configEmpty:
-                "The config is empty. Please provide the `variations` key in order to get started." /* variations: $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#CONFIGEMPTY / core: $COMMENT#EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#CONFIGEMPTY */,
               librariesCouldntZod:
                 "$COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#_THECONFIG's `$COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES` $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#KEYVALUE $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#COULDNTZOD." /* variations: $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESCOULDNTZOD / core: $COMMENT#EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESCOULDNTZOD */,
               librariesShouldBeRecord:
@@ -53,8 +51,6 @@ export const enData = Object.freeze({
                 "$COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#_THECONFIG `$COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES` key's record's records' values $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#MUSTONLYBE strings (representing the actual values of the external libraries' Comment Variables keys these strings are paired with)." /* variations: $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESVALUESMUSTBESTRINGS / core: $COMMENT#EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESVALUESMUSTBESTRINGS */,
             }),
             statuses: Object.freeze({
-              CONFIG_EMPTY:
-                '"$COMMENT#EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#CONFIGEMPTY"' /* variations: $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#CONFIG_EMPTY / core: $COMMENT#EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#CONFIG_EMPTY */,
               LIBRARIES_INVALID:
                 '"$COMMENT#EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESCOULDNTZOD"' /* variations: $COMMENT#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_INVALID / core: $COMMENT#EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_INVALID */,
               LIBRARIES_NOT_RECORD:
@@ -92,6 +88,62 @@ export const enData = Object.freeze({
               flattenedConfigPlaceholderGlobal:
                 "Same as `flattenedConfigPlaceholderLocalRegex` but globally." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGPLACEHOLDERGLOBAL / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGPLACEHOLDERGLOBAL */,
             }),
+          }),
+        }),
+        defs: Object.freeze({
+          utils: Object.freeze({
+            public: Object.freeze({
+              resolveConfigReadonly:
+                "Initially verifies, validates and resolves the config path to retrieve the config and provide its `libraries` key data." /* variations: $COMMENT#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY / core: $COMMENT#EN#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY */,
+            }),
+            freshImport:
+              "Guarantees a fresh import of the config, negating the innate (and hidden) cache of the dynamic `import` utility." /* variations: $COMMENT#TSDOC#SRC#LIB#DEFS#UTILS#FRESHIMPORT / core: $COMMENT#EN#TSDOC#SRC#LIB#DEFS#UTILS#FRESHIMPORT */,
+          }),
+        }),
+        params: Object.freeze({
+          utils: Object.freeze({
+            public: Object.freeze({
+              configPath:
+                "The absolute path of the config regardless of the manner through which it is provided: be it from the default `comments.config.js` at the current working directory, from a relative path passed via the `--config` flag in the CLI, or from a relative path at the extension's `config` key in `.vscode/settings.json` for VS Code." /* variations: $COMMENT#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH / core: $COMMENT#EN#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH */,
+            }),
+            moduleUrl:
+              "The absolute path of the module to import." /* variations: $COMMENT#TSDOC#SRC#LIB#PARAMS#UTILS#MODULEURL / core: $COMMENT#EN#TSDOC#SRC#LIB#PARAMS#UTILS#MODULEURL */,
+          }),
+        }),
+        returns: Object.freeze({
+          utils: Object.freeze({
+            public: Object.freeze({
+              resolveConfigReadonly:
+                "The config and its `librariesData`, or lack thereof for the latter via `null`, inside a `{success: true}` object at its `config` and `libraries` keys respectively. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extension for VS Code." /* variations: $COMMENT#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY / core: $COMMENT#EN#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY */,
+            }),
+            freshImport:
+              "Either an object with its `default` property sets to the default export of the module successfully loaded, or `null` when an error arises. (Debugging is currently manual by looking at the error being caught in the child process.)" /* variations: $COMMENT#TSDOC#SRC#LIB#RETURNS#UTILS#FRESHIMPORT / core: $COMMENT#EN#TSDOC#SRC#LIB#RETURNS#UTILS#FRESHIMPORT */,
+          }),
+        }),
+      }),
+      tests: Object.freeze({
+        defs: Object.freeze({
+          utils: Object.freeze({
+            assertFailureWithMessage:
+              "$COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#_ASSERTS that `$COMMENT#EN#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIGREADONLY` fails $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#WHENITSHOULD, with the message of the error specified and its status inferred." /* variations: $COMMENT#TSDOC#SRC#TESTS#DEFS#UTILS#ASSERTFAILUREWITHMESSAGE / core: $COMMENT#EN#TSDOC#SRC#TESTS#DEFS#UTILS#ASSERTFAILUREWITHMESSAGE */,
+            assertErrorWithMessage:
+              '$COMMENT#EN#TSDOC#SRC#TESTS#DEFS#UTILS#ASSERTFAILUREWITHMESSAGE Here, the error message is prefixed with `"ERROR. "` to specify a leading user-facing error.' /* variations: $COMMENT#TSDOC#SRC#TESTS#DEFS#UTILS#ASSERTERRORWITHMESSAGE / core: $COMMENT#EN#TSDOC#SRC#TESTS#DEFS#UTILS#ASSERTERRORWITHMESSAGE */,
+          }),
+        }),
+        params: Object.freeze({
+          utils: Object.freeze({
+            resolveConfigReadonlyResults:
+              "The results of the `$COMMENT#EN#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIGREADONLY` instance called in the test, whose success or failure is evaluated via its `success` key's boolean value." /* variations: $COMMENT#TSDOC#SRC#TESTS#PARAMS#UTILS#RESOLVECONFIGREADONLYRESULTS / core: $COMMENT#EN#TSDOC#SRC#TESTS#PARAMS#UTILS#RESOLVECONFIGREADONLYRESULTS */,
+            expectedMessage:
+              "The expected message of the error $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#THATSHOULDFAILURE, from which the status can be inferred." /* variations: $COMMENT#TSDOC#SRC#TESTS#PARAMS#UTILS#EXPECTEDMESSAGE / core: $COMMENT#EN#TSDOC#SRC#TESTS#PARAMS#UTILS#EXPECTEDMESSAGE */,
+          }),
+        }),
+        returns: Object.freeze({
+          utils: Object.freeze({
+            assertFailureWithMessage:
+              "$COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#_VOID." /* variations: $COMMENT#TSDOC#SRC#TESTS#RETURNS#UTILS#ASSERTFAILUREWITHMESSAGE / core: $COMMENT#EN#TSDOC#SRC#TESTS#RETURNS#UTILS#ASSERTFAILUREWITHMESSAGE */,
+            assertErrorWithMessage:
+              "EN#TSDOC#SRC#TESTS#RETURNS#UTILS#ASSERTFAILUREWITHMESSAGE" /* variations: $COMMENT#TSDOC#SRC#TESTS#RETURNS#UTILS#ASSERTFAILUREWITHMESSAGE / core: $COMMENT#EN#TSDOC#SRC#TESTS#RETURNS#UTILS#ASSERTFAILUREWITHMESSAGE */,
           }),
         }),
       }),
@@ -133,6 +185,18 @@ export const enData = Object.freeze({
       "should only be" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#SHOULDONLYBE / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#SHOULDONLYBE */,
     mustOnlyBe:
       "must only be" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#MUSTONLYBE / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#MUSTONLYBE */,
+
+    // tsDoc.src.tests.defs.utils
+    _asserts:
+      "Asserts" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#_ASSERTS / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#_ASSERTS */,
+    whenItShould:
+      "when it should" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#WHENITSHOULD / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#WHENITSHOULD */,
+    thatShouldFailure:
+      "that should be encountered during failure" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#THATSHOULDFAILURE / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#THATSHOULDFAILURE */,
+
+    // tsDoc.src.tests.returns.utils
+    _void:
+      "Void" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#_VOID / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#_VOID */,
   }),
 });
 

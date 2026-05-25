@@ -6,7 +6,6 @@ import {
   successTrue,
   typeError,
   makeSuccessFalseTypeError,
-  // makeSuccessFalseTypeWarning,
 } from "@lutherts/error-handling";
 
 import { DOT_JS } from "../../constants/index.js";
@@ -28,14 +27,10 @@ import {
   configPreStaticErrorMessagesSet,
 } from "../../constants/errors/input/messages.js";
 import { CONFIG_PRE_INVALID } from "../../constants/errors/input/statuses.js";
-import {
-  // configStaticErrorMessages_errorStatuses,
-  librariesStaticErrorMessages_errorStatuses,
-} from "../../constants/errors/config/index.js";
+import { librariesStaticErrorMessages_errorStatuses } from "../../constants/errors/config/index.js";
 import {
   librariesCouldntZod,
   librariesStaticErrorMessagesSet,
-  // configEmpty,
 } from "../../constants/errors/config/messages.js";
 import { LIBRARIES_INVALID } from "../../constants/errors/config/statuses.js";
 
@@ -52,10 +47,10 @@ import { freshImport } from "./fresh-import-a.js";
  */
 
 /**
- * Initially verifies, validates and resolves the config path to retrieve the config and provide its `libraries` key data.
+ * $COMMENT#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY
  *
- * @param configPath - The absolute path of the config regardless of the method through which it is provided: be it from the default `comments.config.js` at the current working directory, from a relative path passed via the `--config` flag in the CLI, or from a relative path at the extension's `config` key in `.vscode/settings.json` for VS Code.
- * @returns The config and its `librariesData`, or lack thereof for the latter via `null`, inside a `{success: true}` object at its `config` and `libraries` keys respectively. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extension for VS Code.
+ * @param configPath - $COMMENT#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH
+ * @returns $COMMENT#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY
  *
  * @public
  */

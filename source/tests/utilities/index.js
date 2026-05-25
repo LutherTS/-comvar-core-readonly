@@ -9,30 +9,19 @@ import { allStaticErrorMessages_errorStatuses } from "../../constants/errors/ind
 
 /* assert */
 
-export const assertErrorWithMessage =
-  /** @template {AllStaticErrorMessages_ErrorStatuses__Key} T */ (
-    /** @type {Awaited<ResolveConfigReadonlyReturnType>} */ resolveConfigResults,
-    /** @type {T} */ expectedMessage,
-  ) => {
-    assert.strictEqual(resolveConfigResults.success, false);
-    assert.strictEqual(
-      resolveConfigResults.errors.some(
-        (e) =>
-          e.message === `ERROR. ${expectedMessage}` &&
-          e.status === allStaticErrorMessages_errorStatuses[expectedMessage],
-      ),
-      true,
-    );
-  };
-
+/**
+ * $COMMENT#TSDOC#SRC#TESTS#DEFS#UTILS#ASSERTFAILUREWITHMESSAGE
+ * @param {*} resolveConfigReadonlyResults $COMMENT#TSDOC#SRC#TESTS#PARAMS#UTILS#RESOLVECONFIGREADONLYRESULTS
+ * @param {*} expectedMessage - $COMMENT#TSDOC#SRC#TESTS#PARAMS#UTILS#EXPECTEDMESSAGE
+ */
 export const assertFailureWithMessage =
   /** @template {AllStaticErrorMessages_ErrorStatuses__Key} T */ (
-    /** @type {Awaited<ResolveConfigReadonlyReturnType>} */ resolveConfigResults,
+    /** @type {Awaited<ResolveConfigReadonlyReturnType>} */ resolveConfigReadonlyResults,
     /** @type {T} */ expectedMessage,
   ) => {
-    assert.strictEqual(resolveConfigResults.success, false);
+    assert.strictEqual(resolveConfigReadonlyResults.success, false);
     assert.strictEqual(
-      resolveConfigResults.errors.some(
+      resolveConfigReadonlyResults.errors.some(
         (e) =>
           e.message === expectedMessage &&
           e.status === allStaticErrorMessages_errorStatuses[expectedMessage],
@@ -41,16 +30,21 @@ export const assertFailureWithMessage =
     );
   };
 
-export const assertWarningWithMessage =
+/**
+ * $COMMENT#TSDOC#SRC#TESTS#DEFS#UTILS#ASSERTERRORWITHMESSAGE
+ * @param {*} resolveConfigReadonlyResults - $COMMENT#TSDOC#SRC#TESTS#PARAMS#UTILS#RESOLVECONFIGREADONLYRESULTS
+ * @param {*} expectedMessage - $COMMENT#TSDOC#SRC#TESTS#RETURNS#UTILS#ASSERTFAILUREWITHMESSAGE
+ */
+export const assertErrorWithMessage =
   /** @template {AllStaticErrorMessages_ErrorStatuses__Key} T */ (
-    /** @type {Awaited<ResolveConfigReadonlyReturnType>} */ resolveConfigResults,
+    /** @type {Awaited<ResolveConfigReadonlyReturnType>} */ resolveConfigReadonlyResults,
     /** @type {T} */ expectedMessage,
   ) => {
-    assert.strictEqual(resolveConfigResults.success, false);
+    assert.strictEqual(resolveConfigReadonlyResults.success, false);
     assert.strictEqual(
-      resolveConfigResults.errors.some(
+      resolveConfigReadonlyResults.errors.some(
         (e) =>
-          e.message === `WARNING. ${expectedMessage}` &&
+          e.message === `ERROR. ${expectedMessage}` &&
           e.status === allStaticErrorMessages_errorStatuses[expectedMessage],
       ),
       true,

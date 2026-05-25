@@ -63,7 +63,7 @@ export declare const flattenedConfigPlaceholderLocalRegex: RegExp;
  * Initially verifies, validates and resolves the config path to retrieve the config and provide its `libraries` key data.
  *
  * @param configPath - The absolute path of the config regardless of the method through which it is provided: be it from the default `comments.config.js` at the current working directory, from a relative path passed via the `--config` flag in the CLI, or from a relative path at the extension's `config` key in `.vscode/settings.json` for VS Code.
- * @returns Errors are returned during failures so they can be reused differently on the CLI and in the extension for VS Code.
+ * @returns The config and its `librariesData`, or lack thereof for the latter via `null`, inside a `{success: true}` object at its `config` and `libraries` keys respectively. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extension for VS Code.
  *
  * @public
  */
@@ -98,13 +98,6 @@ export declare function resolveConfigReadonly(configPath: string): Promise<{
 } | {
     readonly success: false;
     readonly errors: readonly [{
-        readonly type: "warning";
-        readonly message: "WARNING. The config is empty. Please provide the `variations` key in order to get started.";
-        readonly status: "CONFIG_EMPTY";
-    }];
-} | {
-    readonly success: false;
-    readonly errors: readonly [{
         readonly type: "error";
         readonly message: "ERROR. The config could not pass pre-validation from zod.";
         readonly status: "CONFIG_PRE_INVALID";
@@ -135,7 +128,7 @@ export declare function resolveConfigReadonly(configPath: string): Promise<{
 } | {
     readonly success: true;
     readonly config: Record<string, unknown>;
-    readonly libraries: Record<string, Record<string, string>>;
+    readonly libraries: Record<string, Record<string, string>> | null;
 }>;
 
 /**

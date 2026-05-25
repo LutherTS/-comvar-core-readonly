@@ -5,7 +5,7 @@ import { describe, it } from "node:test";
 import assert from "node:assert";
 
 import { resolveConfigReadonly } from "../../source/library/index.js"; // dev
-// import { resolveConfig } from "../../tsdown/index.mjs"; // prod // DOESN'T WORK BECAUSE OF freshImport. BUNDLING MIGHT NOT BE A GOOD IDEA HERE.
+// import { resolveConfigReadonly } from "../../tsdown/index.mjs"; // prod // DOESN'T WORK BECAUSE OF freshImport. BUNDLING MIGHT NOT BE A GOOD IDEA HERE.
 // This also means being selective about the `files` key in `package.json` in order to include neither tests nor typedefs.
 
 import { DOT_JS } from "../constants/index.js";
@@ -22,7 +22,6 @@ import {
   librariesRecordMustBeRecords,
   librariesMustKey,
   librariesValuesMustBeStrings,
-  // configEmpty,
 } from "../constants/errors/config/messages.js";
 
 import {
@@ -34,7 +33,6 @@ import {
 import {
   assertErrorWithMessage,
   assertFailureWithMessage,
-  // assertWarningWithMessage,
 } from "./utilities/index.js";
 
 const currentDirectoryPath = path.dirname(url.fileURLToPath(import.meta.url));

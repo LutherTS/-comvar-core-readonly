@@ -2,15 +2,15 @@ import { DOT_JS } from "../source/constants/index.mjs";
 import { configCouldntPreZod, configModuleCouldntResolve, configPathSupposedToBeDotJs, configPathSupposedToBeString, configPreStaticErrorMessagesSet, noConfigFileFound } from "../source/constants/errors/input/messages.mjs";
 import { CONFIG_PRE_INVALID } from "../source/constants/errors/input/statuses.mjs";
 import { configPreStaticErrorMessages_errorStatuses, inputStaticErrorMessages_errorStatuses } from "../source/constants/errors/input/index.mjs";
-import { configEmpty, librariesCouldntZod, librariesStaticErrorMessagesSet } from "../source/constants/errors/config/messages.mjs";
+import { librariesCouldntZod, librariesStaticErrorMessagesSet } from "../source/constants/errors/config/messages.mjs";
 import { LIBRARIES_INVALID } from "../source/constants/errors/config/statuses.mjs";
-import { configStaticErrorMessages_errorStatuses, librariesStaticErrorMessages_errorStatuses } from "../source/constants/errors/config/index.mjs";
+import { librariesStaticErrorMessages_errorStatuses } from "../source/constants/errors/config/index.mjs";
 import { ERROR_NOT_STANDARDIZED, errorNotStandardized } from "../source/constants/errors/index.mjs";
 import { ConfigLibrariesSchema, ConfigPreSchema } from "../constants/schemas.mjs";
 import { freshImport } from "./fresh-import-a.mjs";
 import fs from "fs";
 import path from "path";
-import { makeSuccessFalseTypeError, makeSuccessFalseTypeWarning, successFalse, successTrue, typeError } from "@lutherts/error-handling";
+import { makeSuccessFalseTypeError, successFalse, successTrue, typeError } from "@lutherts/error-handling";
 //#region source/library/utilities/resolve-config-readonly.js
 /**
 * @typedef {import("../../typedefs/index.js").ConfigPreStaticErrorMessage} ConfigPreStaticErrorMessage
@@ -20,7 +20,7 @@ import { makeSuccessFalseTypeError, makeSuccessFalseTypeWarning, successFalse, s
 * Initially verifies, validates and resolves the config path to retrieve the config and provide its `libraries` key data.
 *
 * @param configPath - The absolute path of the config regardless of the method through which it is provided: be it from the default `comments.config.js` at the current working directory, from a relative path passed via the `--config` flag in the CLI, or from a relative path at the extension's `config` key in `.vscode/settings.json` for VS Code.
-* @returns Errors are returned during failures so they can be reused differently on the CLI and in the extension for VS Code.
+* @returns The config and its `librariesData`, or lack thereof for the latter via `null`, inside a `{success: true}` object at its `config` and `libraries` keys respectively. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extension for VS Code.
 *
 * @public
 */
@@ -77,11 +77,9 @@ const resolveConfigReadonly = async (configPath) => {
 		})],
 		...successFalse
 	};
-	const librariesSchemaResultsData = librariesSchemaResults.data;
-	if (!librariesSchemaResultsData) return makeSuccessFalseTypeWarning(`WARNING. ${configEmpty}`, configStaticErrorMessages_errorStatuses[configEmpty]);
 	return {
 		config,
-		libraries: librariesSchemaResultsData,
+		libraries: librariesSchemaResults.data ?? null,
 		...successTrue
 	};
 };

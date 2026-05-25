@@ -10,6 +10,12 @@ const childScriptAbsolutePath = path.join(
   "fresh-import-b.js",
 );
 
+/**
+ * $COMMENT#TSDOC#SRC#LIB#DEFS#UTILS#FRESHIMPORT
+ *
+ * @param moduleUrl - $COMMENT#TSDOC#SRC#LIB#PARAMS#UTILS#MODULEURL
+ * @returns $COMMENT#TSDOC#SRC#LIB#RETURNS#UTILS#FRESHIMPORT
+ */
 export async function freshImport(/** @type {string} */ moduleUrl) {
   const childProcess = fork(childScriptAbsolutePath, {
     env: { [MODULE_TO_LOAD]: moduleUrl.toString() },

@@ -69,8 +69,12 @@ const resolveConfigReadonly = async (configPath) => {
 		})],
 		...successFalse
 	};
-	if (!librariesSchemaResults.data) return makeSuccessFalseTypeWarning(`WARNING. ${configEmpty}`, configStaticErrorMessages_errorStatuses[configEmpty]);
-	return { ...successTrue };
+	const librariesSchemaResultsData = librariesSchemaResults.data;
+	if (!librariesSchemaResultsData) return makeSuccessFalseTypeWarning(`WARNING. ${configEmpty}`, configStaticErrorMessages_errorStatuses[configEmpty]);
+	return {
+		libraries: librariesSchemaResultsData,
+		...successTrue
+	};
 };
 //#endregion
 export { resolveConfigReadonly };

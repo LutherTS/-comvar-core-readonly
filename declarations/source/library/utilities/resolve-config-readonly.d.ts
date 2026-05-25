@@ -66,6 +66,7 @@ export function resolveConfigReadonly(configPath: string): Promise<{
     })[]];
 } | {
     readonly success: true;
+    readonly libraries: Record<string, Record<string, string>>;
 }>;
 export type ConfigPreStaticErrorMessage = import("../../typedefs/index.js").ConfigPreStaticErrorMessage;
 export type LibrariesStaticErrorMessage = import("../../typedefs/index.js").LibrariesStaticErrorMessage;

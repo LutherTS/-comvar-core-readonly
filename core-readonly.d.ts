@@ -127,6 +127,7 @@ export declare function resolveConfigReadonly(configPath: string): Promise<{
     })[]];
 } | {
     readonly success: true;
+    readonly libraries: Record<string, Record<string, string>>;
 }>;
 
 /**

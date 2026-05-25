@@ -179,9 +179,8 @@ export const resolveConfigReadonly = async (
     );
   }
 
-  // AND NOW WE CAN START RESOLVING LIBRARIES.
-
   return /** @type {const} */ ({
+    libraries: librariesSchemaResultsData,
     ...successTrue,
   });
 };

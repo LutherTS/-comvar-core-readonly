@@ -40,3 +40,19 @@ export const assertFailureWithMessage =
       true,
     );
   };
+
+export const assertWarningWithMessage =
+  /** @template {AllStaticErrorMessages_ErrorStatuses__Key} T */ (
+    /** @type {Awaited<ResolveConfigReturnType>} */ resolveConfigResults,
+    /** @type {T} */ expectedMessage,
+  ) => {
+    assert.strictEqual(resolveConfigResults.success, false);
+    assert.strictEqual(
+      resolveConfigResults.errors.some(
+        (e) =>
+          e.message === `WARNING. ${expectedMessage}` &&
+          e.status === allStaticErrorMessages_errorStatuses[expectedMessage],
+      ),
+      true,
+    );
+  };

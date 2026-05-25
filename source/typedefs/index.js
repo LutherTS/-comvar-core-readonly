@@ -1,28 +1,10 @@
 import { resolveConfig } from "../library/index.js";
 
 import { allStaticErrorMessages_errorStatuses } from "../constants/errors/index.js";
-import {
-  configPreStaticErrorMessages,
-  // variationsDataPreStaticErrorMessages,
-} from "../constants/errors/input/messages.js";
-import {
-  configStaticErrorStatuses,
-  // variationsDataPreStaticErrorStatuses,
-} from "../constants/errors/input/statuses.js";
-import {
-  librariesStaticErrorMessages,
-  // lintConfigImportsStaticErrorMessages,
-  // myIgnoresOnlyStaticErrorMessages,
-  // ignoresStaticErrorMessages,
-  // composedVariablesExclusivesStaticErrorMessages,
-} from "../constants/errors/config/messages.js";
-import {
-  librariesStaticErrorStatuses,
-  // lintConfigImportsStaticErrorStatuses,
-  // myIgnoresOnlyStaticErrorStatuses,
-  // ignoresStaticErrorStatuses,
-  // composedVariablesExclusivesStaticErrorStatuses,
-} from "../constants/errors/config/statuses.js";
+import { configPreStaticErrorMessages } from "../constants/errors/input/messages.js";
+import { configPreStaticErrorStatuses } from "../constants/errors/input/statuses.js";
+import { librariesStaticErrorMessages } from "../constants/errors/config/messages.js";
+import { librariesStaticErrorStatuses } from "../constants/errors/config/statuses.js";
 
 /**
  * @typedef {ReturnType<typeof resolveConfig>} ResolveConfigReturnType
@@ -35,7 +17,7 @@ import {
  * @typedef {typeof configPreStaticErrorMessages[number]} ConfigPreStaticErrorMessage
  */
 /**
- * @typedef {typeof configStaticErrorStatuses[number]} ConfigPreStaticErrorStatus
+ * @typedef {typeof configPreStaticErrorStatuses[number]} ConfigPreStaticErrorStatus
  */
 
 /**

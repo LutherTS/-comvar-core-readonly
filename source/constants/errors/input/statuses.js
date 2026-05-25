@@ -21,31 +21,9 @@ export const CONFIG_NOT_OBJECT = "CONFIG_NOT_OBJECT";
 
 // static error statuses arrays and sets
 
-export const configStaticErrorStatuses = /** @type {const} */ ([
+export const configPreStaticErrorStatuses = /** @type {const} */ ([
   CONFIG_NOT_OBJECT,
 ]);
-export const configStaticErrorStatusesSet = new Set(configStaticErrorStatuses);
-
-// /* messages for static errors - variations data (pre) */
-
-// export const VARIATIONS_DATA_PRE_INVALID = "VARIATIONS_DATA_PRE_INVALID";
-
-// // zod static error statuses
-
-// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#VARIATIONS_DATA_DISCRIMINATED */
-// export const VARIATIONS_DATA_DISCRIMINATED = "VARIATIONS_DATA_DISCRIMINATED";
-// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#VARIATIONS_NOT_OBJECT */
-// export const VARIATIONS_NOT_OBJECT = "VARIATIONS_NOT_OBJECT";
-// /** $COMMENT#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#DATA_NOT_OBJECT */
-// export const DATA_NOT_OBJECT = "DATA_NOT_OBJECT";
-
-// // static error statuses arrays and sets
-
-// export const variationsDataPreStaticErrorStatuses = /** @type {const} */ ([
-//   VARIATIONS_DATA_DISCRIMINATED,
-//   VARIATIONS_NOT_OBJECT,
-//   DATA_NOT_OBJECT,
-// ]);
-// export const variationsDataPreStaticErrorStatusesSet = new Set(
-//   variationsDataPreStaticErrorStatuses,
-// );
+export const configPreStaticErrorStatusesSet = new Set(
+  configPreStaticErrorStatuses,
+);

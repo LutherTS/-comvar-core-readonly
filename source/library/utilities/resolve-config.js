@@ -2,10 +2,11 @@ import fs from "fs";
 import path from "path";
 
 import {
-  makeSuccessFalseTypeError,
+  successFalse,
   successTrue,
   typeError,
-  successFalse,
+  makeSuccessFalseTypeError,
+  makeSuccessFalseTypeWarning,
 } from "@lutherts/error-handling";
 
 import { DOT_JS } from "../../constants/index.js";
@@ -17,7 +18,6 @@ import {
 import {
   inputStaticErrorMessages_errorStatuses,
   configPreStaticErrorMessages_errorStatuses,
-  // variationsDataPreStaticErrorMessages_errorStatuses,
 } from "../../constants/errors/input/index.js";
 import {
   configPathSupposedToBeString,
@@ -25,52 +25,19 @@ import {
   noConfigFileFound,
   configModuleCouldntResolve,
   configCouldntPreZod,
-  configStaticPreErrorMessagesSet,
-  // variationsDataCouldntPreZod,
-  // variationsDataPreStaticErrorMessagesSet,
+  configPreStaticErrorMessagesSet,
 } from "../../constants/errors/input/messages.js";
-import {
-  CONFIG_PRE_INVALID,
-  // VARIATIONS_DATA_PRE_INVALID,
-} from "../../constants/errors/input/statuses.js";
-import {
-  // configStaticErrorMessages_errorStatuses,
-  // lintConfigImportsStaticErrorMessages_errorStatuses,
-  // myIgnoresOnlyStaticErrorMessages_errorStatuses,
-  // ignoresStaticErrorMessages_errorStatuses,
-  // composedVariablesExclusivesStaticErrorMessages_errorStatuses,
-  librariesStaticErrorMessages_errorStatuses,
-} from "../../constants/errors/config/index.js";
+import { CONFIG_PRE_INVALID } from "../../constants/errors/input/statuses.js";
+import { librariesStaticErrorMessages_errorStatuses } from "../../constants/errors/config/index.js";
 import {
   librariesCouldntZod,
   librariesStaticErrorMessagesSet,
-  // lintConfigImportsCouldntZod,
-  // lintConfigImportsStaticErrorMessagesSet,
-  // myIgnoresOnlyCouldntZod,
-  // myIgnoresOnlyStaticErrorMessagesSet,
-  // ignoresCouldntZod,
-  // ignoresStaticErrorMessagesSet,
-  // composedVariablesExclusivesCouldntZod,
-  // composedVariablesExclusivesStaticErrorMessagesSet,
-  // configEffectivelyEmpty,
 } from "../../constants/errors/config/messages.js";
-import {
-  LIBRARIES_INVALID,
-  // LINTCONFIGIMPORTS_INVALID,
-  // MYIGNORESONLY_INVALID,
-  // IGNORES_INVALID,
-  // COMPOSEDVARIABLESEXCLUSIVES_INVALID,
-} from "../../constants/errors/config/statuses.js";
+import { LIBRARIES_INVALID } from "../../constants/errors/config/statuses.js";
 
-// import { UNION, BOTH, NEITHER } from "../constants/index.js";
 import {
   ConfigPreSchema,
-  // VariationsDataPreSchema,
   ConfigLibrariesSchema,
-  // ConfigLintConfigImportsSchema,
-  // ConfigMyIgnoresOnlySchema,
-  // ConfigIgnoresSchema,
-  // ConfigComposedVariablesExclusivesSchema,
 } from "../constants/schemas.js";
 
 import { freshImport } from "./fresh-import-a.js";
@@ -132,7 +99,7 @@ export const resolveConfig = async (/** @type {string} */ configPath) => {
           ...typeError,
         },
         ...configPreSchemaResults.error.issues.map((e) => {
-          if (configStaticPreErrorMessagesSet.has(e.message)) {
+          if (configPreStaticErrorMessagesSet.has(e.message)) {
             // If the message is known, so is the status.
             const staticErrorMessage =
               /** @type {ConfigPreStaticErrorMessage} */ (e.message);
@@ -157,54 +124,6 @@ export const resolveConfig = async (/** @type {string} */ configPath) => {
   }
 
   const config = configPreSchemaResults.data;
-
-  // // Pre-validates `config.variations` and `config.data` (mutually optional, mutually required).
-  // const variationsDataPreRawValues = {
-  //   [UNION]:
-  //     config.variations && config.data
-  //       ? BOTH
-  //       : !config.variations && !config.data
-  //         ? NEITHER
-  //         : undefined,
-  //   variations: config.variations,
-  //   data: config.data,
-  // };
-  // const variationsDataSchemaResults = VariationsDataPreSchema.safeParse(
-  //   variationsDataPreRawValues,
-  // );
-
-  // if (!variationsDataSchemaResults.success) {
-  //   return /** @type {const} */ ({
-  //     errors: [
-  //       {
-  //         message: `ERROR. ${variationsDataCouldntPreZod}`,
-  //         status: VARIATIONS_DATA_PRE_INVALID,
-  //         ...typeError,
-  //       },
-  //       ...variationsDataSchemaResults.error.issues.map((e) => {
-  //         if (variationsDataPreStaticErrorMessagesSet.has(e.message)) {
-  //           const staticErrorMessage =
-  //             /** @type {VariationsDataPreStaticErrorMessage} */ (e.message);
-  //           return /** @type {const} */ ({
-  //             message: staticErrorMessage,
-  //             status:
-  //               variationsDataPreStaticErrorMessages_errorStatuses[
-  //                 staticErrorMessage
-  //               ],
-  //             ...typeError,
-  //           });
-  //         } else {
-  //           return /** @type {const} */ ({
-  //             message: errorNotStandardized,
-  //             status: ERROR_NOT_STANDARDIZED,
-  //             ...typeError,
-  //           });
-  //         }
-  //       }),
-  //     ],
-  //     ...successFalse,
-  //   });
-  // }
 
   // config validations
 
@@ -244,208 +163,17 @@ export const resolveConfig = async (/** @type {string} */ configPath) => {
     });
   }
 
-  // // Validates `config.lintConfigImports` (optional).
-  // const lintConfigImportsRawValue = config.lintConfigImports;
-  // const configLintConfigImportsSchemaResults =
-  //   ConfigLintConfigImportsSchema.safeParse(lintConfigImportsRawValue);
+  const librariesSchemaResultsData = librariesSchemaResults.data;
 
-  // if (!configLintConfigImportsSchemaResults.success) {
-  //   return /** @type {const} */ ({
-  //     errors: [
-  //       {
-  //         message: `ERROR. ${lintConfigImportsCouldntZod}`,
-  //         status: LINTCONFIGIMPORTS_INVALID,
-  //         ...typeError,
-  //       },
-  //       ...configLintConfigImportsSchemaResults.error.issues.map((e) => {
-  //         if (lintConfigImportsStaticErrorMessagesSet.has(e.message)) {
-  //           const staticErrorMessage =
-  //             /** @type {LintConfigImportsStaticErrorMessage} */ (e.message);
-  //           return /** @type {const} */ ({
-  //             message: staticErrorMessage,
-  //             status:
-  //               lintConfigImportsStaticErrorMessages_errorStatuses[
-  //                 staticErrorMessage
-  //               ],
-  //             ...typeError,
-  //           });
-  //         } else {
-  //           return /** @type {const} */ ({
-  //             message: errorNotStandardized,
-  //             status: ERROR_NOT_STANDARDIZED,
-  //             ...typeError,
-  //           });
-  //         }
-  //       }),
-  //     ],
-  //     ...successFalse,
-  //   });
-  // }
+  // Without `libraries`, returns a warning, and depending on the consumer, the warning is either an error (for `lutherts.comvar-readonly` ComVar Readonly) or a warning still (for `@comvar/core`, ignored with variations+data, erroring without to `CONFIG_EFFECTIVELY_EMPTY`).
+  if (!librariesSchemaResultsData) {
+    return makeSuccessFalseTypeWarning(
+      `WARNING. ${"The config is empty. Please provide the `variations` key in order to get started."}`,
+      "CONFIG_EMPTY",
+    );
+  }
 
-  // // Validates `config.myIgnoresOnly` (optional).
-  // const myIgnoresOnlyRawValue = config.myIgnoresOnly;
-  // const configMyIgnoresOnlySchemaResults = ConfigMyIgnoresOnlySchema.safeParse(
-  //   myIgnoresOnlyRawValue,
-  // );
-
-  // if (!configMyIgnoresOnlySchemaResults.success) {
-  //   return /** @type {const} */ ({
-  //     errors: [
-  //       {
-  //         message: `ERROR. ${myIgnoresOnlyCouldntZod}`,
-  //         status: MYIGNORESONLY_INVALID,
-  //         ...typeError,
-  //       },
-  //       ...configMyIgnoresOnlySchemaResults.error.issues.map((e) => {
-  //         if (myIgnoresOnlyStaticErrorMessagesSet.has(e.message)) {
-  //           const staticErrorMessage =
-  //             /** @type {MyIgnoresOnlyStaticErrorMessage} */ (e.message);
-  //           return /** @type {const} */ ({
-  //             message: staticErrorMessage,
-  //             status:
-  //               myIgnoresOnlyStaticErrorMessages_errorStatuses[
-  //                 staticErrorMessage
-  //               ],
-  //             ...typeError,
-  //           });
-  //         } else {
-  //           return /** @type {const} */ ({
-  //             message: errorNotStandardized,
-  //             status: ERROR_NOT_STANDARDIZED,
-  //             ...typeError,
-  //           });
-  //         }
-  //       }),
-  //     ],
-  //     ...successFalse,
-  //   });
-  // }
-
-  // // Validates `config.ignores` (optional).
-  // const ignoresRawValue = config.ignores;
-  // const configIgnoresSchemaResults =
-  //   ConfigIgnoresSchema.safeParse(ignoresRawValue);
-
-  // if (!configIgnoresSchemaResults.success) {
-  //   return /** @type {const} */ ({
-  //     errors: [
-  //       {
-  //         message: `ERROR. ${ignoresCouldntZod}`,
-  //         status: IGNORES_INVALID,
-  //         ...typeError,
-  //       },
-  //       ...configIgnoresSchemaResults.error.issues.map((e) => {
-  //         if (ignoresStaticErrorMessagesSet.has(e.message)) {
-  //           const staticErrorMessage =
-  //             /** @type {IgnoresStaticErrorMessage} */ (e.message);
-  //           return /** @type {const} */ ({
-  //             message: staticErrorMessage,
-  //             status:
-  //               ignoresStaticErrorMessages_errorStatuses[staticErrorMessage],
-  //             ...typeError,
-  //           });
-  //         } else {
-  //           return /** @type {const} */ ({
-  //             message: errorNotStandardized,
-  //             status: ERROR_NOT_STANDARDIZED,
-  //             ...typeError,
-  //           });
-  //         }
-  //       }),
-  //     ],
-  //     ...successFalse,
-  //   });
-  // }
-
-  // // Validates `config.composedVariablesExclusives` (optional).
-  // const composedVariablesExclusivesRawValue =
-  //   config.composedVariablesExclusives;
-  // const configComposedVariablesExclusivesSchemaResults =
-  //   ConfigComposedVariablesExclusivesSchema.safeParse(
-  //     composedVariablesExclusivesRawValue,
-  //   );
-
-  // if (!configComposedVariablesExclusivesSchemaResults.success) {
-  //   return /** @type {const} */ ({
-  //     errors: [
-  //       {
-  //         message: `ERROR. ${composedVariablesExclusivesCouldntZod}`,
-  //         status: COMPOSEDVARIABLESEXCLUSIVES_INVALID,
-  //         ...typeError,
-  //       },
-  //       ...configComposedVariablesExclusivesSchemaResults.error.issues.map(
-  //         (e) => {
-  //           if (
-  //             composedVariablesExclusivesStaticErrorMessagesSet.has(e.message)
-  //           ) {
-  //             const staticErrorMessage =
-  //               /** @type {ComposedVariablesExclusivesStaticErrorMessage} */ (
-  //                 e.message
-  //               );
-  //             return /** @type {const} */ ({
-  //               message: staticErrorMessage,
-  //               status:
-  //                 composedVariablesExclusivesStaticErrorMessages_errorStatuses[
-  //                   staticErrorMessage
-  //                 ],
-  //               ...typeError,
-  //             });
-  //           } else {
-  //             return /** @type {const} */ ({
-  //               message: errorNotStandardized,
-  //               status: ERROR_NOT_STANDARDIZED,
-  //               ...typeError,
-  //             });
-  //           }
-  //         },
-  //       ),
-  //     ],
-  //     ...successFalse,
-  //   });
-  // }
-
-  // // Retrieves the states of variations+data and libraries for branching.
-  // const variationsDataSchemaResultsData = variationsDataSchemaResults.data;
-  // const librariesSchemaResultsData = librariesSchemaResults.data;
-
-  // if (variationsDataSchemaResultsData.union === NEITHER) {
-  //   // variationsDataSchemaResultsData.variations // is undefined
-  //   // variationsDataSchemaResultsData.data // is undefined
-
-  //   if (!librariesSchemaResultsData) {
-  //     /* USAGE CASE 0: WITHOUT VARIATIONSDATA, WITHOUT LIBRARIES */
-  //     // If even libraries aren't provided, errors because of an effectively empty config. (It's an error and not a warning because it's a full stop: neither the CLI nor the extension are going to proceed after this.)
-
-  //     return makeSuccessFalseTypeError(
-  //       `ERROR. ${configEffectivelyEmpty}`,
-  //       configStaticErrorMessages_errorStatuses[configEffectivelyEmpty],
-  //     );
-  //   } else {
-  //     /* USAGE CASE 1: WITHOUT VARIATIONSDATA, WITH LIBRARIES */
-  //     // This is a "libraries only" scenario. In this branch, we don't need to handle variations and data, given that we already know them to be nonexistent. As such, we only resolve for the `config.libraries` key.
-  //   }
-  // } else {
-  //   // variationsDataSchemaResultsData.variations // is a record
-  //   // variationsDataSchemaResultsData.data // is a record
-
-  //   // Validates `config.variations` and `config.data` mutually.
-  //   const variationsDataRawValues = {
-  //     variations: variationsDataSchemaResultsData.variations,
-  //     data: variationsDataSchemaResultsData.data,
-  //   };
-
-  //   // ... and much more before branching anew.
-
-  //   if (!librariesSchemaResultsData) {
-  //     /* USAGE CASE 2: WITH VARIATIONSDATA, WITHOUT LIBRARIES */
-  //     // If libraries aren't provided, then this is a "variations+data only" scenario.
-  //     // In this case, we only treat variations and data.
-  //   } else {
-  //     /* USAGE CASE 3: WITH VARIATIONSDATA, WITH LIBRARIES */
-  //     // If libraries are also provided, then this is a "libraries & variations+data" scenario.
-  //     // In this case, we treat libraries, variations and data.
-  //   }
-  // }
+  // AND NOW WE CAN START RESOLVING LIBRARIES.
 
   return /** @type {const} */ ({
     ...successTrue,

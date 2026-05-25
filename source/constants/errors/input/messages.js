@@ -24,30 +24,6 @@ export const configMustBeObject = errorsInputMessages.configMustBeObject.value;
 export const configPreStaticErrorMessages = /** @type {const} */ ([
   configMustBeObject,
 ]);
-export const configStaticPreErrorMessagesSet = new Set(
+export const configPreStaticErrorMessagesSet = new Set(
   configPreStaticErrorMessages,
 );
-
-// /* messages for static errors - variations data (pre) */
-
-// export const variationsDataCouldntPreZod =
-//   errorsInputMessages.variationsDataCouldntPreZod.value;
-
-// // zod static error messages
-
-// export const variationsDataTogether =
-//   errorsInputMessages.variationsDataTogether.value;
-// export const variationsShouldBeObject =
-//   errorsInputMessages.variationsShouldBeObject.value;
-// export const dataShouldBeObject = errorsInputMessages.dataShouldBeObject.value;
-
-// // static error messages arrays and sets
-
-// export const variationsDataPreStaticErrorMessages = /** @type {const} */ ([
-//   variationsDataTogether,
-//   variationsShouldBeObject,
-//   dataShouldBeObject,
-// ]);
-// export const variationsDataPreStaticErrorMessagesSet = new Set(
-//   variationsDataPreStaticErrorMessages,
-// );

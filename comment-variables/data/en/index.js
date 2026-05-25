@@ -78,15 +78,15 @@ export const enData = Object.freeze({
           regexes: Object.freeze({
             public: Object.freeze({
               configDataKey:
-                "Ensures config `data` keys should only include lowercase letters (`Ll`), uppercase letters (`Lu`), other letters (`Lo`), dash punctuation (`Pd`), connector punctuation (`Pc`), numbers (`N`), and whitespaces (`s`).",
+                "Ensures config `data` keys should only include lowercase letters (`Ll`), uppercase letters (`Lu`), other letters (`Lo`), dash punctuation (`Pd`), connector punctuation (`Pc`), numbers (`N`), and whitespaces (`s`)." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATAKEY / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATAKEY */,
               configDataSubKey:
-                "Same as `configDataKeyRegex` but without lowercase letters (`Ll`) replaced by uppercase letters, and without dash punctuation (`Pd`), connector punctuation (`Pc`), and whitespaces (`s`) replaced by underscores (`_`).",
+                "Same as `configDataKeyRegex` but without lowercase letters (`Ll`) replaced by uppercase letters, and without dash punctuation (`Pd`), connector punctuation (`Pc`), and whitespaces (`s`) replaced by underscores (`_`)." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY */,
               flattenedConfigDataKey:
-                "Same as `configDataSubKeyRegex` but with the `#` character that links each subkey together.",
+                "Same as `configDataSubKeyRegex` but with the `#` character that links each subkey together." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY */,
               flattenedConfigDataPlaceholderLocal:
-                "Same as `flattenedConfigDataKeyRegex` but taking the prefix `$COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT` and its `#` into consideration, preventing two consecutive `#`'s, while removing the starting `^` and the ending `$` from the capture group.",
+                "Same as `flattenedConfigDataKeyRegex` but taking the prefix `$COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT` and its `#` into consideration, preventing two consecutive `#`'s, while removing the starting `^` and the ending `$` from the capture group." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL */,
               flattenedConfigDataPlaceholderGlobal:
-                "Same as `flattenedConfigDataPlaceholderLocalRegex` but globally.",
+                "Same as `flattenedConfigDataPlaceholderLocalRegex` but globally." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL */,
             }),
           }),
         }),

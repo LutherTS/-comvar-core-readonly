@@ -3,7 +3,7 @@ import { escapeRegex } from "@lutherts/error-handling";
 import { $COMMENT } from "./index.js";
 
 /**
- * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGKEY
+ * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATAKEY
  *
  * @example
  * `config key`
@@ -13,7 +13,7 @@ import { $COMMENT } from "./index.js";
 export const configDataKeyRegex = /^[\p{Ll}\p{Lu}\p{Lo}\p{Pd}\p{Pc}\p{N}\s]+$/u;
 
 /**
- * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#SUBKEY
+ * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY
  *
  * @example
  * `SUB_KEY`
@@ -23,7 +23,7 @@ export const configDataKeyRegex = /^[\p{Ll}\p{Lu}\p{Lo}\p{Pd}\p{Pc}\p{N}\s]+$/u;
 export const configDataSubKeyRegex = /^[\p{Lu}\p{Lo}\p{N}_]+$/u;
 
 /**
- * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGKEY
+ * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY
  *
  * @example
  * `FLATTENED#CONFIG#KEY`
@@ -33,7 +33,7 @@ export const configDataSubKeyRegex = /^[\p{Lu}\p{Lo}\p{N}_]+$/u;
 export const flattenedConfigDataKeyRegex = /^(?!#)[\p{Lu}\p{Lo}\p{N}_#]+$/u;
 
 /**
- * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGPLACEHOLDERLOCAL
+ * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL
  *
  * @example
  * `$COMMENT#FLATTENED#CONFIG#PLACEHOLDER#LOCAL#REGEX`
@@ -46,7 +46,7 @@ export const flattenedConfigDataPlaceholderLocalRegex = new RegExp(
 );
 
 /**
- * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGPLACEHOLDERGLOBAL
+ * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL
  *
  * @example
  * `$COMMENT#FLATTENED#CONFIG#PLACEHOLDER#GLOBAL#REGEX`

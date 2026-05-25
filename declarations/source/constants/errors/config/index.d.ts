@@ -6,6 +6,7 @@ export const librariesStaticErrorMessages_errorStatuses: Readonly<{
     "The config `libraries` key's record's records' values must only be strings (representing the actual values of the external libraries' Comment Variables keys these strings are paired with).": "LIBRARIES_RECORD_RECORDS_VALUES_NOT_STRINGS";
 }>;
 export const configStaticErrorMessages_errorStatuses: Readonly<{
+    "The config is empty. Please provide the `variations` key in order to get started.": "CONFIG_EMPTY";
     "The config's `libraries` key's value could not pass validation from zod.": "LIBRARIES_INVALID";
     "The config `libraries` key's value, if provided, should only be a record (representing library keys paired with their selected variations).": "LIBRARIES_NOT_RECORD";
     "The config `libraries` key's record has one or more keys that do not conform with the Comment Variables subkey (`COMMENTVARIABLES_SUBKEY`) format. This cannot happen when using a `libraryKey` obtained from a conform external library's resolved public Comment Variables data.": "LIBRARIES_NOT_SUBKEY_CONFORM";

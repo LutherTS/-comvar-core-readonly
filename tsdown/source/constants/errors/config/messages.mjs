@@ -1,5 +1,6 @@
 import { errorsConfigMessages } from "../../../comment-variables/index.mjs";
 //#region source/constants/errors/config/messages.js
+const configEmpty = errorsConfigMessages.configEmpty.value;
 const librariesCouldntZod = errorsConfigMessages.librariesCouldntZod.value;
 const librariesShouldBeRecord = errorsConfigMessages.librariesShouldBeRecord.value;
 const librariesMustSubKey = errorsConfigMessages.librariesMustSubKey.value;
@@ -14,4 +15,4 @@ const librariesStaticErrorMessagesSet = new Set([
 	librariesValuesMustBeStrings
 ]);
 //#endregion
-export { librariesCouldntZod, librariesMustKey, librariesMustSubKey, librariesRecordMustBeRecords, librariesShouldBeRecord, librariesStaticErrorMessagesSet, librariesValuesMustBeStrings };
+export { configEmpty, librariesCouldntZod, librariesMustKey, librariesMustSubKey, librariesRecordMustBeRecords, librariesShouldBeRecord, librariesStaticErrorMessagesSet, librariesValuesMustBeStrings };

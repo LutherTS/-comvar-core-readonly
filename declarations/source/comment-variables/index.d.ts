@@ -55,6 +55,10 @@ export const errors: {
     };
     config: {
         "messages": {
+            "configEmpty": {
+                "value": "The config is empty. Please provide the `variations` key in order to get started.";
+                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#CONFIGEMPTY";
+            };
             "librariesCouldntZod": {
                 "value": "The config's `libraries` key's value could not pass validation from zod.";
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESCOULDNTZOD";
@@ -81,6 +85,10 @@ export const errors: {
             };
         };
         "statuses": {
+            "CONFIG_EMPTY": {
+                "value": "\"The config is empty. Please provide the `variations` key in order to get started.\"";
+                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#CONFIG_EMPTY";
+            };
             "LIBRARIES_INVALID": {
                 "value": "\"The config's `libraries` key's value could not pass validation from zod.\"";
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_INVALID";
@@ -135,6 +143,10 @@ export const errorsInputMessages: {
     };
 };
 export const errorsConfigMessages: {
+    configEmpty: {
+        "value": "The config is empty. Please provide the `variations` key in order to get started.";
+        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#CONFIGEMPTY";
+    };
     librariesCouldntZod: {
         "value": "The config's `libraries` key's value could not pass validation from zod.";
         "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESCOULDNTZOD";

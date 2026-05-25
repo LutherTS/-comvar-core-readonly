@@ -2,9 +2,9 @@ import { DOT_JS } from "../source/constants/index.mjs";
 import { configCouldntPreZod, configModuleCouldntResolve, configPathSupposedToBeDotJs, configPathSupposedToBeString, configPreStaticErrorMessagesSet, noConfigFileFound } from "../source/constants/errors/input/messages.mjs";
 import { CONFIG_PRE_INVALID } from "../source/constants/errors/input/statuses.mjs";
 import { configPreStaticErrorMessages_errorStatuses, inputStaticErrorMessages_errorStatuses } from "../source/constants/errors/input/index.mjs";
-import { librariesCouldntZod, librariesStaticErrorMessagesSet } from "../source/constants/errors/config/messages.mjs";
+import { configEmpty, librariesCouldntZod, librariesStaticErrorMessagesSet } from "../source/constants/errors/config/messages.mjs";
 import { LIBRARIES_INVALID } from "../source/constants/errors/config/statuses.mjs";
-import { librariesStaticErrorMessages_errorStatuses } from "../source/constants/errors/config/index.mjs";
+import { configStaticErrorMessages_errorStatuses, librariesStaticErrorMessages_errorStatuses } from "../source/constants/errors/config/index.mjs";
 import { ERROR_NOT_STANDARDIZED, errorNotStandardized } from "../source/constants/errors/index.mjs";
 import { ConfigLibrariesSchema, ConfigPreSchema } from "../constants/schemas.mjs";
 import { freshImport } from "./fresh-import-a.mjs";
@@ -69,7 +69,7 @@ const resolveConfigReadonly = async (configPath) => {
 		})],
 		...successFalse
 	};
-	if (!librariesSchemaResults.data) return makeSuccessFalseTypeWarning(`WARNING. The config is empty. Please provide the \`variations\` key in order to get started.`, "CONFIG_EMPTY");
+	if (!librariesSchemaResults.data) return makeSuccessFalseTypeWarning(`WARNING. ${configEmpty}`, configStaticErrorMessages_errorStatuses[configEmpty]);
 	return { ...successTrue };
 };
 //#endregion

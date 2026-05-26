@@ -18,6 +18,8 @@ export const librariesRecordMustBeRecords =
 export const librariesMustKey = errorsConfigMessages.librariesMustKey.value;
 export const librariesValuesMustBeStrings =
   errorsConfigMessages.librariesValuesMustBeStrings.value;
+export const librariesValuesCannotBeEmptyStrings =
+  errorsConfigMessages.librariesValuesCannotBeEmptyStrings.value;
 
 // static error messages arrays and sets
 
@@ -27,6 +29,7 @@ export const librariesStaticErrorMessages = /** @type {const} */ ([
   librariesRecordMustBeRecords,
   librariesMustKey,
   librariesValuesMustBeStrings,
+  librariesValuesCannotBeEmptyStrings,
 ]);
 export const librariesStaticErrorMessagesSet = new Set(
   librariesStaticErrorMessages,

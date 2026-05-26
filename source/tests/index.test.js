@@ -22,6 +22,7 @@ import {
   librariesRecordMustBeRecords,
   librariesMustKey,
   librariesValuesMustBeStrings,
+  librariesValuesCannotBeEmptyStrings,
 } from "../constants/errors/config/messages.js";
 
 import {
@@ -67,6 +68,10 @@ const librariesKeyNotKeyPath = path.join(
 const librariesKeyNotStringsPath = path.join(
   currentDirectoryPath,
   "./configs/libraries-key-not-strings.js",
+);
+const librariesKeyEmptyStringsPath = path.join(
+  currentDirectoryPath,
+  "./configs/libraries-key-empty-strings.js",
 );
 
 const configSuccessEnPath = path.join(
@@ -186,6 +191,15 @@ describe(RESOLVE_CONFIG_READONLY, () => {
     assertFailureWithMessage(
       resolveConfigReadonlyResults,
       librariesValuesMustBeStrings,
+    );
+  });
+  it(`should fail if the config's \`${LIBRARIES}\` key's record's records' values are empty strings`, async () => {
+    const resolveConfigReadonlyResults = await resolveConfigReadonly(
+      librariesKeyEmptyStringsPath,
+    );
+    assertFailureWithMessage(
+      resolveConfigReadonlyResults,
+      librariesValuesCannotBeEmptyStrings,
     );
   });
 

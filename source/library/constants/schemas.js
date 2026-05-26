@@ -7,6 +7,7 @@ import {
   librariesRecordMustBeRecords,
   librariesMustKey,
   librariesValuesMustBeStrings,
+  librariesValuesCannotBeEmptyStrings,
 } from "../../constants/errors/config/messages.js";
 
 import {
@@ -34,9 +35,11 @@ export const ConfigLibrariesSchema = z
     z
       .record(
         z.string(),
-        z.string({
-          error: librariesValuesMustBeStrings,
-        }),
+        z
+          .string({
+            error: librariesValuesMustBeStrings,
+          })
+          .nonempty({ error: librariesValuesCannotBeEmptyStrings }),
         {
           error: librariesRecordMustBeRecords,
         },

@@ -84,6 +84,10 @@ export const resolvedConfigData: {
                                     "value": "The config `libraries` key's record's records' values must only be strings (representing the actual values of the external libraries' Comment Variables keys these strings are paired with).";
                                     "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESVALUESMUSTBESTRINGS";
                                 };
+                                "librariesValuesCannotBeEmptyStrings": {
+                                    "value": "The config `libraries` key's record's records' values cannot be empty strings.";
+                                    "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESVALUESCANNOTBEEMPTYSTRINGS";
+                                };
                             };
                             "statuses": {
                                 "LIBRARIES_INVALID": {
@@ -109,6 +113,10 @@ export const resolvedConfigData: {
                                 "LIBRARIES_RECORD_RECORDS_VALUES_NOT_STRINGS": {
                                     "value": "\"The config `libraries` key's record's records' values must only be strings (representing the actual values of the external libraries' Comment Variables keys these strings are paired with).\"";
                                     "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_RECORD_RECORDS_VALUES_NOT_STRINGS";
+                                };
+                                "LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_STRINGS": {
+                                    "value": "\"The config `libraries` key's record's records' values cannot be empty strings.\"";
+                                    "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_STRINGS";
                                 };
                             };
                         };

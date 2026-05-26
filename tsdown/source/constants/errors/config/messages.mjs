@@ -6,12 +6,14 @@ const librariesMustSubKey = errorsConfigMessages.librariesMustSubKey.value;
 const librariesRecordMustBeRecords = errorsConfigMessages.librariesRecordMustBeRecords.value;
 const librariesMustKey = errorsConfigMessages.librariesMustKey.value;
 const librariesValuesMustBeStrings = errorsConfigMessages.librariesValuesMustBeStrings.value;
+const librariesValuesCannotBeEmptyStrings = errorsConfigMessages.librariesValuesCannotBeEmptyStrings.value;
 const librariesStaticErrorMessagesSet = new Set([
 	librariesShouldBeRecord,
 	librariesMustSubKey,
 	librariesRecordMustBeRecords,
 	librariesMustKey,
-	librariesValuesMustBeStrings
+	librariesValuesMustBeStrings,
+	librariesValuesCannotBeEmptyStrings
 ]);
 //#endregion
-export { librariesCouldntZod, librariesMustKey, librariesMustSubKey, librariesRecordMustBeRecords, librariesShouldBeRecord, librariesStaticErrorMessagesSet, librariesValuesMustBeStrings };
+export { librariesCouldntZod, librariesMustKey, librariesMustSubKey, librariesRecordMustBeRecords, librariesShouldBeRecord, librariesStaticErrorMessagesSet, librariesValuesCannotBeEmptyStrings, librariesValuesMustBeStrings };

@@ -11,6 +11,7 @@ export const allStaticErrorMessages_errorStatuses: Readonly<{
     "The config `libraries` key's record's values must only be records as well (representing Comment Variables keys from external libraries paired with their actual values).": "LIBRARIES_RECORD_NOT_RECORDS";
     "The config `libraries` key's record's records' keys include one or more keys that do not conform with the Comment Variables key (`COMMENTVARIABLES#KEY`) format. This cannot happen when using a library variation `libraryVariations.<normalizedVariant>` obtained from a conform external library's resolved public Comment Variables data.": "LIBRARIES_NOT_KEY_CONFORM";
     "The config `libraries` key's record's records' values must only be strings (representing the actual values of the external libraries' Comment Variables keys these strings are paired with).": "LIBRARIES_RECORD_RECORDS_VALUES_NOT_STRINGS";
+    "The config `libraries` key's record's records' values cannot be empty strings.": "LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_STRINGS";
     "The error encountered is not standardized.": "ERROR_NOT_STANDARDIZED";
 }>;
 import { errorNotStandardized } from "@lutherts/error-handling";

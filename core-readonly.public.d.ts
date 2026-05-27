@@ -153,6 +153,7 @@ export declare function resolveConfigReadonly(configPath: string): Promise<{
     readonly success: true;
     readonly config: Record<string, unknown>;
     readonly libraries: Record<string, Record<string, string>> | null;
+    readonly sameReference: boolean;
 }>;
 
 export { }

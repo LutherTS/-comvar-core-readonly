@@ -77,9 +77,16 @@ const resolveConfigReadonly = async (configPath) => {
 		})],
 		...successFalse
 	};
+	const librariesSchemaResultsData = librariesSchemaResults.data ?? null;
+	let sameReference = false;
+	const supposedReferenceData = config.variations?.referenceData;
+	const supposedReferenceVariant = config.variations?.referenceVariant;
+	const supposedReferenceVariantData = config.data?.[supposedReferenceVariant];
+	if (supposedReferenceData && supposedReferenceVariantData && supposedReferenceData === supposedReferenceVariantData) sameReference = true;
 	return {
 		config,
-		libraries: librariesSchemaResults.data ?? null,
+		libraries: librariesSchemaResultsData,
+		sameReference,
 		...successTrue
 	};
 };

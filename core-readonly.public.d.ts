@@ -37,7 +37,7 @@ export declare const commentVariablesData: {
  * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATAKEY
  *
  * @example
- * `config key`
+ * `config data-key`
  *
  * @public
  */
@@ -47,7 +47,7 @@ export declare const configDataKeyRegex: RegExp;
  * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY
  *
  * @example
- * `SUB_KEY`
+ * `CONFIG_DATA_SUB_KEY`
  *
  * @public
  */
@@ -57,7 +57,7 @@ export declare const configDataSubKeyRegex: RegExp;
  * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY
  *
  * @example
- * `FLATTENED#CONFIG#KEY`
+ * `FLATTENED#CONFIG#DATA#KEY`
  *
  * @public
  */
@@ -67,7 +67,7 @@ export declare const flattenedConfigDataKeyRegex: RegExp;
  * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL
  *
  * @example
- * `$COMMENT#FLATTENED#CONFIG#PLACEHOLDER#GLOBAL#REGEX`
+ * `$COMMENT#FLATTENED#CONFIG#DATA#PLACEHOLDER#GLOBAL#REGEX`
  *
  * @public
  */
@@ -77,7 +77,7 @@ export declare const flattenedConfigDataPlaceholderGlobalRegex: RegExp;
  * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL
  *
  * @example
- * `$COMMENT#FLATTENED#CONFIG#PLACEHOLDER#LOCAL#REGEX`
+ * `$COMMENT#FLATTENED#CONFIG#DATA#PLACEHOLDER#LOCAL#REGEX`
  *
  * @public
  */

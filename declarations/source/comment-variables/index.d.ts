@@ -195,6 +195,26 @@ export const composedVariablesExclusives: {
             "value": "sameReference";
             "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#SAMEREFERENCE";
         };
+        "configDataKeyRegex": {
+            "value": "configDataKeyRegex";
+            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#CONFIGDATAKEYREGEX";
+        };
+        "configDataSubKeyRegex": {
+            "value": "configDataSubKeyRegex";
+            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#CONFIGDATASUBKEYREGEX";
+        };
+        "flattenedConfigDataKeyRegex": {
+            "value": "flattenedConfigDataKeyRegex";
+            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAKEYREGEX";
+        };
+        "flattenedConfigDataPlaceholderLocalRegex": {
+            "value": "flattenedConfigDataPlaceholderLocalRegex";
+            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAPLACEHOLDERLOCALREGEX";
+        };
+        "flattenedConfigDataPlaceholderGlobalRegex": {
+            "value": "flattenedConfigDataPlaceholderGlobalRegex";
+            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAPLACEHOLDERGLOBALREGEX";
+        };
     };
     arguments: {
         "configPath": {

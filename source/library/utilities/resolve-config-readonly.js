@@ -173,9 +173,26 @@ export const resolveConfigReadonly = async (
 
   const librariesSchemaResultsData = librariesSchemaResults.data ?? null;
 
+  // Assesses whether or not the config `variations.referenceData` and its `data[`variations.referenceVariant`]` have the same reference, guaranteeing their ultimate similarity (since they would both be pointing to the same object).
+
+  let sameReference = false;
+
+  const supposedReferenceData = config.variations?.referenceData;
+
+  const supposedReferenceVariant = config.variations?.referenceVariant;
+  const supposedReferenceVariantData = config.data?.[supposedReferenceVariant];
+
+  if (
+    supposedReferenceData &&
+    supposedReferenceVariantData &&
+    supposedReferenceData === supposedReferenceVariantData
+  )
+    sameReference = true;
+
   return /** @type {const} */ ({
     config,
     libraries: librariesSchemaResultsData,
+    sameReference,
     ...successTrue,
   });
 };

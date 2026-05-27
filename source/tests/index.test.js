@@ -92,6 +92,15 @@ const configOtherThanLibrariesPath = path.join(
   "./configs/config-other-than-l.js",
 );
 
+const configSuccessSameWith = path.join(
+  currentDirectoryPath,
+  "./configs/success-same-with.js",
+);
+const configSuccessSameWithout = path.join(
+  currentDirectoryPath,
+  "./configs/success-same-without.js",
+);
+
 describe(RESOLVE_CONFIG_READONLY, () => {
   // initial tests
 
@@ -209,6 +218,8 @@ describe(RESOLVE_CONFIG_READONLY, () => {
     assert.strictEqual(resolveConfigReadonlyResults.success, true);
     assert.strictEqual(!!resolveConfigReadonlyResults.config, true);
     assert.strictEqual(!!resolveConfigReadonlyResults.libraries, true);
+
+    assert.strictEqual(resolveConfigReadonlyResults.sameReference, false);
   });
   it(`should succeed here (with FR data)`, async () => {
     const resolveConfigReadonlyResults =
@@ -216,6 +227,8 @@ describe(RESOLVE_CONFIG_READONLY, () => {
     assert.strictEqual(resolveConfigReadonlyResults.success, true);
     assert.strictEqual(!!resolveConfigReadonlyResults.config, true);
     assert.strictEqual(!!resolveConfigReadonlyResults.libraries, true);
+
+    assert.strictEqual(resolveConfigReadonlyResults.sameReference, false);
   });
 
   it(`should succeed here if the config is empty`, async () => {
@@ -224,6 +237,8 @@ describe(RESOLVE_CONFIG_READONLY, () => {
     assert.strictEqual(resolveConfigReadonlyResults.success, true);
     assert.strictEqual(!!resolveConfigReadonlyResults.config, true);
     assert.strictEqual(resolveConfigReadonlyResults.libraries, null);
+
+    assert.strictEqual(resolveConfigReadonlyResults.sameReference, false);
   });
 
   it(`should succeed here if the config has other keys than \`${LIBRARIES}\` without \`${LIBRARIES}\``, async () => {
@@ -233,5 +248,29 @@ describe(RESOLVE_CONFIG_READONLY, () => {
     assert.strictEqual(resolveConfigReadonlyResults.success, true);
     assert.strictEqual(!!resolveConfigReadonlyResults.config, true);
     assert.strictEqual(resolveConfigReadonlyResults.libraries, null);
+
+    assert.strictEqual(resolveConfigReadonlyResults.sameReference, false);
+  });
+
+  it(`should succeed here with \`sameReference\` being true along with \`${LIBRARIES}\`'s presence`, async () => {
+    const resolveConfigReadonlyResults = await resolveConfigReadonly(
+      configSuccessSameWith,
+    );
+    assert.strictEqual(resolveConfigReadonlyResults.success, true);
+    assert.strictEqual(!!resolveConfigReadonlyResults.config, true);
+    assert.strictEqual(!!resolveConfigReadonlyResults.libraries, true);
+
+    assert.strictEqual(resolveConfigReadonlyResults.sameReference, true);
+  });
+
+  it(`should succeed here with \`sameReference\` being true along with \`${LIBRARIES}\`'s absence`, async () => {
+    const resolveConfigReadonlyResults = await resolveConfigReadonly(
+      configSuccessSameWithout,
+    );
+    assert.strictEqual(resolveConfigReadonlyResults.success, true);
+    assert.strictEqual(!!resolveConfigReadonlyResults.config, true);
+    assert.strictEqual(!!resolveConfigReadonlyResults.libraries, false);
+
+    assert.strictEqual(resolveConfigReadonlyResults.sameReference, true);
   });
 });

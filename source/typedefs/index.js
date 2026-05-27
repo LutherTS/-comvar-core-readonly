@@ -7,6 +7,10 @@ import { librariesStaticErrorMessages } from "../constants/errors/config/message
 import { librariesStaticErrorStatuses } from "../constants/errors/config/statuses.js";
 
 /**
+ * @typedef {typeof resolveConfigReadonly} ResolveConfigReadonly
+ */
+
+/**
  * @typedef {ReturnType<typeof resolveConfigReadonly>} ResolveConfigReadonlyReturnType
  */
 /**

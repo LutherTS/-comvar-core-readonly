@@ -166,7 +166,15 @@ export const enData = Object.freeze({
         "$COMMENT" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT */,
       libraries:
         "libraries" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES */,
-      sameReference: "sameReference" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#SAMEREFERENCE / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#SAMEREFERENCE */,
+      sameReference:
+        "sameReference" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#SAMEREFERENCE / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#SAMEREFERENCE */,
+      configDataKeyRegex: "configDataKeyRegex",
+      configDataSubKeyRegex: "configDataSubKeyRegex",
+      flattenedConfigDataKeyRegex: "flattenedConfigDataKeyRegex",
+      flattenedConfigDataPlaceholderLocalRegex:
+        "flattenedConfigDataPlaceholderLocalRegex",
+      flattenedConfigDataPlaceholderGlobalRegex:
+        "flattenedConfigDataPlaceholderGlobalRegex",
     }),
     arguments: Object.freeze({
       configPath:

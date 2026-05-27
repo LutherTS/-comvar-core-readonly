@@ -30,7 +30,7 @@
     "prepare": "npm run types && npm run doc && npm run api && npm run build && npm run test"
   },
   "dependencies": {
-    "@lutherts/error-handling": "file:packages/lutherts-error-handling-0.1.5.tgz",
+    "@lutherts/error-handling": "file:packages/lutherts-error-handling-0.1.6.tgz",
     "zod": "^4.4.3"
   },
   "devDependencies": {

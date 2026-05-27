@@ -1,4 +1,12 @@
-import { resolveConfigReadonly } from "../library/index.js";
+import {
+  resolveConfigReadonly,
+  $COMMENT,
+  configDataKeyRegex,
+  configDataSubKeyRegex,
+  flattenedConfigDataKeyRegex,
+  flattenedConfigDataPlaceholderLocalRegex,
+  flattenedConfigDataPlaceholderGlobalRegex,
+} from "../library/index.js";
 
 import { allStaticErrorMessages_errorStatuses } from "../constants/errors/index.js";
 import { configPreStaticErrorMessages } from "../constants/errors/input/messages.js";
@@ -29,4 +37,24 @@ import { librariesStaticErrorStatuses } from "../constants/errors/config/statuse
  */
 /**
  * @typedef {typeof librariesStaticErrorStatuses[number]} LibrariesStaticErrorStatus
+ */
+
+/**
+ * @typedef {typeof $COMMENT} _COMMENTType
+ */
+
+/**
+ * @typedef {typeof configDataKeyRegex} ConfigDataKeyRegex
+ */
+/**
+ * @typedef {typeof configDataSubKeyRegex} ConfigDataSubKeyRegex
+ */
+/**
+ * @typedef {typeof flattenedConfigDataKeyRegex} FlattenedConfigDataKeyRegex
+ */
+/**
+ * @typedef {typeof flattenedConfigDataPlaceholderLocalRegex} FlattenedConfigDataPlaceholderLocalRegex
+ */
+/**
+ * @typedef {typeof flattenedConfigDataPlaceholderGlobalRegex} FlattenedConfigDataPlaceholderGlobalRegex
  */

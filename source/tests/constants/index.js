@@ -18,6 +18,8 @@ export const SAMEREFERENCE =
 
 /* secondary export names */
 
+export const _COMMENT = composedVariablesExclusives.variables._COMMENT.value;
+
 export const CONFIG_DATA_KEY_REGEX =
   composedVariablesExclusives.variables.configDataKeyRegex.value;
 export const CONFIG_DATA_SUBKEY_REGEX =

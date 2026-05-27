@@ -29,6 +29,7 @@ import {
   RESOLVE_CONFIG_READONLY,
   CONFIG_PATH,
   LIBRARIES,
+  SAMEREFERENCE,
 } from "./constants/index.js";
 
 import {
@@ -252,7 +253,7 @@ describe(RESOLVE_CONFIG_READONLY, () => {
     assert.strictEqual(resolveConfigReadonlyResults.sameReference, false);
   });
 
-  it(`should succeed here with \`sameReference\` being true along with \`${LIBRARIES}\`'s presence`, async () => {
+  it(`should succeed here with \`${SAMEREFERENCE}\` being true along with \`${LIBRARIES}\`'s presence`, async () => {
     const resolveConfigReadonlyResults = await resolveConfigReadonly(
       configSuccessSameWith,
     );
@@ -263,7 +264,7 @@ describe(RESOLVE_CONFIG_READONLY, () => {
     assert.strictEqual(resolveConfigReadonlyResults.sameReference, true);
   });
 
-  it(`should succeed here with \`sameReference\` being true along with \`${LIBRARIES}\`'s absence`, async () => {
+  it(`should succeed here with \`${SAMEREFERENCE}\` being true along with \`${LIBRARIES}\`'s absence`, async () => {
     const resolveConfigReadonlyResults = await resolveConfigReadonly(
       configSuccessSameWithout,
     );

@@ -13,3 +13,5 @@ export const CONFIG_PATH =
   composedVariablesExclusives.arguments.configPath.value;
 
 export const LIBRARIES = composedVariablesExclusives.variables.libraries.value;
+export const SAMEREFERENCE =
+  composedVariablesExclusives.variables.sameReference.value;

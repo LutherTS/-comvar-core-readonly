@@ -261,6 +261,10 @@ export const resolvedConfigData: {
                     "value": "libraries";
                     "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES";
                 };
+                "sameReference": {
+                    "value": "sameReference";
+                    "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#SAMEREFERENCE";
+                };
             };
             "arguments": {
                 "configPath": {

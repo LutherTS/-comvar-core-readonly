@@ -252,6 +252,10 @@ export const resolvedConfigData: {
                     "value": "resolveConfigReadonly";
                     "key": "EN#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIGREADONLY";
                 };
+                "defaultConfigFileName": {
+                    "value": "defaultConfigFileName";
+                    "key": "EN#FORCOMPOSEDVARIABLES#VARIABLES#DEFAULTCONFIGFILENAME";
+                };
             };
             "arguments": {};
         };

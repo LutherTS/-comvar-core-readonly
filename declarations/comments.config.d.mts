@@ -129,6 +129,10 @@ export const resolvedConfigData: {
                                 "value": "The absolute prefix for every single Comment Variables placeholder.";
                                 "key": "EN#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT";
                             };
+                            "defaultConfigFileName": {
+                                "value": "The default file name considered at the project's root directory for the Comment Variables config.";
+                                "key": "EN#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME";
+                            };
                         };
                         "MODULE_TO_LOAD": {
                             "value": "The shared `env` between `fresh-import-a.js` and `fresh-import-b.js` for the `freshImport` utility.";
@@ -257,6 +261,10 @@ export const resolvedConfigData: {
                     "value": "$COMMENT";
                     "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT";
                 };
+                "defaultConfigFileName": {
+                    "value": "comments.config.js";
+                    "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#DEFAULTCONFIGFILENAME";
+                };
                 "libraries": {
                     "value": "libraries";
                     "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES";
@@ -355,6 +363,10 @@ export const resolvedConfigData: {
                             "_COMMENT": {
                                 "value": "Le pr\u00E9fixe absolu de tout et chaque substitut Comment Variables.";
                                 "key": "FR#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT";
+                            };
+                            "defaultConfigFileName": {
+                                "value": "Le nom de fichier consid\u00E9r\u00E9 par d\u00E9faut au dossier racine du projet pour la config de Comment Variables.";
+                                "key": "FR#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME";
                             };
                         };
                         "regexes": {

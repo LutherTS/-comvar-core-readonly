@@ -3,6 +3,7 @@ import { describe } from "node:test";
 import {
   resolveConfigReadonly,
   $COMMENT,
+  defaultConfigFileName,
   configDataKeyRegex,
   configDataSubKeyRegex,
   flattenedConfigDataKeyRegex,
@@ -20,6 +21,7 @@ import { inputOperationsSuite } from "./suites/input-operations/index.js";
 import { configValidationsSuite } from "./suites/config-validations/index.js";
 import { configOperationsSuite } from "./suites/config-operations/index.js";
 import { $COMMENTSuite } from "./suites/_comment/index.js";
+import { defaultConfigFileNameSuite } from "./suites/default-config-file-name/index.js";
 import { regexSuites } from "./suites/regexes/index.js";
 
 describe(RESOLVE_CONFIG_READONLY, () => {
@@ -39,8 +41,9 @@ describe(RESOLVE_CONFIG_READONLY, () => {
   configOperationsSuite(resolveConfigReadonly);
 });
 
-// $COMMENT tests
+// constants tests
 $COMMENTSuite($COMMENT);
+defaultConfigFileNameSuite(defaultConfigFileName);
 
 // regex tests
 regexSuites(

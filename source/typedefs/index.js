@@ -1,6 +1,7 @@
 import {
   resolveConfigReadonly,
   $COMMENT,
+  defaultConfigFileName,
   configDataKeyRegex,
   configDataSubKeyRegex,
   flattenedConfigDataKeyRegex,
@@ -41,6 +42,9 @@ import { librariesStaticErrorStatuses } from "../constants/errors/config/statuse
 
 /**
  * @typedef {typeof $COMMENT} _COMMENTType
+ */
+/**
+ * @typedef {typeof defaultConfigFileName} DefaultConfigFileName
  */
 
 /**

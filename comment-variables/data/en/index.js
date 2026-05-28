@@ -76,6 +76,8 @@ export const enData = Object.freeze({
           public: Object.freeze({
             _COMMENT:
               "The absolute prefix for every single $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#COMMENTVARIABLES placeholder." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT */,
+            defaultConfigFileName:
+              "The default file name considered at the project's root directory for the $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#COMMENTVARIABLES config." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME */,
           }),
           MODULE_TO_LOAD:
             "The shared `env` between `fresh-import-a.js` and `fresh-import-b.js` for the `freshImport` utility." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#MODULE_TO_LOAD / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#MODULE_TO_LOAD */,
@@ -157,6 +159,7 @@ export const enData = Object.freeze({
     variables: Object.freeze({
       resolveConfigReadonly:
         "resolveConfigReadonly" /* variations: $COMMENT#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIGREADONLY / core: $COMMENT#EN#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIGREADONLY */,
+      defaultConfigFileName: "defaultConfigFileName" /* variations: $COMMENT#FORCOMPOSEDVARIABLES#VARIABLES#DEFAULTCONFIGFILENAME / core: $COMMENT#EN#FORCOMPOSEDVARIABLES#VARIABLES#DEFAULTCONFIGFILENAME */,
     }),
     arguments: Object.freeze({}),
   }),
@@ -164,17 +167,22 @@ export const enData = Object.freeze({
     variables: Object.freeze({
       _COMMENT:
         "$COMMENT" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT */,
+      defaultConfigFileName:
+        "comments.config.js" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#DEFAULTCONFIGFILENAME / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#DEFAULTCONFIGFILENAME */,
       libraries:
         "libraries" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES */,
       sameReference:
         "sameReference" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#SAMEREFERENCE / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#SAMEREFERENCE */,
-      configDataKeyRegex: "configDataKeyRegex",
-      configDataSubKeyRegex: "configDataSubKeyRegex",
-      flattenedConfigDataKeyRegex: "flattenedConfigDataKeyRegex",
+      configDataKeyRegex:
+        "configDataKeyRegex" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#CONFIGDATAKEYREGEX / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#CONFIGDATAKEYREGEX */,
+      configDataSubKeyRegex:
+        "configDataSubKeyRegex" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#CONFIGDATASUBKEYREGEX / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#CONFIGDATASUBKEYREGEX */,
+      flattenedConfigDataKeyRegex:
+        "flattenedConfigDataKeyRegex" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAKEYREGEX / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAKEYREGEX */,
       flattenedConfigDataPlaceholderLocalRegex:
-        "flattenedConfigDataPlaceholderLocalRegex",
+        "flattenedConfigDataPlaceholderLocalRegex" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAPLACEHOLDERLOCALREGEX / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAPLACEHOLDERLOCALREGEX */,
       flattenedConfigDataPlaceholderGlobalRegex:
-        "flattenedConfigDataPlaceholderGlobalRegex",
+        "flattenedConfigDataPlaceholderGlobalRegex" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAPLACEHOLDERGLOBALREGEX / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAPLACEHOLDERGLOBALREGEX */,
     }),
     arguments: Object.freeze({
       configPath:

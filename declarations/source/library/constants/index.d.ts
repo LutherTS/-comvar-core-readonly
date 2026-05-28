@@ -3,4 +3,9 @@
  * @public
  */
 export const $COMMENT: "$COMMENT";
+/**
+ * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME
+ * @public
+ */
+export const defaultConfigFileName: "comments.config.js";
 export const MODULE_TO_LOAD: "MODULE_TO_LOAD";

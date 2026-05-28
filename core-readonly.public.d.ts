@@ -10,6 +10,7 @@ export declare const commentVariablesData: {
     "libraryVariations": {
         "EN": {
             "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT": "The absolute prefix for every single Comment Variables placeholder.";
+            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME": "The default file name considered at the project's root directory for the Comment Variables config.";
             "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATAKEY": "Ensures config `data` keys should only include lowercase letters (`Ll`), uppercase letters (`Lu`), other letters (`Lo`), dash punctuation (`Pd`), connector punctuation (`Pc`), numbers (`N`), and whitespaces (`s`).";
             "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY": "Same as `configDataKeyRegex` but without lowercase letters (`Ll`) replaced by uppercase letters, and without dash punctuation (`Pd`), connector punctuation (`Pc`), and whitespaces (`s`) replaced by underscores (`_`).";
             "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY": "Same as `configDataSubKeyRegex` but with the `#` character that links each subkey together.";
@@ -21,6 +22,7 @@ export declare const commentVariablesData: {
         };
         "FR": {
             "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT": "Le pr\u00E9fixe absolu de tout et chaque substitut Comment Variables.";
+            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME": "Le nom de fichier consid\u00E9r\u00E9 par d\u00E9faut au dossier racine du projet pour la config de Comment Variables.";
             "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATAKEY": "S'assure que les cl\u00E9s `data` de la config ne doivent inclure que des lettres minuscules (`Ll`), lettres majuscules (`Lu`), d'autres lettres (`Lo`), de la ponctuation tiret (`Pd`), ponctuation connecteur (`Pc`), des chiffres (`N`) et des caract\u00E8res d'espacement (`s`).";
             "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY": "Pareil que `configDataKeyRegex` mais sans les lettres minuscules (`Ll`), et sans ponctuation tiret (`Pd`), ponctuation connecteur (`Pc`) et caract\u00E8res d'espacement (`s`) remplac\u00E9s par des tirets bas (`_`).";
             "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY": "Pareil que `configDataSubKeyRegex` mais sans le caract\u00E8re `#` qui connecte les sous-cl\u00E9s les unes aux autres.";
@@ -52,6 +54,12 @@ export declare const configDataKeyRegex: RegExp;
  * @public
  */
 export declare const configDataSubKeyRegex: RegExp;
+
+/**
+ * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME
+ * @public
+ */
+export declare const defaultConfigFileName: "comments.config.js";
 
 /**
  * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY

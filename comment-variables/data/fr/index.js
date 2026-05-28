@@ -8,6 +8,8 @@ export const frData = Object.freeze({
           public: Object.freeze({
             _COMMENT:
               "Le préfixe absolu de tout et chaque substitut $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#COMMENTVARIABLES." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT / core: $COMMENT#FR#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT */,
+            defaultConfigFileName:
+              "Le nom de fichier considéré par défaut au dossier racine du projet pour la config de $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#COMMENTVARIABLES." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME / core: $COMMENT#FR#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME */,
           }),
           regexes: Object.freeze({
             public: Object.freeze({

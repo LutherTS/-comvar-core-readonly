@@ -21,6 +21,8 @@ export const SAMEREFERENCE =
 export const _COMMENT = composedVariablesExclusives.variables._COMMENT.value;
 export const DEFAULT_CONFIG_FILE_NAME =
   forComposedVariables.variables.defaultConfigFileName.value;
+export const PACKAGE_JSON_FILE_NAME =
+  forComposedVariables.variables.packageJsonFileName.value;
 
 export const CONFIG_DATA_KEY_REGEX =
   composedVariablesExclusives.variables.configDataKeyRegex.value;

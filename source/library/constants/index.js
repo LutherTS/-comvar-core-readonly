@@ -15,6 +15,13 @@ export const $COMMENT = composedVariablesExclusives.variables._COMMENT.value;
 export const defaultConfigFileName =
   composedVariablesExclusives.variables.defaultConfigFileName.value;
 
+/**
+ * $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#PACKAGEJSONFILENAME
+ * @public
+ */
+export const packageJsonFileName =
+  composedVariablesExclusives.variables.packageJsonFileName.value;
+
 /* process environments */
 
 /** $COMMENT#TSDOC#SRC#LIB#CONSTS#MODULE_TO_LOAD */

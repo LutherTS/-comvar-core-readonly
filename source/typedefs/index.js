@@ -2,6 +2,7 @@ import {
   resolveConfigReadonly,
   $COMMENT,
   defaultConfigFileName,
+  packageJsonFileName,
   configDataKeyRegex,
   configDataSubKeyRegex,
   flattenedConfigDataKeyRegex,
@@ -45,6 +46,9 @@ import { librariesStaticErrorStatuses } from "../constants/errors/config/statuse
  */
 /**
  * @typedef {typeof defaultConfigFileName} DefaultConfigFileName
+ */
+/**
+ * @typedef {typeof packageJsonFileName} PackageJsonFileName
  */
 
 /**

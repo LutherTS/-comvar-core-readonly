@@ -78,6 +78,8 @@ export const enData = Object.freeze({
               "The absolute prefix for every single $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#COMMENTVARIABLES placeholder." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT */,
             defaultConfigFileName:
               "The default file name considered at the project's root directory for the $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#COMMENTVARIABLES config." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME */,
+            packageJsonFileName:
+              "Useful to watch in order to refresh the Comment Variables config for `libraries` every time the project's `package.json` is updated (but not when it's created or deleted)." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#PACKAGEJSONFILENAME / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#PUBLIC#PACKAGEJSONFILENAME */,
           }),
           MODULE_TO_LOAD:
             "The shared `env` between `fresh-import-a.js` and `fresh-import-b.js` for the `freshImport` utility." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#MODULE_TO_LOAD / core: $COMMENT#EN#TSDOC#SRC#LIB#CONSTS#MODULE_TO_LOAD */,
@@ -159,7 +161,9 @@ export const enData = Object.freeze({
     variables: Object.freeze({
       resolveConfigReadonly:
         "resolveConfigReadonly" /* variations: $COMMENT#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIGREADONLY / core: $COMMENT#EN#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIGREADONLY */,
-      defaultConfigFileName: "defaultConfigFileName" /* variations: $COMMENT#FORCOMPOSEDVARIABLES#VARIABLES#DEFAULTCONFIGFILENAME / core: $COMMENT#EN#FORCOMPOSEDVARIABLES#VARIABLES#DEFAULTCONFIGFILENAME */,
+      defaultConfigFileName:
+        "defaultConfigFileName" /* variations: $COMMENT#FORCOMPOSEDVARIABLES#VARIABLES#DEFAULTCONFIGFILENAME / core: $COMMENT#EN#FORCOMPOSEDVARIABLES#VARIABLES#DEFAULTCONFIGFILENAME */,
+      packageJsonFileName: "packageJsonFileName" /* variations: $COMMENT#FORCOMPOSEDVARIABLES#VARIABLES#PACKAGEJSONFILENAME / core: $COMMENT#EN#FORCOMPOSEDVARIABLES#VARIABLES#PACKAGEJSONFILENAME */,
     }),
     arguments: Object.freeze({}),
   }),
@@ -169,6 +173,7 @@ export const enData = Object.freeze({
         "$COMMENT" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT */,
       defaultConfigFileName:
         "comments.config.js" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#DEFAULTCONFIGFILENAME / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#DEFAULTCONFIGFILENAME */,
+      packageJsonFileName: "package.json" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#PACKAGEJSONFILENAME / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#PACKAGEJSONFILENAME */,
       libraries:
         "libraries" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES */,
       sameReference:

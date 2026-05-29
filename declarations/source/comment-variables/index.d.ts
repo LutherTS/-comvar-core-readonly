@@ -182,6 +182,10 @@ export const forComposedVariables: {
             "value": "defaultConfigFileName";
             "key": "EN#FORCOMPOSEDVARIABLES#VARIABLES#DEFAULTCONFIGFILENAME";
         };
+        "packageJsonFileName": {
+            "value": "packageJsonFileName";
+            "key": "EN#FORCOMPOSEDVARIABLES#VARIABLES#PACKAGEJSONFILENAME";
+        };
     };
     arguments: {};
 };
@@ -194,6 +198,10 @@ export const composedVariablesExclusives: {
         "defaultConfigFileName": {
             "value": "comments.config.js";
             "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#DEFAULTCONFIGFILENAME";
+        };
+        "packageJsonFileName": {
+            "value": "package.json";
+            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#PACKAGEJSONFILENAME";
         };
         "libraries": {
             "value": "libraries";

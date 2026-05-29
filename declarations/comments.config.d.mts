@@ -133,6 +133,10 @@ export const resolvedConfigData: {
                                 "value": "The default file name considered at the project's root directory for the Comment Variables config.";
                                 "key": "EN#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME";
                             };
+                            "packageJsonFileName": {
+                                "value": "Useful to watch in order to refresh the Comment Variables config for `libraries` every time the project's `package.json` is updated (but not when it's created or deleted).";
+                                "key": "EN#TSDOC#SRC#LIB#CONSTS#PUBLIC#PACKAGEJSONFILENAME";
+                            };
                         };
                         "MODULE_TO_LOAD": {
                             "value": "The shared `env` between `fresh-import-a.js` and `fresh-import-b.js` for the `freshImport` utility.";
@@ -256,6 +260,10 @@ export const resolvedConfigData: {
                     "value": "defaultConfigFileName";
                     "key": "EN#FORCOMPOSEDVARIABLES#VARIABLES#DEFAULTCONFIGFILENAME";
                 };
+                "packageJsonFileName": {
+                    "value": "packageJsonFileName";
+                    "key": "EN#FORCOMPOSEDVARIABLES#VARIABLES#PACKAGEJSONFILENAME";
+                };
             };
             "arguments": {};
         };
@@ -268,6 +276,10 @@ export const resolvedConfigData: {
                 "defaultConfigFileName": {
                     "value": "comments.config.js";
                     "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#DEFAULTCONFIGFILENAME";
+                };
+                "packageJsonFileName": {
+                    "value": "package.json";
+                    "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#PACKAGEJSONFILENAME";
                 };
                 "libraries": {
                     "value": "libraries";
@@ -371,6 +383,10 @@ export const resolvedConfigData: {
                             "defaultConfigFileName": {
                                 "value": "Le nom de fichier consid\u00E9r\u00E9 par d\u00E9faut au dossier racine du projet pour la config de Comment Variables.";
                                 "key": "FR#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME";
+                            };
+                            "packageJsonFileName": {
+                                "value": "Particuli\u00E8rement utile \u00E0 surveiller afin de rafra\u00EEchir la config Comment Variables pour ses `libraries` \u00E0 chaque fois que le `package.json` du projet est mis \u00E0 jour (ignorant cr\u00E9ations et suppressions).";
+                                "key": "FR#TSDOC#SRC#LIB#CONSTS#PUBLIC#PACKAGEJSONFILENAME";
                             };
                         };
                         "regexes": {

@@ -7,6 +7,7 @@ export type LibrariesStaticErrorMessage = (typeof librariesStaticErrorMessages)[
 export type LibrariesStaticErrorStatus = (typeof librariesStaticErrorStatuses)[number];
 export type _COMMENTType = typeof $COMMENT;
 export type DefaultConfigFileName = typeof defaultConfigFileName;
+export type PackageJsonFileName = typeof packageJsonFileName;
 export type ConfigDataKeyRegex = typeof configDataKeyRegex;
 export type ConfigDataSubKeyRegex = typeof configDataSubKeyRegex;
 export type FlattenedConfigDataKeyRegex = typeof flattenedConfigDataKeyRegex;
@@ -20,6 +21,7 @@ import { librariesStaticErrorMessages } from "../constants/errors/config/message
 import { librariesStaticErrorStatuses } from "../constants/errors/config/statuses.js";
 import { $COMMENT } from "../library/index.js";
 import { defaultConfigFileName } from "../library/index.js";
+import { packageJsonFileName } from "../library/index.js";
 import { configDataKeyRegex } from "../library/index.js";
 import { configDataSubKeyRegex } from "../library/index.js";
 import { flattenedConfigDataKeyRegex } from "../library/index.js";

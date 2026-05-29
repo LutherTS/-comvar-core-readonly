@@ -10,7 +10,12 @@ const $COMMENT = composedVariablesExclusives.variables._COMMENT.value;
 * @public
 */
 const defaultConfigFileName = composedVariablesExclusives.variables.defaultConfigFileName.value;
+/**
+* $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#PACKAGEJSONFILENAME
+* @public
+*/
+const packageJsonFileName = composedVariablesExclusives.variables.packageJsonFileName.value;
 /** $COMMENT#TSDOC#SRC#LIB#CONSTS#MODULE_TO_LOAD */
 const MODULE_TO_LOAD = "MODULE_TO_LOAD";
 //#endregion
-export { $COMMENT, MODULE_TO_LOAD, defaultConfigFileName };
+export { $COMMENT, MODULE_TO_LOAD, defaultConfigFileName, packageJsonFileName };

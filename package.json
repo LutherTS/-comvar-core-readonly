@@ -9,6 +9,10 @@
   ],
   "license": "UNLICENSED",
   "author": "Luther Tchofo Safo <luther@tchofo-safo-portfolio.me>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LutherTS/-comvar-core-readonly.git"
+  },
   "type": "module",
   "main": "source/library/index.js",
   "types": "core-readonly.public.d.ts",

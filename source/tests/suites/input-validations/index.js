@@ -21,16 +21,24 @@ export const inputValidationsSuite = (
   describe(`${RESOLVE_CONFIG_READONLY} - input validations`, () => {
     it(`should error if \`${CONFIG_PATH}\` param is not a string`, async () => {
       const resolveConfigReadonlyResults = await resolveConfigReadonly(2);
-      assertErrorWithMessage(resolveConfigReadonlyResults, configPathSupposedToBeString);
+      assertErrorWithMessage(
+        resolveConfigReadonlyResults,
+        configPathSupposedToBeString,
+      );
     });
 
     it(`should error if \`${CONFIG_PATH}\` param does not end with \`${DOT_JS}\``, async () => {
-      const resolveConfigReadonlyResults = await resolveConfigReadonly("not-javascript.ts");
-      assertErrorWithMessage(resolveConfigReadonlyResults, configPathSupposedToBeDotJs);
+      const resolveConfigReadonlyResults =
+        await resolveConfigReadonly("not-javascript.ts");
+      assertErrorWithMessage(
+        resolveConfigReadonlyResults,
+        configPathSupposedToBeDotJs,
+      );
     });
 
     it(`should error if \`${CONFIG_PATH}\` is not found`, async () => {
-      const resolveConfigReadonlyResults = await resolveConfigReadonly("does-not-exist.js");
+      const resolveConfigReadonlyResults =
+        await resolveConfigReadonly("does-not-exist.js");
       assertErrorWithMessage(resolveConfigReadonlyResults, noConfigFileFound);
     });
   });

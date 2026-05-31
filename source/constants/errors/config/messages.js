@@ -4,15 +4,20 @@ import { errorsConfigMessages } from "../../../comment-variables/index.js";
 
 /* messages for static errors - libraries */
 
-export const librariesCouldntZod = errorsConfigMessages.librariesCouldntZod.value;
+export const librariesCouldntZod =
+  errorsConfigMessages.librariesCouldntZod.value;
 
 // zod static error messages
 
-export const librariesShouldBeRecord = errorsConfigMessages.librariesShouldBeRecord.value;
-export const librariesMustSubKey = errorsConfigMessages.librariesMustSubKey.value;
-export const librariesRecordMustBeRecords = errorsConfigMessages.librariesRecordMustBeRecords.value;
+export const librariesShouldBeRecord =
+  errorsConfigMessages.librariesShouldBeRecord.value;
+export const librariesMustSubKey =
+  errorsConfigMessages.librariesMustSubKey.value;
+export const librariesRecordMustBeRecords =
+  errorsConfigMessages.librariesRecordMustBeRecords.value;
 export const librariesMustKey = errorsConfigMessages.librariesMustKey.value;
-export const librariesValuesMustBeStrings = errorsConfigMessages.librariesValuesMustBeStrings.value;
+export const librariesValuesMustBeStrings =
+  errorsConfigMessages.librariesValuesMustBeStrings.value;
 export const librariesValuesCannotBeEmptyStrings =
   errorsConfigMessages.librariesValuesCannotBeEmptyStrings.value;
 
@@ -26,4 +31,6 @@ export const librariesStaticErrorMessages = /** @type {const} */ ([
   librariesValuesMustBeStrings,
   librariesValuesCannotBeEmptyStrings,
 ]);
-export const librariesStaticErrorMessagesSet = new Set(librariesStaticErrorMessages);
+export const librariesStaticErrorMessagesSet = new Set(
+  librariesStaticErrorMessages,
+);

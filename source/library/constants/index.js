@@ -19,7 +19,8 @@ export const defaultConfigFileName =
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#PACKAGEJSONFILENAME
  * @public
  */
-export const packageJsonFileName = composedVariablesExclusives.variables.packageJsonFileName.value;
+export const packageJsonFileName =
+  composedVariablesExclusives.variables.packageJsonFileName.value;
 
 /* process environments */
 

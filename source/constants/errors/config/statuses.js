@@ -32,4 +32,6 @@ export const librariesStaticErrorStatuses = /** @type {const} */ ([
   LIBRARIES_RECORD_RECORDS_VALUES_NOT_STRINGS,
   LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_STRINGS,
 ]);
-export const librariesStaticErrorStatusesSet = new Set(librariesStaticErrorStatuses);
+export const librariesStaticErrorStatusesSet = new Set(
+  librariesStaticErrorStatuses,
+);

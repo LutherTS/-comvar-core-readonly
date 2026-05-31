@@ -21,5 +21,9 @@ export const CONFIG_NOT_OBJECT = "CONFIG_NOT_OBJECT";
 
 // static error statuses arrays and sets
 
-export const configPreStaticErrorStatuses = /** @type {const} */ ([CONFIG_NOT_OBJECT]);
-export const configPreStaticErrorStatusesSet = new Set(configPreStaticErrorStatuses);
+export const configPreStaticErrorStatuses = /** @type {const} */ ([
+  CONFIG_NOT_OBJECT,
+]);
+export const configPreStaticErrorStatusesSet = new Set(
+  configPreStaticErrorStatuses,
+);

@@ -7,7 +7,9 @@ import { RESOLVE_CONFIG_READONLY } from "../../constants/index.js";
  * @typedef {import("../../../typedefs/index.js").ResolveConfigReadonly} ResolveConfigReadonly
  */
 
-export const initialSuite = (/** @type {ResolveConfigReadonly} */ resolveConfigReadonly) => {
+export const initialSuite = (
+  /** @type {ResolveConfigReadonly} */ resolveConfigReadonly,
+) => {
   describe(`${RESOLVE_CONFIG_READONLY} - initial`, () => {
     it("should be a function", () => {
       const resolveConfigReadonlyType = typeof resolveConfigReadonly;

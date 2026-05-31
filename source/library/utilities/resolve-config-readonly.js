@@ -10,7 +10,10 @@ import {
 
 import { DOT_JS } from "../../constants/index.js";
 
-import { errorNotStandardized, ERROR_NOT_STANDARDIZED } from "../../constants/errors/index.js";
+import {
+  errorNotStandardized,
+  ERROR_NOT_STANDARDIZED,
+} from "../../constants/errors/index.js";
 import {
   inputStaticErrorMessages_errorStatuses,
   configPreStaticErrorMessages_errorStatuses,
@@ -48,7 +51,9 @@ import { freshImport } from "./fresh-import-a.js";
  *
  * @public
  */
-export const resolveConfigReadonly = async (/** @type {string} */ configPath) => {
+export const resolveConfigReadonly = async (
+  /** @type {string} */ configPath,
+) => {
   // input validations
 
   // Checks if the input argument is a string.
@@ -101,10 +106,12 @@ export const resolveConfigReadonly = async (/** @type {string} */ configPath) =>
         ...configPreSchemaResults.error.issues.map((e) => {
           if (configPreStaticErrorMessagesSet.has(e.message)) {
             // If the message is known, so is the status.
-            const staticErrorMessage = /** @type {ConfigPreStaticErrorMessage} */ (e.message);
+            const staticErrorMessage =
+              /** @type {ConfigPreStaticErrorMessage} */ (e.message);
             return /** @type {const} */ ({
               message: staticErrorMessage,
-              status: configPreStaticErrorMessages_errorStatuses[staticErrorMessage],
+              status:
+                configPreStaticErrorMessages_errorStatuses[staticErrorMessage],
               ...typeError,
             });
           } else {
@@ -127,7 +134,8 @@ export const resolveConfigReadonly = async (/** @type {string} */ configPath) =>
 
   // Validates `config.libraries` (optional).
   const librariesRawValue = config.libraries;
-  const librariesSchemaResults = ConfigLibrariesSchema.safeParse(librariesRawValue);
+  const librariesSchemaResults =
+    ConfigLibrariesSchema.safeParse(librariesRawValue);
 
   if (!librariesSchemaResults.success) {
     return /** @type {const} */ ({
@@ -139,10 +147,12 @@ export const resolveConfigReadonly = async (/** @type {string} */ configPath) =>
         },
         ...librariesSchemaResults.error.issues.map((e) => {
           if (librariesStaticErrorMessagesSet.has(e.message)) {
-            const staticErrorMessage = /** @type {LibrariesStaticErrorMessage} */ (e.message);
+            const staticErrorMessage =
+              /** @type {LibrariesStaticErrorMessage} */ (e.message);
             return /** @type {const} */ ({
               message: staticErrorMessage,
-              status: librariesStaticErrorMessages_errorStatuses[staticErrorMessage],
+              status:
+                librariesStaticErrorMessages_errorStatuses[staticErrorMessage],
               ...typeError,
             });
           } else {

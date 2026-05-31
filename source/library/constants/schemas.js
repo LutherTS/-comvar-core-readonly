@@ -10,7 +10,10 @@ import {
   librariesValuesCannotBeEmptyStrings,
 } from "../../constants/errors/config/messages.js";
 
-import { configDataSubKeyRegex, flattenedConfigDataKeyRegex } from "./regexes.js";
+import {
+  configDataSubKeyRegex,
+  flattenedConfigDataKeyRegex,
+} from "./regexes.js";
 
 /* input schemas */
 

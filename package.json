@@ -34,7 +34,7 @@
     "prepare": "npm run types && npm run doc && npm run api && npm run test && npm run lint"
   },
   "dependencies": {
-    "@lutherts/error-handling": "^0.1.13",
+    "@lutherts/error-handling": "^0.1.14",
     "zod": "^4.4.3"
   },
   "devDependencies": {

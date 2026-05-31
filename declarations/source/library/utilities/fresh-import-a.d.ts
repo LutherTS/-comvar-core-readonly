@@ -1,3 +1,3 @@
-export function freshImport(moduleUrl: string): Promise<{
+export declare function freshImport(moduleUrl: string): Promise<{
     default: unknown;
 } | null>;

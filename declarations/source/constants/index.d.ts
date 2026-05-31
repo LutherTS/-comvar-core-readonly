@@ -1,1 +1,1 @@
-export const DOT_JS: ".js";
+export declare const DOT_JS: ".js";

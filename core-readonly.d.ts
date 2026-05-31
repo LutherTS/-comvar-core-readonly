@@ -22,17 +22,17 @@ export declare const commentVariablesData: {
             "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY": "The config and its `libraries` data, or lack thereof for the latter via `null`, inside a `{success: true}` object at its `config` and `libraries` keys respectively. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extension for VS Code.";
         };
         "FR": {
-            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT": "Le pr\u00E9fixe absolu de tout et chaque substitut Comment Variables.";
-            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME": "Le nom de fichier consid\u00E9r\u00E9 par d\u00E9faut au dossier racine du projet pour la config de Comment Variables.";
-            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#PUBLIC#PACKAGEJSONFILENAME": "Particuli\u00E8rement utile \u00E0 surveiller afin de rafra\u00EEchir la config Comment Variables pour ses `libraries` \u00E0 chaque fois que le `package.json` du projet est mis \u00E0 jour (ignorant cr\u00E9ations et suppressions).";
-            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATAKEY": "S'assure que les cl\u00E9s `data` de la config ne doivent inclure que des lettres minuscules (`Ll`), lettres majuscules (`Lu`), d'autres lettres (`Lo`), de la ponctuation tiret (`Pd`), ponctuation connecteur (`Pc`), des chiffres (`N`) et des caract\u00E8res d'espacement (`s`).";
-            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY": "Pareil que `configDataKeyRegex` mais sans les lettres minuscules (`Ll`), et sans ponctuation tiret (`Pd`), ponctuation connecteur (`Pc`) et caract\u00E8res d'espacement (`s`) remplac\u00E9s par des tirets bas (`_`).";
-            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY": "Pareil que `configDataSubKeyRegex` mais sans le caract\u00E8re `#` qui connecte les sous-cl\u00E9s les unes aux autres.";
-            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL": "Pareil que `flattenedConfigDataKeyRegex` mais prenant en compte le pr\u00E9fixe `$COMMENT` et son caract\u00E8re `#`, emp\u00EAchant la succession de deux `#` cons\u00E9cutifs, tout en enlevant les `^` et `$` du d\u00E9but et de la fin du groupe de capture.";
+            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT": "Le préfixe absolu de tout et chaque substitut Comment Variables.";
+            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME": "Le nom de fichier considéré par défaut au dossier racine du projet pour la config de Comment Variables.";
+            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#PUBLIC#PACKAGEJSONFILENAME": "Particulièrement utile à surveiller afin de rafraîchir la config Comment Variables pour ses `libraries` à chaque fois que le `package.json` du projet est mis à jour (ignorant créations et suppressions).";
+            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATAKEY": "S'assure que les clés `data` de la config ne doivent inclure que des lettres minuscules (`Ll`), lettres majuscules (`Lu`), d'autres lettres (`Lo`), de la ponctuation tiret (`Pd`), ponctuation connecteur (`Pc`), des chiffres (`N`) et des caractères d'espacement (`s`).";
+            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY": "Pareil que `configDataKeyRegex` mais sans les lettres minuscules (`Ll`), et sans ponctuation tiret (`Pd`), ponctuation connecteur (`Pc`) et caractères d'espacement (`s`) remplacés par des tirets bas (`_`).";
+            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY": "Pareil que `configDataSubKeyRegex` mais sans le caractère `#` qui connecte les sous-clés les unes aux autres.";
+            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL": "Pareil que `flattenedConfigDataKeyRegex` mais prenant en compte le préfixe `$COMMENT` et son caractère `#`, empêchant la succession de deux `#` consécutifs, tout en enlevant les `^` et `$` du début et de la fin du groupe de capture.";
             "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL": "Pareil que `flattenedConfigDataPlaceholderLocalRegex` mais global.";
-            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY": "V\u00E9rifie, valide et r\u00E9sout de fa\u00E7on initiale le chemin de la config pour en obtenir la config et en fournir les donn\u00E9es de sa cl\u00E9 `libraries`.";
-            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH": "Le chemin absolu de la config qu'importe la mani\u00E8re dont il est fourni : que ce soit par d\u00E9faut avec `comments.config.js` dans le dossier courant, \u00E0 partir d'un chemin relatif passer via le drapeau `--config` par l'outil ligne de commande, ou d'un chemin relatif entr\u00E9 \u00E0 la cl\u00E9 `config` de l'extension dans `.vscode/settings.json` pour VS Code.";
-            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY": "La config et ses donn\u00E9es `libraries`, ou leur absence pour ces derni\u00E8res via `null`, dans un objet `{success: true}` \u00E0 ses cl\u00E9s `config` and `libraries` respectivement. En cas d'erreur, un objet `{success: false}` est retourn\u00E9 \u00E0 la place de sorte que les erreurs puissent \u00EAtre r\u00E9utilis\u00E9es de fa\u00E7ons ad\u00E9quates dans l'outil ligne de commande et dans l'extension pour VS Code.";
+            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY": "Vérifie, valide et résout de façon initiale le chemin de la config pour en obtenir la config et en fournir les données de sa clé `libraries`.";
+            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH": "Le chemin absolu de la config qu'importe la manière dont il est fourni : que ce soit par défaut avec `comments.config.js` dans le dossier courant, à partir d'un chemin relatif passer via le drapeau `--config` par l'outil ligne de commande, ou d'un chemin relatif entré à la clé `config` de l'extension dans `.vscode/settings.json` pour VS Code.";
+            "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY": "La config et ses données `libraries`, ou leur absence pour ces dernières via `null`, dans un objet `{success: true}` à ses clés `config` and `libraries` respectivement. En cas d'erreur, un objet `{success: false}` est retourné à la place de sorte que les erreurs puissent être réutilisées de façons adéquates dans l'outil ligne de commande et dans l'extension pour VS Code.";
         };
     };
 };
@@ -107,19 +107,12 @@ export declare const packageJsonFileName: "package.json";
  *
  * @public
  */
-export declare function resolveConfigReadonly(configPath: string): Promise<{
+export declare const resolveConfigReadonly: (configPath: string) => Promise<{
     readonly success: false;
     readonly errors: readonly [{
         readonly type: "error";
-        readonly message: "ERROR. `configPath` is supposed to be a string.";
-        readonly status: "CONFIGPATH_NOT_STRING";
-    }];
-} | {
-    readonly success: false;
-    readonly errors: readonly [{
-        readonly type: "error";
-        readonly message: "ERROR. `configPath` is supposed to be strictly JavaScript (`.js` only).";
-        readonly status: "CONFIGPATH_NOT_DOT_JS";
+        readonly message: "ERROR. Config module could not get resolved. (Most probably due to fatal syntax.)";
+        readonly status: "CONFIG_MODULE_NOT_RESOLVED";
     }];
 } | {
     readonly success: false;
@@ -132,8 +125,15 @@ export declare function resolveConfigReadonly(configPath: string): Promise<{
     readonly success: false;
     readonly errors: readonly [{
         readonly type: "error";
-        readonly message: "ERROR. Config module could not get resolved. (Most probably due to fatal syntax.)";
-        readonly status: "CONFIG_MODULE_NOT_RESOLVED";
+        readonly message: "ERROR. `configPath` is supposed to be a string.";
+        readonly status: "CONFIGPATH_NOT_STRING";
+    }];
+} | {
+    readonly success: false;
+    readonly errors: readonly [{
+        readonly type: "error";
+        readonly message: "ERROR. `configPath` is supposed to be strictly JavaScript (`.js` only).";
+        readonly status: "CONFIGPATH_NOT_DOT_JS";
     }];
 } | {
     readonly success: false;
@@ -158,8 +158,8 @@ export declare function resolveConfigReadonly(configPath: string): Promise<{
         readonly status: "LIBRARIES_INVALID";
     }, ...({
         readonly type: "error";
-        readonly message: "The config `libraries` key's value, if provided, should only be a record (representing library keys paired with their selected variations)." | "The config `libraries` key's record has one or more keys that do not conform with the Comment Variables subkey (`COMMENTVARIABLES_SUBKEY`) format. This cannot happen when using a `libraryKey` obtained from a conform external library's resolved public Comment Variables data." | "The config `libraries` key's record's values must only be records as well (representing Comment Variables keys from external libraries paired with their actual values)." | "The config `libraries` key's record's records' keys include one or more keys that do not conform with the Comment Variables key (`COMMENTVARIABLES#KEY`) format. This cannot happen when using a library variation `libraryVariations.<normalizedVariant>` obtained from a conform external library's resolved public Comment Variables data." | "The config `libraries` key's record's records' values must only be strings (representing the actual values of the external libraries' Comment Variables keys these strings are paired with)." | "The config `libraries` key's record's records' values cannot be empty strings.";
-        readonly status: "LIBRARIES_NOT_RECORD" | "LIBRARIES_NOT_SUBKEY_CONFORM" | "LIBRARIES_RECORD_NOT_RECORDS" | "LIBRARIES_NOT_KEY_CONFORM" | "LIBRARIES_RECORD_RECORDS_VALUES_NOT_STRINGS" | "LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_STRINGS";
+        readonly message: "The config `libraries` key's record has one or more keys that do not conform with the Comment Variables subkey (`COMMENTVARIABLES_SUBKEY`) format. This cannot happen when using a `libraryKey` obtained from a conform external library's resolved public Comment Variables data." | "The config `libraries` key's record's records' keys include one or more keys that do not conform with the Comment Variables key (`COMMENTVARIABLES#KEY`) format. This cannot happen when using a library variation `libraryVariations.<normalizedVariant>` obtained from a conform external library's resolved public Comment Variables data." | "The config `libraries` key's record's records' values cannot be empty strings." | "The config `libraries` key's record's records' values must only be strings (representing the actual values of the external libraries' Comment Variables keys these strings are paired with)." | "The config `libraries` key's record's values must only be records as well (representing Comment Variables keys from external libraries paired with their actual values)." | "The config `libraries` key's value, if provided, should only be a record (representing library keys paired with their selected variations).";
+        readonly status: "LIBRARIES_NOT_KEY_CONFORM" | "LIBRARIES_NOT_RECORD" | "LIBRARIES_NOT_SUBKEY_CONFORM" | "LIBRARIES_RECORD_NOT_RECORDS" | "LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_STRINGS" | "LIBRARIES_RECORD_RECORDS_VALUES_NOT_STRINGS";
     } | {
         readonly type: "error";
         readonly message: "The error encountered is not standardized.";

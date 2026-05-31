@@ -31,5 +31,5 @@ export const librariesStaticErrorMessages_errorStatuses = Object.freeze({
 
 export const configStaticErrorMessages_errorStatuses = Object.freeze({
   ...librariesStaticErrorMessages_errorStatuses,
-  ...{ [librariesCouldntZod]: LIBRARIES_INVALID },
+  [librariesCouldntZod]: LIBRARIES_INVALID,
 });

@@ -1,4 +1,4 @@
-export const errors: {
+export declare const errors: {
     input: {
         "messages": {
             "configPathSupposedToBeString": {
@@ -116,7 +116,7 @@ export const errors: {
         };
     };
 };
-export const errorsInputMessages: {
+export declare const errorsInputMessages: {
     configPathSupposedToBeString: {
         "value": "`configPath` is supposed to be a string.";
         "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#CONFIGPATHSUPPOSEDTOBESTRING";
@@ -142,7 +142,7 @@ export const errorsInputMessages: {
         "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#CONFIGMUSTBEOBJECT";
     };
 };
-export const errorsConfigMessages: {
+export declare const errorsConfigMessages: {
     librariesCouldntZod: {
         "value": "The config's `libraries` key's value could not pass validation from zod.";
         "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESCOULDNTZOD";
@@ -172,7 +172,7 @@ export const errorsConfigMessages: {
         "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESVALUESCANNOTBEEMPTYSTRINGS";
     };
 };
-export const forComposedVariables: {
+export declare const forComposedVariables: {
     variables: {
         "resolveConfigReadonly": {
             "value": "resolveConfigReadonly";
@@ -189,7 +189,7 @@ export const forComposedVariables: {
     };
     arguments: {};
 };
-export const composedVariablesExclusives: {
+export declare const composedVariablesExclusives: {
     variables: {
         "_COMMENT": {
             "value": "$COMMENT";

@@ -23,12 +23,10 @@ export const configPreStaticErrorMessages_errorStatuses = Object.freeze({
 
 export const inputStaticErrorMessages_errorStatuses = Object.freeze({
   ...configPreStaticErrorMessages_errorStatuses,
-  ...{
-    [configPathSupposedToBeString]: CONFIGPATH_NOT_STRING,
-    [configPathSupposedToBeDotJs]: CONFIGPATH_NOT_DOT_JS,
-    [noConfigFileFound]: CONFIG_FILE_NOT_FOUND,
-    [configModuleCouldntResolve]: CONFIG_MODULE_NOT_RESOLVED,
+  [configPathSupposedToBeString]: CONFIGPATH_NOT_STRING,
+  [configPathSupposedToBeDotJs]: CONFIGPATH_NOT_DOT_JS,
+  [noConfigFileFound]: CONFIG_FILE_NOT_FOUND,
+  [configModuleCouldntResolve]: CONFIG_MODULE_NOT_RESOLVED,
 
-    [configCouldntPreZod]: CONFIG_PRE_INVALID,
-  },
+  [configCouldntPreZod]: CONFIG_PRE_INVALID,
 });

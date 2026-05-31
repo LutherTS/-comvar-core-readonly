@@ -13,7 +13,7 @@ export { errorNotStandardized, ERROR_NOT_STANDARDIZED };
 /* error messages to error statuses */
 
 export const allStaticErrorMessages_errorStatuses = Object.freeze({
-  ...{ [errorNotStandardized]: ERROR_NOT_STANDARDIZED },
+  [errorNotStandardized]: ERROR_NOT_STANDARDIZED,
   ...configStaticErrorMessages_errorStatuses,
   ...inputStaticErrorMessages_errorStatuses,
 });

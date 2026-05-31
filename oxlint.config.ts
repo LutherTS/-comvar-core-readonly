@@ -8,6 +8,7 @@ export default defineConfig({
     "eslint/no-unused-vars": "off", // for JSDoc
     "typescript/no-useless-empty-export": "off", // for API Extractor
   },
+  ignorePatterns: ["source/tests/suites/input-operations/configs/fatal.js"],
   overrides: [
     {
       jsPlugins: ["eslint-plugin-tsdoc"],

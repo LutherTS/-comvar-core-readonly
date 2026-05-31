@@ -1,3 +1,6 @@
 {
-  "files.associations": { "api-extractor.json": "jsonc" }
+  "files.associations": { "api-extractor.json": "jsonc" },
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file"
 }

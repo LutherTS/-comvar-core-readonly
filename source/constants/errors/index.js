@@ -1,7 +1,4 @@
-import {
-  errorNotStandardized,
-  ERROR_NOT_STANDARDIZED,
-} from "@lutherts/error-handling";
+import { errorNotStandardized, ERROR_NOT_STANDARDIZED } from "@lutherts/error-handling";
 
 import { inputStaticErrorMessages_errorStatuses } from "./input/index.js";
 import { configStaticErrorMessages_errorStatuses } from "./config/index.js";

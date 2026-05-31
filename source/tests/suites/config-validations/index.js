@@ -52,55 +52,30 @@ export const configValidationsSuite = (
 ) => {
   describe(`${RESOLVE_CONFIG_READONLY} - config validations`, () => {
     it(`should fail if the config's \`${LIBRARIES}\` key's value, when provided, is not a record`, async () => {
-      const resolveConfigReadonlyResults = await resolveConfigReadonly(
-        librariesKeyNotRecordPath,
-      );
-      assertFailureWithMessage(
-        resolveConfigReadonlyResults,
-        librariesShouldBeRecord,
-      );
+      const resolveConfigReadonlyResults = await resolveConfigReadonly(librariesKeyNotRecordPath);
+      assertFailureWithMessage(resolveConfigReadonlyResults, librariesShouldBeRecord);
     });
     it(`should fail if the config's \`${LIBRARIES}\` key's record has keys not subkey-conform`, async () => {
-      const resolveConfigReadonlyResults = await resolveConfigReadonly(
-        librariesKeyNotSubkeyPath,
-      );
-      assertFailureWithMessage(
-        resolveConfigReadonlyResults,
-        librariesMustSubKey,
-      );
+      const resolveConfigReadonlyResults = await resolveConfigReadonly(librariesKeyNotSubkeyPath);
+      assertFailureWithMessage(resolveConfigReadonlyResults, librariesMustSubKey);
     });
     it(`should fail if the config's \`${LIBRARIES}\` key's record's values are not records`, async () => {
-      const resolveConfigReadonlyResults = await resolveConfigReadonly(
-        librariesKeyNotRecordsPath,
-      );
-      assertFailureWithMessage(
-        resolveConfigReadonlyResults,
-        librariesRecordMustBeRecords,
-      );
+      const resolveConfigReadonlyResults = await resolveConfigReadonly(librariesKeyNotRecordsPath);
+      assertFailureWithMessage(resolveConfigReadonlyResults, librariesRecordMustBeRecords);
     });
     it(`should fail if the config's \`${LIBRARIES}\` key's record's records have keys not key-conform`, async () => {
-      const resolveConfigReadonlyResults = await resolveConfigReadonly(
-        librariesKeyNotKeyPath,
-      );
+      const resolveConfigReadonlyResults = await resolveConfigReadonly(librariesKeyNotKeyPath);
       assertFailureWithMessage(resolveConfigReadonlyResults, librariesMustKey);
     });
     it(`should fail if the config's \`${LIBRARIES}\` key's record's records' values are not strings`, async () => {
-      const resolveConfigReadonlyResults = await resolveConfigReadonly(
-        librariesKeyNotStringsPath,
-      );
-      assertFailureWithMessage(
-        resolveConfigReadonlyResults,
-        librariesValuesMustBeStrings,
-      );
+      const resolveConfigReadonlyResults = await resolveConfigReadonly(librariesKeyNotStringsPath);
+      assertFailureWithMessage(resolveConfigReadonlyResults, librariesValuesMustBeStrings);
     });
     it(`should fail if the config's \`${LIBRARIES}\` key's record's records' values are empty strings`, async () => {
       const resolveConfigReadonlyResults = await resolveConfigReadonly(
         librariesKeyEmptyStringsPath,
       );
-      assertFailureWithMessage(
-        resolveConfigReadonlyResults,
-        librariesValuesCannotBeEmptyStrings,
-      );
+      assertFailureWithMessage(resolveConfigReadonlyResults, librariesValuesCannotBeEmptyStrings);
     });
   });
 };

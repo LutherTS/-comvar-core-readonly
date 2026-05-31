@@ -25,8 +25,7 @@ export const librariesStaticErrorMessages_errorStatuses = Object.freeze({
   [librariesRecordMustBeRecords]: LIBRARIES_RECORD_NOT_RECORDS,
   [librariesMustKey]: LIBRARIES_NOT_KEY_CONFORM,
   [librariesValuesMustBeStrings]: LIBRARIES_RECORD_RECORDS_VALUES_NOT_STRINGS,
-  [librariesValuesCannotBeEmptyStrings]:
-    LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_STRINGS,
+  [librariesValuesCannotBeEmptyStrings]: LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_STRINGS,
 });
 
 export const configStaticErrorMessages_errorStatuses = Object.freeze({

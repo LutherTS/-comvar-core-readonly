@@ -1,6 +1,6 @@
 {
   "name": "@comvar/core-readonly",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "The shared package at the very heart of the Comment Variables Architecture, powering the ComVar Readonly extension for VS Code.",
   "keywords": [
     "comment-variables",

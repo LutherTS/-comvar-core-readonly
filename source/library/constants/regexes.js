@@ -30,7 +30,8 @@ export const configDataSubKeyRegex = /^[\p{Lu}\p{Lo}\p{N}_]+$/u;
  *
  * @public
  */
-export const flattenedConfigDataKeyRegex = /^(?!#)[\p{Lu}\p{Lo}\p{N}_#]+$/u;
+export const flattenedConfigDataKeyRegex =
+  /^[\p{Lu}\p{Lo}\p{N}_]+(?:#[\p{Lu}\p{Lo}\p{N}_]+)+$/u;
 
 /**
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL
@@ -41,7 +42,7 @@ export const flattenedConfigDataKeyRegex = /^(?!#)[\p{Lu}\p{Lo}\p{N}_#]+$/u;
  * @public
  */
 export const flattenedConfigDataPlaceholderLocalRegex = new RegExp(
-  `${escapeRegex($COMMENT)}#(?!#)([\\p{Lu}\\p{Lo}\\p{N}_#]+)`,
+  `${escapeRegex($COMMENT)}#([\\p{Lu}\\p{Lo}\\p{N}_]+(?:#[\\p{Lu}\\p{Lo}\\p{N}_]+)+)`,
   "u",
 );
 
@@ -54,6 +55,6 @@ export const flattenedConfigDataPlaceholderLocalRegex = new RegExp(
  * @public
  */
 export const flattenedConfigDataPlaceholderGlobalRegex = new RegExp(
-  `${escapeRegex($COMMENT)}#(?!#)([\\p{Lu}\\p{Lo}\\p{N}_#]+)`,
-  "gu",
+  `${escapeRegex($COMMENT)}#([\\p{Lu}\\p{Lo}\\p{N}_]+(?:#[\\p{Lu}\\p{Lo}\\p{N}_]+)+)`,
+  "ug",
 );

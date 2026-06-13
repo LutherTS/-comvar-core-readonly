@@ -153,7 +153,7 @@
                   "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY"
                 },
                 "flattenedConfigDataKey": {
-                  "value": "Same as `configDataSubKeyRegex` but with the `#` character that links each subkey together.",
+                  "value": "Same as `configDataSubKeyRegex` but with the `#` character that links each subkey together, ensuring the string is made of a least two subkeys since the first variant subkey is mandatory, while ensuring that the `#` character does not end the string.",
                   "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY"
                 },
                 "flattenedConfigDataPlaceholderLocal": {
@@ -400,7 +400,7 @@
                   "key": "FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY"
                 },
                 "flattenedConfigDataKey": {
-                  "value": "Pareil que `configDataSubKeyRegex` mais sans le caractère `#` qui connecte les sous-clés les unes aux autres.",
+                  "value": "Pareil que `configDataSubKeyRegex` mais avec le caractère `#` qui connecte les sous-clés les unes aux autres, s'assurant que la chaîne de caractères comprenne au moins deux sous-clés puisque la première attribuée au variant est obligatoire, tout en s'assurant que le caractère `#` ne termine pas la chaîne de caractères.",
                   "key": "FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY"
                 },
                 "flattenedConfigDataPlaceholderLocal": {

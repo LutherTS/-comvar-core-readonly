@@ -22,9 +22,9 @@ export const frData = Object.freeze({
               flattenedConfigDataKey:
                 "Pareil que `configDataSubKeyRegex` mais avec le caractère `#` qui connecte les sous-clés les unes aux autres, s'assurant que la chaîne de caractères comprenne au moins deux sous-clés puisque la première attribuée au variant est obligatoire, tout en s'assurant que le caractère `#` ne termine pas la chaîne de caractères." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY / core: $COMMENT#FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY */,
               flattenedConfigDataPlaceholderLocal:
-                "Pareil que `flattenedConfigDataKeyRegex` mais prenant en compte le préfixe `$COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT` et son caractère `#`, empêchant la succession de deux `#` consécutifs, tout en enlevant les `^` et `$` du début et de la fin du groupe de capture." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL / core: $COMMENT#FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL */,
+                "Pareil que `flattenedConfigDataKeyRegex` mais prenant en compte le préfixe `$COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT` et son caractère `#`." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL / core: $COMMENT#FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL */,
               flattenedConfigDataPlaceholderGlobal:
-                "Pareil que `flattenedConfigDataPlaceholderLocalRegex` mais global." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL / core: $COMMENT#FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL */,
+                "Pareil que `flattenedConfigDataPlaceholderLocalRegex` mais global, tout en enlevant les `^` et `$` du début et de la fin du groupe de capture." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL / core: $COMMENT#FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL */,
             }),
           }),
         }),

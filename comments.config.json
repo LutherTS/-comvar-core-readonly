@@ -153,15 +153,15 @@
                   "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY"
                 },
                 "flattenedConfigDataKey": {
-                  "value": "Same as `configDataSubKeyRegex` but with the `#` character that links each subkey together, ensuring the string is made of a least two subkeys since the first variant subkey is mandatory, while ensuring that the `#` character does not end the string.",
+                  "value": "Same as `configDataSubKeyRegex` but with the `#` character that links each subkey together, ensuring the string is made of at least two subkeys since the first variant subkey is mandatory, while ensuring that the `#` character does not end the string.",
                   "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY"
                 },
                 "flattenedConfigDataPlaceholderLocal": {
-                  "value": "Same as `flattenedConfigDataKeyRegex` but taking the prefix `$COMMENT` and its `#` into consideration, preventing two consecutive `#`'s, while removing the starting `^` and the ending `$` from the capture group.",
+                  "value": "Same as `flattenedConfigDataKeyRegex` but taking the prefix `$COMMENT` and its `#` into consideration.",
                   "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL"
                 },
                 "flattenedConfigDataPlaceholderGlobal": {
-                  "value": "Same as `flattenedConfigDataPlaceholderLocalRegex` but globally.",
+                  "value": "Same as `flattenedConfigDataPlaceholderLocalRegex` but globally, while removing the starting `^` and the ending `$` from the capture group.",
                   "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL"
                 }
               }
@@ -404,11 +404,11 @@
                   "key": "FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY"
                 },
                 "flattenedConfigDataPlaceholderLocal": {
-                  "value": "Pareil que `flattenedConfigDataKeyRegex` mais prenant en compte le préfixe `$COMMENT` et son caractère `#`, empêchant la succession de deux `#` consécutifs, tout en enlevant les `^` et `$` du début et de la fin du groupe de capture.",
+                  "value": "Pareil que `flattenedConfigDataKeyRegex` mais prenant en compte le préfixe `$COMMENT` et son caractère `#`.",
                   "key": "FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL"
                 },
                 "flattenedConfigDataPlaceholderGlobal": {
-                  "value": "Pareil que `flattenedConfigDataPlaceholderLocalRegex` mais global.",
+                  "value": "Pareil que `flattenedConfigDataPlaceholderLocalRegex` mais global, tout en enlevant les `^` et `$` du début et de la fin du groupe de capture.",
                   "key": "FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL"
                 }
               }

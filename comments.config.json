@@ -214,12 +214,16 @@
           "defs": {
             "utils": {
               "assertFailureWithMessage": {
-                "value": "Asserts that `resolveConfigReadonly` fails when it should, with the message of the error specified and its status inferred.",
+                "value": "Asserts that `resolveConfigReadonly` fails when it should, with only the message of the error specified since its status inferred.",
                 "key": "EN#TSDOC#SRC#TESTS#DEFS#UTILS#ASSERTFAILUREWITHMESSAGE"
               },
               "assertErrorWithMessage": {
-                "value": "Asserts that `resolveConfigReadonly` fails when it should, with the message of the error specified and its status inferred. Here, the error message is prefixed with `\"ERROR. \"` to specify a leading user-facing error.",
+                "value": "Asserts that `resolveConfigReadonly` fails when it should, with only the message of the error specified since its status inferred. Here, the error message is prefixed with `\"ERROR. \"` to specify a leading user-facing error.",
                 "key": "EN#TSDOC#SRC#TESTS#DEFS#UTILS#ASSERTERRORWITHMESSAGE"
+              },
+              "assertFailureWithStatus": {
+                "value": "Asserts that `resolveConfigReadonly` fails when it should, with only the status of the error specified since the message is dynamic.",
+                "key": "EN#TSDOC#SRC#TESTS#DEFS#UTILS#ASSERTFAILUREWITHSTATUS"
               }
             }
           },
@@ -232,6 +236,10 @@
               "expectedMessage": {
                 "value": "The expected message of the error that should be encountered during failure, from which the status can be inferred.",
                 "key": "EN#TSDOC#SRC#TESTS#PARAMS#UTILS#EXPECTEDMESSAGE"
+              },
+              "expectedStatus": {
+                "value": "The expected status of the error that should be encountered during failure.",
+                "key": "EN#TSDOC#SRC#TESTS#PARAMS#UTILS#EXPECTEDSTATUS"
               }
             }
           },
@@ -244,6 +252,10 @@
               "assertErrorWithMessage": {
                 "value": "Void.",
                 "key": "EN#TSDOC#SRC#TESTS#RETURNS#UTILS#ASSERTERRORWITHMESSAGE"
+              },
+              "assertFailureWithStatus": {
+                "value": "Void.",
+                "key": "EN#TSDOC#SRC#TESTS#RETURNS#UTILS#ASSERTFAILUREWITHSTATUS"
               }
             }
           }

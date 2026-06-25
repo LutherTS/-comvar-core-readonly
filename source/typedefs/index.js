@@ -66,3 +66,13 @@ import { librariesStaticErrorStatuses } from "../constants/errors/config/statuse
 /**
  * @typedef {typeof flattenedConfigDataPlaceholderGlobalRegex} FlattenedConfigDataPlaceholderGlobalRegex
  */
+
+/**
+ * @typedef {{
+ *   default: unknown;
+ * }} ConfigModule
+ */
+
+/**
+ * @typedef {Record<string, unknown>} Config
+ */

@@ -3,6 +3,7 @@ import path from "path";
 
 import { describe, it } from "node:test";
 
+import { MISPLACED_LIBRARY_VARIATION } from "../../../constants/errors/index.js";
 import {
   librariesShouldBeRecord,
   librariesMustSubKey,
@@ -14,7 +15,10 @@ import {
 
 import { RESOLVE_CONFIG_READONLY, LIBRARIES } from "../../constants/index.js";
 
-import { assertFailureWithMessage } from "../../utilities/index.js";
+import {
+  assertFailureWithMessage,
+  assertFailureWithStatus,
+} from "../../utilities/index.js";
 
 /**
  * @typedef {import("../../../typedefs/index.js").ResolveConfigReadonly} ResolveConfigReadonly
@@ -45,6 +49,10 @@ const librariesKeyNotStringsPath = path.join(
 const librariesKeyEmptyStringsPath = path.join(
   currentDirectoryPath,
   "./configs/libraries-key-empty-strings.js",
+);
+const librariesMisplacedPath = path.join(
+  currentDirectoryPath,
+  "./configs/libraries-misplaced.js",
 );
 
 export const configValidationsSuite = (
@@ -100,6 +108,15 @@ export const configValidationsSuite = (
       assertFailureWithMessage(
         resolveConfigReadonlyResults,
         librariesValuesCannotBeEmptyStrings,
+      );
+    });
+    it(`should fail if the config's \`${LIBRARIES}\` key's record's records' keys do not start with their assign library key`, async () => {
+      const resolveConfigReadonlyResults = await resolveConfigReadonly(
+        librariesMisplacedPath,
+      );
+      assertFailureWithStatus(
+        resolveConfigReadonlyResults,
+        MISPLACED_LIBRARY_VARIATION,
       );
     });
   });

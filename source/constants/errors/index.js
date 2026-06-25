@@ -17,3 +17,7 @@ export const allStaticErrorMessages_errorStatuses = Object.freeze({
   ...configStaticErrorMessages_errorStatuses,
   ...inputStaticErrorMessages_errorStatuses,
 });
+
+/* dynamic statuses */
+
+export const MISPLACED_LIBRARY_VARIATION = "MISPLACED_LIBRARY_VARIATION";

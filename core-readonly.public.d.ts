@@ -139,6 +139,13 @@ export declare const resolveConfigReadonly: (configPath: string) => Promise<{
     readonly success: false;
     readonly errors: readonly [{
         readonly type: "error";
+        readonly message: `ERROR. Library variation key ${string} does not start with its assigned library key (${string}#), which suggests its library variation has been misplaced.`;
+        readonly status: "MISPLACED_LIBRARY_VARIATION";
+    }];
+} | {
+    readonly success: false;
+    readonly errors: readonly [{
+        readonly type: "error";
         readonly message: "ERROR. The config could not pass pre-validation from zod.";
         readonly status: "CONFIG_PRE_INVALID";
     }, ...({
@@ -169,6 +176,7 @@ export declare const resolveConfigReadonly: (configPath: string) => Promise<{
     readonly success: true;
     readonly config: Record<string, unknown>;
     readonly libraries: Record<string, Record<string, string>> | null;
+    readonly libraryVariationKeys_libraryVariationValues: Map<string, string>;
     readonly sameReference: boolean;
 }>;
 

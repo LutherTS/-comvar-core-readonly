@@ -19,3 +19,7 @@ export type ConfigDataSubKeyRegex = typeof configDataSubKeyRegex;
 export type FlattenedConfigDataKeyRegex = typeof flattenedConfigDataKeyRegex;
 export type FlattenedConfigDataPlaceholderLocalRegex = typeof flattenedConfigDataPlaceholderLocalRegex;
 export type FlattenedConfigDataPlaceholderGlobalRegex = typeof flattenedConfigDataPlaceholderGlobalRegex;
+export type ConfigModule = {
+    default: unknown;
+};
+export type Config = Record<string, unknown>;

@@ -16,3 +16,4 @@ export declare const allStaticErrorMessages_errorStatuses: Readonly<{
     "The config's `libraries` key's value could not pass validation from zod.": "LIBRARIES_INVALID";
     "The error encountered is not standardized.": "ERROR_NOT_STANDARDIZED";
 }>;
+export declare const MISPLACED_LIBRARY_VARIATION = "MISPLACED_LIBRARY_VARIATION";

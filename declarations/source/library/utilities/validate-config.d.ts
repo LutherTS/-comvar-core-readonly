@@ -1,61 +1,12 @@
-/**
- * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY
- *
- * @param configPath - $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH
- * @returns $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY
- *
- * @public
- */
-export declare const resolveConfigReadonly: (configPath: string) => Promise<{
-    readonly success: false;
-    readonly errors: readonly [{
-        readonly type: "error";
-        readonly message: "ERROR. Config module could not get resolved. (Most probably due to fatal syntax.)";
-        readonly status: "CONFIG_MODULE_NOT_RESOLVED";
-    }];
-} | {
-    readonly success: false;
-    readonly errors: readonly [{
-        readonly type: "error";
-        readonly message: "ERROR. No config file found for Comment Variables.";
-        readonly status: "CONFIG_FILE_NOT_FOUND";
-    }];
-} | {
-    readonly success: false;
-    readonly errors: readonly [{
-        readonly type: "error";
-        readonly message: "ERROR. `configPath` is supposed to be a string.";
-        readonly status: "CONFIGPATH_NOT_STRING";
-    }];
-} | {
-    readonly success: false;
-    readonly errors: readonly [{
-        readonly type: "error";
-        readonly message: "ERROR. `configPath` is supposed to be strictly JavaScript (`.js` only).";
-        readonly status: "CONFIGPATH_NOT_DOT_JS";
-    }];
-} | {
+export type Config = import("../../typedefs/index.js").Config;
+export type LibrariesStaticErrorMessage = import("../../typedefs/index.js").LibrariesStaticErrorMessage;
+export declare const validateConfig: (config: Config) => {
     readonly success: false;
     readonly errors: readonly [{
         readonly type: "error";
         readonly message: `ERROR. Library variation key ${string} does not start with its assigned library key (${string}#), which suggests its library variation has been misplaced.`;
         readonly status: "MISPLACED_LIBRARY_VARIATION";
     }];
-} | {
-    readonly success: false;
-    readonly errors: readonly [{
-        readonly type: "error";
-        readonly message: "ERROR. The config could not pass pre-validation from zod.";
-        readonly status: "CONFIG_PRE_INVALID";
-    }, ...({
-        readonly type: "error";
-        readonly message: "Invalid config format. The config must only be default-exported as an object.";
-        readonly status: "CONFIG_NOT_OBJECT";
-    } | {
-        readonly type: "error";
-        readonly message: "The error encountered is not standardized.";
-        readonly status: "ERROR_NOT_STANDARDIZED";
-    })[]];
 } | {
     readonly success: false;
     readonly errors: readonly [{
@@ -73,8 +24,6 @@ export declare const resolveConfigReadonly: (configPath: string) => Promise<{
     })[]];
 } | {
     readonly success: true;
-    readonly config: Record<string, unknown>;
-    readonly libraries: Record<string, Record<string, string>> | null;
+    readonly librariesSchemaResultsData: Record<string, Record<string, string>> | null;
     readonly libraryVariationKeys_libraryVariationValues: Map<string, string>;
-    readonly sameReference: boolean;
-}>;
+};

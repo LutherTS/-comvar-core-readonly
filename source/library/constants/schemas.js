@@ -12,7 +12,7 @@ import {
 
 import {
   configDataSubKeyRegex,
-  flattenedConfigDataKeyRegex,
+  flattenedConfigDataKeyLocalRegex,
 } from "./regexes.js";
 
 /* input schemas */
@@ -47,7 +47,7 @@ export const ConfigLibrariesSchema = z
       .refine(
         (record) => {
           for (const key of Object.keys(record)) {
-            if (!flattenedConfigDataKeyRegex.test(key)) return false;
+            if (!flattenedConfigDataKeyLocalRegex.test(key)) return false;
           }
           return true;
         },

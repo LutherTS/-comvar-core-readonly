@@ -23,17 +23,6 @@ export const configDataKeyRegex = /^[\p{Ll}\p{Lu}\p{Lo}\p{Pd}\p{Pc}\p{N}\s]+$/u;
 export const configDataSubKeyRegex = /^[\p{Lu}\p{Lo}\p{N}_]+$/u;
 
 /**
- * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY
- *
- * @example
- * `FLATTENED#CONFIG#DATA#KEY`
- *
- * @public
- */
-export const flattenedConfigDataKeyRegex =
-  /^[\p{Lu}\p{Lo}\p{N}_]+(?:#[\p{Lu}\p{Lo}\p{N}_]+)+$/u;
-
-/**
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEYLOCAL
  *
  * @example

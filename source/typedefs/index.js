@@ -5,7 +5,6 @@ import {
   packageJsonFileName,
   configDataKeyRegex,
   configDataSubKeyRegex,
-  flattenedConfigDataKeyRegex,
   flattenedConfigDataKeyLocalRegex,
   flattenedConfigDataKeyGlobalRegex,
   flattenedConfigDataPlaceholderLocalRegex,
@@ -58,9 +57,6 @@ import { librariesStaticErrorStatuses } from "../constants/errors/config/statuse
  */
 /**
  * @typedef {typeof configDataSubKeyRegex} ConfigDataSubKeyRegex
- */
-/**
- * @typedef {typeof flattenedConfigDataKeyRegex} FlattenedConfigDataKeyRegex
  */
 /**
  * @typedef {typeof flattenedConfigDataKeyLocalRegex} FlattenedConfigDataKeyLocalRegex

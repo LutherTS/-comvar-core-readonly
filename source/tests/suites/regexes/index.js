@@ -4,7 +4,6 @@ import assert from "node:assert";
 import {
   CONFIG_DATA_KEY_REGEX,
   CONFIG_DATA_SUBKEY_REGEX,
-  FLATTENED_CONFIG_DATA_KEY_REGEX,
   FLATTENED_CONFIG_DATA_KEY_LOCAL_REGEX,
   FLATTENED_CONFIG_DATA_KEY_GLOBAL_REGEX,
   FLATTENED_CONFIG_DATA_PLACEHOLDER_LOCAL_REGEX,
@@ -14,7 +13,6 @@ import {
 /**
  * @typedef {import("../../../typedefs/index.js").ConfigDataKeyRegex} ConfigDataKeyRegex
  * @typedef {import("../../../typedefs/index.js").ConfigDataSubKeyRegex} ConfigDataSubKeyRegex
- * @typedef {import("../../../typedefs/index.js").FlattenedConfigDataKeyRegex} FlattenedConfigDataKeyRegex
  * @typedef {import("../../../typedefs/index.js").FlattenedConfigDataKeyLocalRegex} FlattenedConfigDataKeyLocalRegex
  * @typedef {import("../../../typedefs/index.js").FlattenedConfigDataKeyGlobalRegex} FlattenedConfigDataKeyGlobalRegex
  * @typedef {import("../../../typedefs/index.js").FlattenedConfigDataPlaceholderLocalRegex} FlattenedConfigDataPlaceholderLocalRegex
@@ -24,7 +22,6 @@ import {
 export const regexSuites = (
   /** @type {ConfigDataKeyRegex} */ configDataKeyRegex,
   /** @type {ConfigDataSubKeyRegex} */ configDataSubKeyRegex,
-  /** @type {FlattenedConfigDataKeyRegex} */ flattenedConfigDataKeyRegex,
   /** @type {FlattenedConfigDataKeyLocalRegex} */ flattenedConfigDataKeyLocalRegex,
   /** @type {FlattenedConfigDataKeyGlobalRegex} */ flattenedConfigDataKeyGlobalRegex,
   /** @type {FlattenedConfigDataPlaceholderLocalRegex} */ flattenedConfigDataPlaceholderLocalRegex,
@@ -53,19 +50,6 @@ export const regexSuites = (
     it(`should pass when testing its example`, () => {
       const example = "CONFIG_DATA_SUB_KEY";
       assert.strictEqual(configDataSubKeyRegex.test(example), true);
-    });
-  });
-
-  describe(FLATTENED_CONFIG_DATA_KEY_REGEX, () => {
-    // initial tests
-    it(`should be a regex`, () => {
-      assert.strictEqual(flattenedConfigDataKeyRegex instanceof RegExp, true);
-    });
-
-    // validations tests
-    it(`should pass when testing its example`, () => {
-      const example = "FLATTENED#CONFIG#DATA#KEY";
-      assert.strictEqual(flattenedConfigDataKeyRegex.test(example), true);
     });
   });
 

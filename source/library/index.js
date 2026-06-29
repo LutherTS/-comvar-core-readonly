@@ -12,7 +12,6 @@ export {
 export {
   configDataKeyRegex,
   configDataSubKeyRegex,
-  flattenedConfigDataKeyRegex,
   flattenedConfigDataKeyLocalRegex,
   flattenedConfigDataKeyGlobalRegex,
   flattenedConfigDataPlaceholderLocalRegex,

@@ -13,6 +13,8 @@ export {
   configDataKeyRegex,
   configDataSubKeyRegex,
   flattenedConfigDataKeyRegex,
+  flattenedConfigDataKeyLocalRegex,
+  flattenedConfigDataKeyGlobalRegex,
   flattenedConfigDataPlaceholderLocalRegex,
   flattenedConfigDataPlaceholderGlobalRegex,
 } from "./constants/regexes.js";

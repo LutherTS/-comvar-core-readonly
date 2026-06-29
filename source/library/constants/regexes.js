@@ -34,10 +34,32 @@ export const flattenedConfigDataKeyRegex =
   /^[\p{Lu}\p{Lo}\p{N}_]+(?:#[\p{Lu}\p{Lo}\p{N}_]+)+$/u;
 
 /**
+ * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEYLOCAL
+ *
+ * @example
+ * `FLATTENED#CONFIG#DATA#KEY`, `FLATTENED`, `CONFIG#DATA#KEY`
+ *
+ * @public
+ */
+export const flattenedConfigDataKeyLocalRegex =
+  /^([\p{Lu}\p{Lo}\p{N}_]+)#([\p{Lu}\p{Lo}\p{N}_]+(?:#[\p{Lu}\p{Lo}\p{N}_]+)*)$/u;
+
+/**
+ * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEYGLOBAL
+ *
+ * @example
+ * `FLATTENED#CONFIG#DATA#KEY`, `FLATTENED`, `CONFIG#DATA#KEY`
+ *
+ * @public
+ */
+export const flattenedConfigDataKeyGlobalRegex =
+  /([\p{Lu}\p{Lo}\p{N}_]+)#([\p{Lu}\p{Lo}\p{N}_]+(?:#[\p{Lu}\p{Lo}\p{N}_]+)*)/gu;
+
+/**
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCAL
  *
  * @example
- * `$COMMENT#FLATTENED#CONFIG#DATA#PLACEHOLDER#LOCAL#REGEX`
+ * `$COMMENT#FLATTENED#CONFIG#DATA#PLACEHOLDER#LOCAL#REGEX`, `FLATTENED#CONFIG#DATA#PLACEHOLDER#LOCAL#REGEX`
  *
  * @public
  */
@@ -50,11 +72,11 @@ export const flattenedConfigDataPlaceholderLocalRegex = new RegExp(
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL
  *
  * @example
- * `$COMMENT#FLATTENED#CONFIG#DATA#PLACEHOLDER#GLOBAL#REGEX`
+ * `$COMMENT#FLATTENED#CONFIG#DATA#PLACEHOLDER#LOCAL#REGEX`, `FLATTENED#CONFIG#DATA#PLACEHOLDER#LOCAL#REGEX`
  *
  * @public
  */
 export const flattenedConfigDataPlaceholderGlobalRegex = new RegExp(
   `${escapeRegex($COMMENT)}#([\\p{Lu}\\p{Lo}\\p{N}_]+(?:#[\\p{Lu}\\p{Lo}\\p{N}_]+)+)`,
-  "ug",
+  "gu",
 );

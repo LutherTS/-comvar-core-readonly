@@ -321,6 +321,14 @@
           "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAKEYREGEX",
           "value": "flattenedConfigDataKeyRegex"
         },
+        "flattenedConfigDataKeyLocalRegex": {
+          "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAKEYLOCALREGEX",
+          "value": "flattenedConfigDataKeyLocalRegex"
+        },
+        "flattenedConfigDataKeyGlobalRegex": {
+          "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAKEYGLOBALREGEX",
+          "value": "flattenedConfigDataKeyGlobalRegex"
+        },
         "flattenedConfigDataPlaceholderLocalRegex": {
           "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAPLACEHOLDERLOCALREGEX",
           "value": "flattenedConfigDataPlaceholderLocalRegex"

@@ -8,6 +8,8 @@ import {
   configDataKeyRegex,
   configDataSubKeyRegex,
   flattenedConfigDataKeyRegex,
+  flattenedConfigDataKeyLocalRegex,
+  flattenedConfigDataKeyGlobalRegex,
   flattenedConfigDataPlaceholderLocalRegex,
   flattenedConfigDataPlaceholderGlobalRegex,
 } from "../../source/library/index.js"; // dev
@@ -53,6 +55,8 @@ regexSuites(
   configDataKeyRegex,
   configDataSubKeyRegex,
   flattenedConfigDataKeyRegex,
+  flattenedConfigDataKeyLocalRegex,
+  flattenedConfigDataKeyGlobalRegex,
   flattenedConfigDataPlaceholderLocalRegex,
   flattenedConfigDataPlaceholderGlobalRegex,
 );

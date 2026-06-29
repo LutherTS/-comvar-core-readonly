@@ -196,6 +196,8 @@ export const enData = Object.freeze({
         "configDataSubKeyRegex" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#CONFIGDATASUBKEYREGEX / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#CONFIGDATASUBKEYREGEX */,
       flattenedConfigDataKeyRegex:
         "flattenedConfigDataKeyRegex" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAKEYREGEX / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAKEYREGEX */,
+      flattenedConfigDataKeyLocalRegex: "flattenedConfigDataKeyLocalRegex",
+      flattenedConfigDataKeyGlobalRegex: "flattenedConfigDataKeyGlobalRegex",
       flattenedConfigDataPlaceholderLocalRegex:
         "flattenedConfigDataPlaceholderLocalRegex" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAPLACEHOLDERLOCALREGEX / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAPLACEHOLDERLOCALREGEX */,
       flattenedConfigDataPlaceholderGlobalRegex:

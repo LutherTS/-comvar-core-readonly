@@ -6,6 +6,8 @@ import {
   configDataKeyRegex,
   configDataSubKeyRegex,
   flattenedConfigDataKeyRegex,
+  flattenedConfigDataKeyLocalRegex,
+  flattenedConfigDataKeyGlobalRegex,
   flattenedConfigDataPlaceholderLocalRegex,
   flattenedConfigDataPlaceholderGlobalRegex,
 } from "../library/index.js";
@@ -59,6 +61,12 @@ import { librariesStaticErrorStatuses } from "../constants/errors/config/statuse
  */
 /**
  * @typedef {typeof flattenedConfigDataKeyRegex} FlattenedConfigDataKeyRegex
+ */
+/**
+ * @typedef {typeof flattenedConfigDataKeyLocalRegex} FlattenedConfigDataKeyLocalRegex
+ */
+/**
+ * @typedef {typeof flattenedConfigDataKeyGlobalRegex} FlattenedConfigDataKeyGlobalRegex
  */
 /**
  * @typedef {typeof flattenedConfigDataPlaceholderLocalRegex} FlattenedConfigDataPlaceholderLocalRegex

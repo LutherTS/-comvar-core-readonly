@@ -1,4 +1,4 @@
-import { resolveConfigReadonly, $COMMENT, defaultConfigFileName, packageJsonFileName, configDataKeyRegex, configDataSubKeyRegex, flattenedConfigDataKeyRegex, flattenedConfigDataKeyLocalRegex, flattenedConfigDataKeyGlobalRegex, flattenedConfigDataPlaceholderLocalRegex, flattenedConfigDataPlaceholderGlobalRegex } from "../library/index.js";
+import { resolveConfigReadonly, $COMMENT, defaultConfigFileName, packageJsonFileName, configDataKeyRegex, configDataSubKeyRegex, flattenedConfigDataKeyLocalRegex, flattenedConfigDataKeyGlobalRegex, flattenedConfigDataPlaceholderLocalRegex, flattenedConfigDataPlaceholderGlobalRegex } from "../library/index.js";
 import { allStaticErrorMessages_errorStatuses } from "../constants/errors/index.js";
 import { configPreStaticErrorMessages } from "../constants/errors/input/messages.js";
 import { configPreStaticErrorStatuses } from "../constants/errors/input/statuses.js";
@@ -16,7 +16,6 @@ export type DefaultConfigFileName = typeof defaultConfigFileName;
 export type PackageJsonFileName = typeof packageJsonFileName;
 export type ConfigDataKeyRegex = typeof configDataKeyRegex;
 export type ConfigDataSubKeyRegex = typeof configDataSubKeyRegex;
-export type FlattenedConfigDataKeyRegex = typeof flattenedConfigDataKeyRegex;
 export type FlattenedConfigDataKeyLocalRegex = typeof flattenedConfigDataKeyLocalRegex;
 export type FlattenedConfigDataKeyGlobalRegex = typeof flattenedConfigDataKeyGlobalRegex;
 export type FlattenedConfigDataPlaceholderLocalRegex = typeof flattenedConfigDataPlaceholderLocalRegex;

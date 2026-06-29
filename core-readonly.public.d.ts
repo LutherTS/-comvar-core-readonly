@@ -88,16 +88,6 @@ export declare const flattenedConfigDataKeyGlobalRegex: RegExp;
 export declare const flattenedConfigDataKeyLocalRegex: RegExp;
 
 /**
- * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEY
- *
- * @example
- * `FLATTENED#CONFIG#DATA#KEY`
- *
- * @public
- */
-export declare const flattenedConfigDataKeyRegex: RegExp;
-
-/**
  * $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBAL
  *
  * @example

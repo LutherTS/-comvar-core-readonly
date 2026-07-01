@@ -167,6 +167,7 @@ export const enData = Object.freeze({
   }),
   forComposedVariables: Object.freeze({
     variables: Object.freeze({
+      // tsDoc.src.tests.consts
       resolveConfigReadonly:
         "resolveConfigReadonly" /* variations: $COMMENT#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIGREADONLY / core: $COMMENT#EN#FORCOMPOSEDVARIABLES#VARIABLES#RESOLVECONFIGREADONLY */,
       defaultConfigFileName:
@@ -178,12 +179,15 @@ export const enData = Object.freeze({
   }),
   composedVariablesExclusives: Object.freeze({
     variables: Object.freeze({
+      // tsDoc.src.lib.consts
       _COMMENT:
         "$COMMENT" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT */,
       defaultConfigFileName:
         "comments.config.js" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#DEFAULTCONFIGFILENAME / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#DEFAULTCONFIGFILENAME */,
       packageJsonFileName:
         "package.json" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#PACKAGEJSONFILENAME / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#PACKAGEJSONFILENAME */,
+
+      // tsDoc.src.tests.consts
       libraries:
         "libraries" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#LIBRARIES */,
       sameReference:
@@ -200,15 +204,19 @@ export const enData = Object.freeze({
         "flattenedConfigDataPlaceholderGlobalRegex" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAPLACEHOLDERGLOBALREGEX / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAPLACEHOLDERGLOBALREGEX */,
     }),
     arguments: Object.freeze({
+      // tsDoc.src.tests.consts
       configPath:
         "configPath" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#ARGUMENTS#CONFIGPATH / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#ARGUMENTS#CONFIGPATH */,
     }),
 
-    // tsDoc.src.consts
     commentVariables:
       "Comment Variables" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#COMMENTVARIABLES / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#COMMENTVARIABLES */,
+
+    // tsDoc.src.consts
     dotJs:
       ".js" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#DOTJS / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#DOTJS */,
+
+    // tsDoc.src.consts.errors.messages
     couldntPreZod:
       "could not pass pre-validation from zod" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#COULDNTPREZOD / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#COULDNTPREZOD */,
     couldntZod:

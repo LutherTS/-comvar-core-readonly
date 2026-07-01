@@ -53,7 +53,7 @@ export const flattenedConfigDataKeyGlobalRegex =
  * @public
  */
 export const flattenedConfigDataPlaceholderLocalRegex = new RegExp(
-  `^${escapeRegex($COMMENT)}#([\\p{Lu}\\p{Lo}\\p{N}_]+(?:#[\\p{Lu}\\p{Lo}\\p{N}_]+)+)$`,
+  `^${escapeRegex($COMMENT)}#([\\p{Lu}\\p{Lo}\\p{N}_]+(?:#[\\p{Lu}\\p{Lo}\\p{N}_]+)*)$`,
   "u",
 );
 
@@ -66,6 +66,6 @@ export const flattenedConfigDataPlaceholderLocalRegex = new RegExp(
  * @public
  */
 export const flattenedConfigDataPlaceholderGlobalRegex = new RegExp(
-  `${escapeRegex($COMMENT)}#([\\p{Lu}\\p{Lo}\\p{N}_]+(?:#[\\p{Lu}\\p{Lo}\\p{N}_]+)+)`,
+  `${escapeRegex($COMMENT)}#([\\p{Lu}\\p{Lo}\\p{N}_]+(?:#[\\p{Lu}\\p{Lo}\\p{N}_]+)*)`,
   "gu",
 );

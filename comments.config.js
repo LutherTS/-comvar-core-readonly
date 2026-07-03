@@ -12,7 +12,7 @@ const lintConfigImports = false; // can be omitted
 
 /* ignores */
 
-const ignores = [];
+const ignores = ["source/tests/suites/input-operations/configs/fatal.js"];
 
 /* composedVariablesExclusives */
 

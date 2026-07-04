@@ -150,7 +150,7 @@
                 },
                 "configDataSubKey": {
                   "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY",
-                  "value": "Same as `configDataKeyRegex` but without lowercase letters (`Ll`) replaced by uppercase letters, and without dash punctuation (`Pd`), connector punctuation (`Pc`), and whitespaces (`s`) replaced by underscores (`_`)."
+                  "value": "Same as `configDataKeyRegex` but without lowercase letters (`Ll`) replaced by uppercase letters (`Lu`), and without dash punctuation (`Pd`), connector punctuation (`Pc`), and whitespaces (`s`) replaced by underscores (`_`)."
                 },
                 "flattenedConfigDataKeyLocal": {
                   "key": "EN#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEYLOCAL",
@@ -417,7 +417,7 @@
                 },
                 "configDataSubKey": {
                   "key": "FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY",
-                  "value": "Pareil que `configDataKeyRegex` mais sans les lettres minuscules (`Ll`), et sans ponctuation tiret (`Pd`), ponctuation connecteur (`Pc`) et caractères d'espacement (`s`) remplacés par des tirets bas (`_`)."
+                  "value": "Pareil que `configDataKeyRegex` mais sans les lettres minuscules (`Ll`) remplacées par des lettres majuscules (`Lu`), et sans ponctuation tiret (`Pd`), ponctuation connecteur (`Pc`) et caractères d'espacement (`s`) remplacés par des tirets bas (`_`)."
                 },
                 "flattenedConfigDataKeyLocal": {
                   "key": "FR#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEYLOCAL",
@@ -463,7 +463,7 @@
               "public": {
                 "resolveConfigReadonly": {
                   "key": "FR#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY",
-                  "value": "La config et ses données `libraries`, ou leur absence pour ces dernières via `null`, dans un objet `{success: true}` à ses clés `config` and `libraries` respectivement, avec aussi `libraryVariationKeys_libraryVariationValues` : une version aplati et non-nulle de `libraries` pour en facilité l'usage. En cas d'erreur, un objet `{success: false}` est retourné à la place de sorte que les erreurs puissent être réutilisées de façons adéquates dans l'outil ligne de commande et dans les extensions pour VS Code."
+                  "value": "La config et ses données `libraries`, ou leur absence pour ces dernières via `null`, dans un objet `{success: true}` à ses clés `config` et `libraries` respectivement, avec aussi `libraryVariationKeys_libraryVariationValues` : une version aplatie et non-nulle de `libraries` pour en faciliter l'usage. En cas d'erreur, un objet `{success: false}` est retourné à la place de sorte que les erreurs puissent être réutilisées de façons adéquates dans l'outil ligne de commande et dans les extensions pour VS Code."
                 }
               }
             }

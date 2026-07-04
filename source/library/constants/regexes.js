@@ -31,7 +31,7 @@ export const configDataSubKeyRegex = /^[\p{Lu}\p{Lo}\p{N}_]+$/u;
  * @public
  */
 export const flattenedConfigDataKeyLocalRegex =
-  /^([\p{Lu}\p{Lo}\p{N}_]+)#([\p{Lu}\p{Lo}\p{N}_]+(?:#[\p{Lu}\p{Lo}\p{N}_]+)*)$/u;
+  /^([\p{Lu}\p{Lo}\p{N}_]+)#([\p{Lu}\p{Lo}\p{N}_]+(?:#[\p{Lu}\p{Lo}\p{N}_]+)*)$/u; // (I'll need to be very careful about this in usages such as EN#COMMENT/COMMENT, since the variations version does not include two subkeys. But so far no errors have been encountered as such.)
 
 /**
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEYGLOBAL

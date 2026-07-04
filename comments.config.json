@@ -190,7 +190,7 @@
               "public": {
                 "configPath": {
                   "key": "EN#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH",
-                  "value": "The absolute path of the config regardless of the manner through which it is provided: be it from a default `comments.config.js` at the current working directory, from a relative path passed via the `--config` flag in the CLI, or from a relative path at the extension's `config` key in `.vscode/settings.json` for VS Code."
+                  "value": "The absolute path of the config regardless of the manner through which it is provided. That being said, Comment Variables now requires a default `comments.config.js` at the project's root directory for both its `@comvar/cli` and its extensions for VS Code."
                 }
               },
               "moduleUrl": {
@@ -204,7 +204,7 @@
               "public": {
                 "resolveConfigReadonly": {
                   "key": "EN#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY",
-                  "value": "The config and its `libraries` data, or lack thereof for the latter via `null`, inside a `{success: true}` object at its `config` and `libraries` keys respectively. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extension for VS Code."
+                  "value": "The config and its `libraries` data, or lack thereof for the latter via `null`, inside a `{success: true}` object, at its `config` and `libraries` keys respectively, along with the flattened, non-null `libraryVariationKeys_libraryVariationValues` data for easier consumption. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extensions for VS Code."
                 }
               },
               "freshImport": {
@@ -453,7 +453,7 @@
               "public": {
                 "configPath": {
                   "key": "FR#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH",
-                  "value": "Le chemin absolu de la config qu'importe la manière dont il est fourni : que ce soit par défaut avec `comments.config.js` dans le dossier courant, à partir d'un chemin relatif passer via le drapeau `--config` par l'outil ligne de commande, ou d'un chemin relatif entré à la clé `config` de l'extension dans `.vscode/settings.json` pour VS Code."
+                  "value": "Le chemin absolu de la config qu'importe la manière dont il est fourni. Cela dit, Comment Variables requiert désormais par défaut un fichier `comments.config.js` au dossier racine du projet en cours, tant pour sa `@comvar/cli` que pour ses extensions pour VS Code."
                 }
               }
             }
@@ -463,7 +463,7 @@
               "public": {
                 "resolveConfigReadonly": {
                   "key": "FR#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY",
-                  "value": "La config et ses données `libraries`, ou leur absence pour ces dernières via `null`, dans un objet `{success: true}` à ses clés `config` and `libraries` respectivement. En cas d'erreur, un objet `{success: false}` est retourné à la place de sorte que les erreurs puissent être réutilisées de façons adéquates dans l'outil ligne de commande et dans l'extension pour VS Code."
+                  "value": "La config et ses données `libraries`, ou leur absence pour ces dernières via `null`, dans un objet `{success: true}` à ses clés `config` and `libraries` respectivement, avec aussi `libraryVariationKeys_libraryVariationValues` : une version aplati et non-nulle de `libraries` pour en facilité l'usage. En cas d'erreur, un objet `{success: false}` est retourné à la place de sorte que les erreurs puissent être réutilisées de façons adéquates dans l'outil ligne de commande et dans les extensions pour VS Code."
                 }
               }
             }

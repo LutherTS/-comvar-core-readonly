@@ -5,6 +5,10 @@ import { fork } from "child_process";
 
 import { MODULE_TO_LOAD } from "../constants/index.js";
 
+/**
+ * @typedef {import("../../typedefs/index.js").ConfigModule} ConfigModule
+ */
+
 const childScriptAbsolutePath = path.join(
   path.dirname(url.fileURLToPath(import.meta.url)),
   "fresh-import-b.js",
@@ -22,14 +26,15 @@ export async function freshImport(/** @type {string} */ moduleUrl) {
     serialization: "advanced",
   });
 
-  const promise = /** @type {Promise<{ default: unknown } | null>} */ (
-    new Promise((resolve) => {
-      childProcess.on("message", ({ module }) => {
-        childProcess.kill();
-        resolve(module);
-      });
-    })
-  );
+  const promise =
+    /** @type {Promise<ConfigModule | null>} */ (
+      new Promise((resolve) => {
+        childProcess.on("message", ({ module }) => {
+          childProcess.kill();
+          resolve(module);
+        });
+      })
+    );
 
   return promise;
 }

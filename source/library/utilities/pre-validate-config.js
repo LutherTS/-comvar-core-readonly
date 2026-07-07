@@ -61,8 +61,12 @@ export const preValidateConfig = (/** @type {ConfigModule} */ configModule) => {
 
   const config = configPreSchemaResults.data;
 
+  // Now returns the code of the config module, as obtained from freshImport.
+  const { code } = configModule;
+
   return /** @type {const} */ ({
     config,
+    code,
     ...successTrue,
   });
 };

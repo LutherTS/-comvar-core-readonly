@@ -74,6 +74,7 @@ import { librariesStaticErrorStatuses } from "../constants/errors/config/statuse
 /**
  * @typedef {{
  *   default: unknown;
+ *   code: string;
  * }} ConfigModule
  */
 

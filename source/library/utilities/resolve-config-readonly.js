@@ -1,8 +1,21 @@
 import { successTrue } from "@lutherts/error-handling";
 
+import { Linter } from "eslint";
+
 import { validateInput } from "./validate-input.js";
 import { preValidateConfig } from "./pre-validate-config.js";
 import { validateConfig } from "./validate-config.js";
+
+const languageOptions = /** @type {const} */ ({
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+});
+const linterOptions = /** @type {const} */ ({
+  noInlineConfig: true,
+});
 
 /**
  * $COMMENT#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY
@@ -25,7 +38,7 @@ export const resolveConfigReadonly = async (
   const preValidateConfigResults = preValidateConfig(configModule);
   if (!preValidateConfigResults.success) return preValidateConfigResults;
 
-  const { config } = preValidateConfigResults;
+  const { config, code } = preValidateConfigResults;
 
   // config validations
 
@@ -52,6 +65,16 @@ export const resolveConfigReadonly = async (
     supposedReferenceData === supposedReferenceVariantData
   )
     sameReference = true;
+
+  // NEW
+  // At this point the file is confirmed to be non-fatal JavaScript, meaning its SourceCode object can be obtained through little to no stress. Not getting the code for the file then amounts to an impossible error.
+  // ...
+  // And there I can make sure it doesn't include the current Comment Variables config path as `.json` and as `.public.json`, since these are generated. If VS Code reacts to them, it is most likely to trigger an infinite refresh loop.
+  // So that means for self-testing, it is only natural for people to refresh their window in order to avoid infinitely looping. But they still need that automated refresh on libraries they're importing (done via package.json), and on imported libraries they are modifying through their own copied JSON files (which this features will handle here).
+
+  const linter = new Linter();
+  linter.verify(code, { languageOptions, linterOptions }); // The file is verified to be `.js` only, so the TSESLint parser is actually unneeded.
+  const sourceCode = linter.getSourceCode(); // There is no reason to check `sourceCode` here because if the original code was fatal, it would have errored at `freshImport` earlier.
 
   return /** @type {const} */ ({
     config,

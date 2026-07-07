@@ -1,6 +1,9 @@
+import path from "path";
+
 import { successTrue } from "@lutherts/error-handling";
 
 import { Linter } from "eslint";
+import { ResolverFactory } from "oxc-resolver";
 
 import { validateInput } from "./validate-input.js";
 import { preValidateConfig } from "./pre-validate-config.js";
@@ -15,6 +18,10 @@ const languageOptions = /** @type {const} */ ({
 });
 const linterOptions = /** @type {const} */ ({
   noInlineConfig: true,
+});
+const resolver = new ResolverFactory({
+  extensions: [".json"], // focusing exclusively on ".json" files (but to no avail)
+  modules: [], // voluntarily ignoring "node_modules" (successfully so far)
 });
 
 /**
@@ -76,11 +83,38 @@ export const resolveConfigReadonly = async (
   linter.verify(code, { languageOptions, linterOptions }); // The file is verified to be `.js` only, so the TSESLint parser is actually unneeded.
   const sourceCode = linter.getSourceCode(); // There is no reason to check `sourceCode` here because if the original code was fatal, it would have errored at `freshImport` earlier.
 
+  const userlandJsonImports__Absolute = /** @type {Set<string>} */ (new Set());
+  const userlandJsonImports__Relative = /** @type {Set<string>} */ (new Set());
+
+  for (const node of sourceCode.ast.body) {
+    if (node.type === "ImportDeclaration") {
+      const {
+        source: { value },
+      } = node;
+
+      if (typeof value === "string") {
+        const { path: absolutePath } = resolver.resolveFileSync(
+          configPath,
+          value,
+        );
+
+        if (absolutePath && absolutePath.endsWith(".json")) {
+          const relativePath = path.relative(configPath, absolutePath);
+
+          userlandJsonImports__Absolute.add(absolutePath);
+          userlandJsonImports__Relative.add(relativePath);
+        }
+      }
+    }
+  }
+
   return /** @type {const} */ ({
     config,
     libraries: librariesSchemaResultsData,
     libraryVariationKeys_libraryVariationValues, // the flattened, better data
     sameReference,
+    userlandJsonImports__Absolute,
+    userlandJsonImports__Relative,
     ...successTrue,
   });
 };

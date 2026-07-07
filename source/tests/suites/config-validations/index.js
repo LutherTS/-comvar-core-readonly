@@ -2,6 +2,7 @@ import url from "url";
 import path from "path";
 
 import { describe, it } from "node:test";
+import assert from "node:assert";
 
 import { MISPLACED_LIBRARY_VARIATION } from "../../../constants/errors/index.js";
 import {
@@ -10,7 +11,8 @@ import {
   librariesRecordMustBeRecords,
   librariesMustKey,
   librariesValuesMustBeStrings,
-  librariesValuesCannotBeEmptyStrings,
+  // librariesValuesCannotBeEmptyStrings,
+  librariesValuesCannotBeEmptyTrimmed,
 } from "../../../constants/errors/config/messages.js";
 
 import { RESOLVE_CONFIG_READONLY, LIBRARIES } from "../../constants/index.js";
@@ -49,6 +51,10 @@ const librariesKeyNotStringsPath = path.join(
 const librariesKeyEmptyStringsPath = path.join(
   currentDirectoryPath,
   "./configs/libraries-key-empty-strings.js",
+);
+const librariesKeyEmptyTrimmedPath = path.join(
+  currentDirectoryPath,
+  "./configs/libraries-key-empty-trimmed.js",
 );
 const librariesMisplacedPath = path.join(
   currentDirectoryPath,
@@ -101,13 +107,34 @@ export const configValidationsSuite = (
         librariesValuesMustBeStrings,
       );
     });
-    it(`should fail if the config's \`${LIBRARIES}\` key's record's records' values are empty strings`, async () => {
+    // it(`should fail if the config's \`${LIBRARIES}\` key's record's records' values are empty strings`, async () => {
+    //   const resolveConfigReadonlyResults = await resolveConfigReadonly(
+    //     librariesKeyEmptyStringsPath,
+    //   );
+    //   assertFailureWithMessage(
+    //     resolveConfigReadonlyResults,
+    //     librariesValuesCannotBeEmptyStrings,
+    //   );
+    // });
+
+    it(`should actually pass if the config's \`${LIBRARIES}\` key's record's records' values are empty strings`, async () => {
       const resolveConfigReadonlyResults = await resolveConfigReadonly(
         librariesKeyEmptyStringsPath,
       );
+      console.debug(
+        "resolveConfigReadonlyResults are:",
+        resolveConfigReadonlyResults,
+      );
+      assert.strictEqual(resolveConfigReadonlyResults.success, true);
+    });
+
+    it(`should fail if the config's \`${LIBRARIES}\` key's record's records' values are empty trimmed`, async () => {
+      const resolveConfigReadonlyResults = await resolveConfigReadonly(
+        librariesKeyEmptyTrimmedPath,
+      );
       assertFailureWithMessage(
         resolveConfigReadonlyResults,
-        librariesValuesCannotBeEmptyStrings,
+        librariesValuesCannotBeEmptyTrimmed,
       );
     });
     it(`should fail if the config's \`${LIBRARIES}\` key's record's records' keys do not start with their assign library key`, async () => {

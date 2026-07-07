@@ -7,7 +7,8 @@ import {
   librariesRecordMustBeRecords,
   librariesMustKey,
   librariesValuesMustBeStrings,
-  librariesValuesCannotBeEmptyStrings,
+  // librariesValuesCannotBeEmptyStrings,
+  librariesValuesCannotBeEmptyTrimmed,
 } from "../../constants/errors/config/messages.js";
 
 import {
@@ -39,7 +40,15 @@ export const ConfigLibrariesSchema = z
           .string({
             error: librariesValuesMustBeStrings,
           })
-          .nonempty({ error: librariesValuesCannotBeEmptyStrings }),
+          .refine(
+            (value) => {
+              if (value.length && !value.trim()) return false;
+              return true;
+            },
+            { error: librariesValuesCannotBeEmptyTrimmed },
+            // Values can now be empty strings, but they cannot be made exclusively of whitespace.
+          ),
+        // .nonempty({ error: librariesValuesCannotBeEmptyStrings }),
         {
           error: librariesRecordMustBeRecords,
         },

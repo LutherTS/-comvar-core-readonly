@@ -1,3 +1,3 @@
-const libraries = { SUBKEY: { "RIGHT#KEY": "" } };
+const libraries = { SUBKEY: { "SUBKEY#KEY": "" } };
 
 export default { libraries };

@@ -121,10 +121,6 @@ export const configValidationsSuite = (
       const resolveConfigReadonlyResults = await resolveConfigReadonly(
         librariesKeyEmptyStringsPath,
       );
-      console.debug(
-        "resolveConfigReadonlyResults are:",
-        resolveConfigReadonlyResults,
-      );
       assert.strictEqual(resolveConfigReadonlyResults.success, true);
     });
 

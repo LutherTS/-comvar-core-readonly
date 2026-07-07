@@ -88,6 +88,10 @@ export declare const resolvedConfigData: {
                                     "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESVALUESCANNOTBEEMPTYSTRINGS";
                                     "value": "The config `libraries` key's record's records' values cannot be empty strings.";
                                 };
+                                "librariesValuesCannotBeEmptyTrimmed": {
+                                    "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESVALUESCANNOTBEEMPTYTRIMMED";
+                                    "value": "The config `libraries` key's record's records' values cannot be empty trimmed.";
+                                };
                             };
                             "statuses": {
                                 "LIBRARIES_INVALID": {
@@ -117,6 +121,10 @@ export declare const resolvedConfigData: {
                                 "LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_STRINGS": {
                                     "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_STRINGS";
                                     "value": "\"The config `libraries` key's record's records' values cannot be empty strings.\"";
+                                };
+                                "LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_TRIMMED": {
+                                    "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_TRIMMED";
+                                    "value": "\"The config `libraries` key's record's records' values cannot be empty trimmed.\"";
                                 };
                             };
                         };

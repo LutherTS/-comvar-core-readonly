@@ -4,7 +4,7 @@
  * @param configPath - $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH
  * @returns $COMMENT#_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY
  *
- * @public
+ * @public $COMMENT#_COMVAR_CORE_READONLY#PUBLIC#RESOLVECONFIGREADONLY
  */
 export declare const resolveConfigReadonly: (configPath: string) => Promise<{
     readonly success: false;
@@ -77,4 +77,8 @@ export declare const resolveConfigReadonly: (configPath: string) => Promise<{
     readonly libraries: Record<string, Record<string, string>> | null;
     readonly libraryVariationKeys_libraryVariationValues: Map<string, string>;
     readonly sameReference: boolean;
+    readonly code: string;
+    readonly sourceCode: import("eslint").SourceCode;
+    readonly userlandJsonImports__Absolute: Set<string>;
+    readonly userlandJsonImports__Relative: Set<string>;
 }>;

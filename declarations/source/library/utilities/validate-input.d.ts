@@ -28,7 +28,5 @@ export declare const validateInput: (configPath: string) => Promise<{
     }];
 } | {
     readonly success: true;
-    readonly configModule: {
-        default: unknown;
-    };
+    readonly configModule: import("../../typedefs/index.js").ConfigModule;
 }>;

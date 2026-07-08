@@ -22,5 +22,6 @@ export type FlattenedConfigDataPlaceholderLocalRegex = typeof flattenedConfigDat
 export type FlattenedConfigDataPlaceholderGlobalRegex = typeof flattenedConfigDataPlaceholderGlobalRegex;
 export type ConfigModule = {
     default: unknown;
+    code: string;
 };
 export type Config = Record<string, unknown>;

@@ -4,7 +4,7 @@
  * @example
  * `config data-key`
  *
- * @public
+ * @public $COMMENT#_COMVAR_CORE_READONLY#PUBLIC#CONFIGDATAKEYREGEX
  */
 export declare const configDataKeyRegex: RegExp;
 /**
@@ -13,7 +13,7 @@ export declare const configDataKeyRegex: RegExp;
  * @example
  * `CONFIG_DATA_SUB_KEY`
  *
- * @public
+ * @public $COMMENT#_COMVAR_CORE_READONLY#PUBLIC#CONFIGDATASUBKEYREGEX
  */
 export declare const configDataSubKeyRegex: RegExp;
 /**
@@ -22,7 +22,7 @@ export declare const configDataSubKeyRegex: RegExp;
  * @example
  * `FLATTENED#CONFIG#DATA#KEY`, `FLATTENED`, `CONFIG#DATA#KEY`
  *
- * @public
+ * @public $COMMENT#_COMVAR_CORE_READONLY#PUBLIC#FLATTENEDCONFIGDATAKEYLOCALREGEX
  */
 export declare const flattenedConfigDataKeyLocalRegex: RegExp;
 /**
@@ -31,7 +31,7 @@ export declare const flattenedConfigDataKeyLocalRegex: RegExp;
  * @example
  * `FLATTENED#CONFIG#DATA#KEY`, `FLATTENED`, `CONFIG#DATA#KEY`
  *
- * @public
+ * @public $COMMENT#_COMVAR_CORE_READONLY#PUBLIC#FLATTENEDCONFIGDATAKEYGLOBALREGEX
  */
 export declare const flattenedConfigDataKeyGlobalRegex: RegExp;
 /**
@@ -40,7 +40,7 @@ export declare const flattenedConfigDataKeyGlobalRegex: RegExp;
  * @example
  * `$COMMENT#FLATTENED#CONFIG#DATA#PLACEHOLDER#LOCAL#REGEX`, `FLATTENED#CONFIG#DATA#PLACEHOLDER#LOCAL#REGEX`
  *
- * @public
+ * @public $COMMENT#_COMVAR_CORE_READONLY#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERLOCALREGEX
  */
 export declare const flattenedConfigDataPlaceholderLocalRegex: RegExp;
 /**
@@ -49,6 +49,6 @@ export declare const flattenedConfigDataPlaceholderLocalRegex: RegExp;
  * @example
  * `$COMMENT#FLATTENED#CONFIG#DATA#PLACEHOLDER#LOCAL#REGEX`, `FLATTENED#CONFIG#DATA#PLACEHOLDER#LOCAL#REGEX`
  *
- * @public
+ * @public $COMMENT#_COMVAR_CORE_READONLY#PUBLIC#FLATTENEDCONFIGDATAPLACEHOLDERGLOBALREGEX
  */
 export declare const flattenedConfigDataPlaceholderGlobalRegex: RegExp;

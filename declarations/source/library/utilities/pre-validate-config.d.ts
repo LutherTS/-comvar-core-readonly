@@ -18,4 +18,5 @@ export declare const preValidateConfig: (configModule: ConfigModule) => {
 } | {
     readonly success: true;
     readonly config: Record<string, unknown>;
+    readonly code: string;
 };

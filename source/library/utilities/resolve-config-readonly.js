@@ -113,6 +113,8 @@ export const resolveConfigReadonly = async (
     libraries: librariesSchemaResultsData,
     libraryVariationKeys_libraryVariationValues, // the flattened, better data
     sameReference,
+    code,
+    sourceCode,
     userlandJsonImports__Absolute,
     userlandJsonImports__Relative,
     ...successTrue,

@@ -50,7 +50,7 @@ export const frData = Object.freeze({
           utils: Object.freeze({
             public: Object.freeze({
               resolveConfigReadonly:
-                "La config et ses données `libraries`, ou leur absence pour ces dernières via `null`, dans un objet `{success: true}` à ses clés `config` et `libraries` respectivement, avec aussi `libraryVariationKeys_libraryVariationValues` : une version aplatie et non-nulle de `libraries` pour en faciliter l'usage. En cas d'erreur, un objet `{success: false}` est retourné à la place de sorte que les erreurs puissent être réutilisées de façons adéquates dans l'outil ligne de commande et dans les extensions pour VS Code." /* variations: $COMMENT#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY / core: $COMMENT#FR#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY */,
+                "La config et ses données `libraries`, ou leur absence pour ces dernières via `null`, dans un objet `{success: true}` à ses clés `config` et `libraries` respectivement, avec aussi `libraryVariationKeys_libraryVariationValues` : une version aplatie et non-nulle de `libraries` pour en faciliter l'usage. Inclut aussi le `code` et le `SourceCode` ESLint du fichier de config, avec les listes de ses fichiers JSON importés pour en observer les changements. En cas d'erreur, un objet `{success: false}` est retourné à la place de sorte que les erreurs puissent être réutilisées de façons adéquates dans l'outil ligne de commande et dans les extensions pour VS Code." /* variations: $COMMENT#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY / core: $COMMENT#FR#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY */,
             }),
           }),
         }),

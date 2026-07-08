@@ -99,7 +99,10 @@ export const resolveConfigReadonly = async (
         );
 
         if (absolutePath && absolutePath.endsWith(".json")) {
-          const relativePath = path.relative(configPath, absolutePath);
+          const relativePath = path.relative(
+            path.dirname(configPath),
+            absolutePath,
+          );
 
           userlandJsonImports__Absolute.add(absolutePath);
           userlandJsonImports__Relative.add(relativePath);

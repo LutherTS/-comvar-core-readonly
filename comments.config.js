@@ -58,13 +58,14 @@ const variations = Object.freeze({
 import { resolvedPublicData as coreReadonlyCommentVariablesData } from "./comments.config.public.mjs";
 
 import { commentVariablesData as errorHandlingCommentVariablesData } from "@lutherts/error-handling";
+import errorHandlingCommentVariablesDataIntl from "./comment-variables/miscellaneous/librairies/error-handling.intl.json" with { type: "json" };
 
 const libraries = {
   [coreReadonlyCommentVariablesData.libraryKey]:
     coreReadonlyCommentVariablesData.libraryVariations.EN,
 
   [errorHandlingCommentVariablesData.libraryKey]:
-    errorHandlingCommentVariablesData.libraryVariations.EN,
+    errorHandlingCommentVariablesDataIntl.EN,
 }; // can be omitted // v3
 
 const config = {

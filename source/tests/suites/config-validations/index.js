@@ -11,7 +11,6 @@ import {
   librariesRecordMustBeRecords,
   librariesMustKey,
   librariesValuesMustBeStrings,
-  // librariesValuesCannotBeEmptyStrings,
   librariesValuesCannotBeEmptyTrimmed,
 } from "../../../constants/errors/config/messages.js";
 
@@ -107,15 +106,6 @@ export const configValidationsSuite = (
         librariesValuesMustBeStrings,
       );
     });
-    // it(`should fail if the config's \`${LIBRARIES}\` key's record's records' values are empty strings`, async () => {
-    //   const resolveConfigReadonlyResults = await resolveConfigReadonly(
-    //     librariesKeyEmptyStringsPath,
-    //   );
-    //   assertFailureWithMessage(
-    //     resolveConfigReadonlyResults,
-    //     librariesValuesCannotBeEmptyStrings,
-    //   );
-    // });
 
     it(`should actually pass if the config's \`${LIBRARIES}\` key's record's records' values are empty strings`, async () => {
       const resolveConfigReadonlyResults = await resolveConfigReadonly(

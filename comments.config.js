@@ -12,7 +12,10 @@ const lintConfigImports = false; // can be omitted
 
 /* ignores */
 
-const ignores = ["source/tests/suites/input-operations/configs/fatal.js"];
+const ignores = [
+  "**/typedefs/**",
+  "source/tests/suites/input-operations/configs/fatal.js",
+];
 
 /* composedVariablesExclusives */
 

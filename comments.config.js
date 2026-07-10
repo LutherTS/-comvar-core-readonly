@@ -6,16 +6,16 @@ import { data } from "./comment-variables/data/index.js";
 
 const myIgnoresOnly = false; // can be omitted
 
-/* lintConfigImports */
-
-const lintConfigImports = false; // can be omitted
-
 /* ignores */
 
 const ignores = [
   "**/typedefs/**",
   "source/tests/suites/input-operations/configs/fatal.js",
-];
+]; // can be omitted
+
+/* lintConfigImports */
+
+const lintConfigImports = false; // can be omitted
 
 /* composedVariablesExclusives */
 

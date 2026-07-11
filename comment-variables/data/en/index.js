@@ -111,8 +111,6 @@ export const enData = Object.freeze({
             public: Object.freeze({
               resolveConfigReadonly:
                 "Initially verifies, validates and resolves the config path to retrieve the config and provide its `libraries` key data." /* variations: $COMMENT#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY / core: $COMMENT#EN#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY */,
-              trimStringWithLimit:
-                "Trims a string with an ellipsis based on a provided length limit." /* variations: $COMMENT#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#TRIMSTRINGWITHLIMIT / core: $COMMENT#EN#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#TRIMSTRINGWITHLIMIT */,
             }),
             freshImport:
               "Guarantees a fresh import of the config, negating the innate (and hidden) cache of the dynamic `import` utility." /* variations: $COMMENT#TSDOC#SRC#LIB#DEFS#UTILS#FRESHIMPORT / core: $COMMENT#EN#TSDOC#SRC#LIB#DEFS#UTILS#FRESHIMPORT */,
@@ -123,10 +121,6 @@ export const enData = Object.freeze({
             public: Object.freeze({
               configPath:
                 "The absolute path of the config regardless of the manner through which it is provided. That being said, $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#COMMENTVARIABLES now requires a default `$COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#DEFAULTCONFIGFILENAME` at the project's root directory for both its `@comvar/cli` and its extensions for VS Code." /* variations: $COMMENT#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH / core: $COMMENT#EN#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH */,
-              string:
-                "The string at hand." /* variations: $COMMENT#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#STRING / core: $COMMENT#EN#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#STRING */,
-              limit:
-                "The provided length limit. The string will be trimmed if its length is strictly superior to this given number." /* variations: $COMMENT#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#LIMIT / core: $COMMENT#EN#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#LIMIT */,
             }),
             moduleUrl:
               "The absolute path of the module to import." /* variations: $COMMENT#TSDOC#SRC#LIB#PARAMS#UTILS#MODULEURL / core: $COMMENT#EN#TSDOC#SRC#LIB#PARAMS#UTILS#MODULEURL */,
@@ -137,8 +131,6 @@ export const enData = Object.freeze({
             public: Object.freeze({
               resolveConfigReadonly:
                 "The config and its `libraries` data, or lack thereof for the latter via `null`, inside a `{success: true}` object, at its `config` and `libraries` keys respectively, along with the flattened, non-null `libraryVariationKeys_libraryVariationValues` data for easier consumption. Also includes the `code` and the ESLint `SourceCode` of the config file, along with its lists of imported JSON files to be watched for changes. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extensions for VS Code." /* variations: $COMMENT#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY / core: $COMMENT#EN#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY */,
-              trimStringWithLimit:
-                "The provided string if its length is lower or equal to the provided length limit; a trimmed version of that string otherwise." /* variations: $COMMENT#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#TRIMSTRINGWITHLIMIT / core: $COMMENT#EN#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#TRIMSTRINGWITHLIMIT */,
             }),
             freshImport:
               "Either an object with its `default` property sets to the default export of the module successfully loaded, or `null` when an error arises. (Debugging is currently manual by looking at the error being caught in the child process.)" /* variations: $COMMENT#TSDOC#SRC#LIB#RETURNS#UTILS#FRESHIMPORT / core: $COMMENT#EN#TSDOC#SRC#LIB#RETURNS#UTILS#FRESHIMPORT */,

@@ -3,6 +3,7 @@ import {
   successTrue,
   typeError,
   makeSuccessFalseTypeError,
+  trimStringWithLimit,
 } from "@lutherts/error-handling";
 
 import {
@@ -20,8 +21,6 @@ import { LIBRARIES_INVALID } from "../../constants/errors/config/statuses.js";
 import { ConfigLibrariesSchema } from "../constants/schemas.js";
 
 import { subkeySeparator } from "../constants/index.js";
-
-import { trimStringWithLimit } from "../utilities/index.js";
 
 /**
  * @typedef {import("../../types/index.ts").Config} Config

@@ -43,7 +43,7 @@ import { librariesStaticErrorStatuses } from "../constants/errors/config/statuse
  */
 
 /**
- * @typedef {typeof $COMMENT} _COMMENTType
+ * @typedef {typeof $COMMENT} $COMMENT__Type
  */
 /**
  * @typedef {typeof defaultConfigFileName} DefaultConfigFileName

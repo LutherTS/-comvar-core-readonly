@@ -11,7 +11,7 @@ import {
 } from "../../constants/errors/config/messages.js";
 
 import {
-  configDataSubKeyRegex,
+  configDataSubkeyRegex,
   flattenedConfigDataKeyLocalRegex,
 } from "./regexes.js";
 
@@ -68,7 +68,7 @@ export const ConfigLibrariesSchema = z
   .refine(
     (record) => {
       for (const key of Object.keys(record)) {
-        if (!configDataSubKeyRegex.test(key)) return false;
+        if (!configDataSubkeyRegex.test(key)) return false;
       }
       return true;
     },

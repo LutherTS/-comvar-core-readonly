@@ -227,9 +227,9 @@ export declare const composedVariablesExclusives: {
             "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#CONFIGDATAKEYREGEX";
             "value": "configDataKeyRegex";
         };
-        "configDataSubKeyRegex": {
+        "configDataSubkeyRegex": {
             "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#CONFIGDATASUBKEYREGEX";
-            "value": "configDataSubKeyRegex";
+            "value": "configDataSubkeyRegex";
         };
         "flattenedConfigDataKeyLocalRegex": {
             "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#FLATTENEDCONFIGDATAKEYLOCALREGEX";

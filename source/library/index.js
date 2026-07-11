@@ -6,13 +6,13 @@ export { resolveConfigReadonly } from "./utilities/resolve-config-readonly.js";
 
 export {
   $COMMENT,
-  subKeySeparator,
+  subkeySeparator,
   defaultConfigFileName,
   packageJsonFileName,
 } from "./constants/index.js";
 export {
   configDataKeyRegex,
-  configDataSubKeyRegex,
+  configDataSubkeyRegex,
   flattenedConfigDataKeyLocalRegex,
   flattenedConfigDataKeyGlobalRegex,
   flattenedConfigDataPlaceholderLocalRegex,

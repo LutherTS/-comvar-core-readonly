@@ -19,7 +19,7 @@ import { LIBRARIES_INVALID } from "../../constants/errors/config/statuses.js";
 
 import { ConfigLibrariesSchema } from "../constants/schemas.js";
 
-import { subKeySeparator } from "../constants/index.js";
+import { subkeySeparator } from "../constants/index.js";
 
 import { trimStringWithLimit } from "../utilities/index.js";
 
@@ -47,7 +47,7 @@ const makeMisplacedLibraryVariationError = (
   );
 
   const message = /** @type {const} */ (
-    `ERROR. Library variation key ${trimmedLibraryVariationKey} does not start with its assigned library key (${trimmedLibraryKey}${subKeySeparator}), which suggests its library variation has been misplaced.`
+    `ERROR. Library variation key ${trimmedLibraryVariationKey} does not start with its assigned library key (${trimmedLibraryKey}${subkeySeparator}), which suggests its library variation has been misplaced.`
   );
   const status = MISPLACED_LIBRARY_VARIATION;
 
@@ -104,7 +104,7 @@ export const validateConfig = (/** @type {Config} */ config) => {
       for (const [libraryVariationKey, libraryVariationValue] of Object.entries(
         libraryVariation,
       )) {
-        if (!libraryVariationKey.startsWith(`${libraryKey}${subKeySeparator}`)) {
+        if (!libraryVariationKey.startsWith(`${libraryKey}${subkeySeparator}`)) {
           const error = makeMisplacedLibraryVariationError(
             libraryVariationKey,
             libraryKey,

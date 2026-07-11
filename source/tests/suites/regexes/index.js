@@ -12,7 +12,7 @@ import {
 
 /**
  * @typedef {import("../../../types/index.ts").ConfigDataKeyRegex} ConfigDataKeyRegex
- * @typedef {import("../../../types/index.ts").ConfigDataSubKeyRegex} ConfigDataSubKeyRegex
+ * @typedef {import("../../../types/index.ts").ConfigDataSubkeyRegex} ConfigDataSubkeyRegex
  * @typedef {import("../../../types/index.ts").FlattenedConfigDataKeyLocalRegex} FlattenedConfigDataKeyLocalRegex
  * @typedef {import("../../../types/index.ts").FlattenedConfigDataKeyGlobalRegex} FlattenedConfigDataKeyGlobalRegex
  * @typedef {import("../../../types/index.ts").FlattenedConfigDataPlaceholderLocalRegex} FlattenedConfigDataPlaceholderLocalRegex
@@ -21,7 +21,7 @@ import {
 
 export const regexSuites = (
   /** @type {ConfigDataKeyRegex} */ configDataKeyRegex,
-  /** @type {ConfigDataSubKeyRegex} */ configDataSubKeyRegex,
+  /** @type {ConfigDataSubkeyRegex} */ configDataSubkeyRegex,
   /** @type {FlattenedConfigDataKeyLocalRegex} */ flattenedConfigDataKeyLocalRegex,
   /** @type {FlattenedConfigDataKeyGlobalRegex} */ flattenedConfigDataKeyGlobalRegex,
   /** @type {FlattenedConfigDataPlaceholderLocalRegex} */ flattenedConfigDataPlaceholderLocalRegex,
@@ -43,13 +43,13 @@ export const regexSuites = (
   describe(CONFIG_DATA_SUBKEY_REGEX, () => {
     // initial tests
     it(`should be a regex`, () => {
-      assert.strictEqual(configDataSubKeyRegex instanceof RegExp, true);
+      assert.strictEqual(configDataSubkeyRegex instanceof RegExp, true);
     });
 
     // validations tests
     it(`should pass when testing its example`, () => {
-      const example = "CONFIG_DATA_SUB_KEY";
-      assert.strictEqual(configDataSubKeyRegex.test(example), true);
+      const example = "CONFIG_DATA_SUBKEY";
+      assert.strictEqual(configDataSubkeyRegex.test(example), true);
     });
   });
 

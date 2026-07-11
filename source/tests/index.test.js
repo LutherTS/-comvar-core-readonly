@@ -6,7 +6,7 @@ import {
   defaultConfigFileName,
   packageJsonFileName,
   configDataKeyRegex,
-  configDataSubKeyRegex,
+  configDataSubkeyRegex,
   flattenedConfigDataKeyLocalRegex,
   flattenedConfigDataKeyGlobalRegex,
   flattenedConfigDataPlaceholderLocalRegex,
@@ -52,7 +52,7 @@ packageJsonFileNameSuite(packageJsonFileName);
 // regex tests
 regexSuites(
   configDataKeyRegex,
-  configDataSubKeyRegex,
+  configDataSubkeyRegex,
   flattenedConfigDataKeyLocalRegex,
   flattenedConfigDataKeyGlobalRegex,
   flattenedConfigDataPlaceholderLocalRegex,

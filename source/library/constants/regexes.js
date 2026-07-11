@@ -1,6 +1,6 @@
 import { escapeRegex } from "@lutherts/error-handling";
 
-import { $COMMENT, subKeySeparator } from "./index.js";
+import { $COMMENT, subkeySeparator } from "./index.js";
 
 /**
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATAKEY
@@ -16,11 +16,11 @@ export const configDataKeyRegex = /^[\p{Ll}\p{Lu}\p{Lo}\p{Pd}\p{Pc}\p{N}\s]+$/u;
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY
  *
  * @example
- * `CONFIG_DATA_SUB_KEY`
+ * `CONFIG_DATA_SUBKEY`
  *
  * @public
  */
-export const configDataSubKeyRegex = /^[\p{Lu}\p{Lo}\p{N}_]+$/u;
+export const configDataSubkeyRegex = /^[\p{Lu}\p{Lo}\p{N}_]+$/u;
 
 /**
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#FLATTENEDCONFIGDATAKEYLOCAL
@@ -31,7 +31,7 @@ export const configDataSubKeyRegex = /^[\p{Lu}\p{Lo}\p{N}_]+$/u;
  * @public
  */
 export const flattenedConfigDataKeyLocalRegex = new RegExp(
-  `^([\\p{Lu}\\p{Lo}\\p{N}_]+)${escapeRegex(subKeySeparator)}([\\p{Lu}\\p{Lo}\\p{N}_]+(?:${escapeRegex(subKeySeparator)}[\\p{Lu}\\p{Lo}\\p{N}_]+)*)$`,
+  `^([\\p{Lu}\\p{Lo}\\p{N}_]+)${escapeRegex(subkeySeparator)}([\\p{Lu}\\p{Lo}\\p{N}_]+(?:${escapeRegex(subkeySeparator)}[\\p{Lu}\\p{Lo}\\p{N}_]+)*)$`,
   "u",
 ); // (Be very careful about this in usages such as EN#COMMENT/COMMENT, since the variations version does not include two subkeys. But so far no errors have been encountered as such, since variation versions are not exposed to regex until they are transformed into core versions.)
 
@@ -44,7 +44,7 @@ export const flattenedConfigDataKeyLocalRegex = new RegExp(
  * @public
  */
 export const flattenedConfigDataKeyGlobalRegex = new RegExp(
-  `([\\p{Lu}\\p{Lo}\\p{N}_]+)${escapeRegex(subKeySeparator)}([\\p{Lu}\\p{Lo}\\p{N}_]+(?:${escapeRegex(subKeySeparator)}[\\p{Lu}\\p{Lo}\\p{N}_]+)*)`,
+  `([\\p{Lu}\\p{Lo}\\p{N}_]+)${escapeRegex(subkeySeparator)}([\\p{Lu}\\p{Lo}\\p{N}_]+(?:${escapeRegex(subkeySeparator)}[\\p{Lu}\\p{Lo}\\p{N}_]+)*)`,
   "gu",
 );
 
@@ -57,7 +57,7 @@ export const flattenedConfigDataKeyGlobalRegex = new RegExp(
  * @public
  */
 export const flattenedConfigDataPlaceholderLocalRegex = new RegExp(
-  `^${escapeRegex($COMMENT)}${escapeRegex(subKeySeparator)}([\\p{Lu}\\p{Lo}\\p{N}_]+(?:${escapeRegex(subKeySeparator)}[\\p{Lu}\\p{Lo}\\p{N}_]+)*)$`,
+  `^${escapeRegex($COMMENT)}${escapeRegex(subkeySeparator)}([\\p{Lu}\\p{Lo}\\p{N}_]+(?:${escapeRegex(subkeySeparator)}[\\p{Lu}\\p{Lo}\\p{N}_]+)*)$`,
   "u",
 );
 
@@ -70,6 +70,6 @@ export const flattenedConfigDataPlaceholderLocalRegex = new RegExp(
  * @public
  */
 export const flattenedConfigDataPlaceholderGlobalRegex = new RegExp(
-  `${escapeRegex($COMMENT)}${escapeRegex(subKeySeparator)}([\\p{Lu}\\p{Lo}\\p{N}_]+(?:${escapeRegex(subKeySeparator)}[\\p{Lu}\\p{Lo}\\p{N}_]+)*)`,
+  `${escapeRegex($COMMENT)}${escapeRegex(subkeySeparator)}([\\p{Lu}\\p{Lo}\\p{N}_]+(?:${escapeRegex(subkeySeparator)}[\\p{Lu}\\p{Lo}\\p{N}_]+)*)`,
   "gu",
 );

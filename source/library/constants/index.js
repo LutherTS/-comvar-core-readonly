@@ -12,7 +12,7 @@ export const $COMMENT = composedVariablesExclusives.variables._COMMENT.value;
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#SUBKEYSEPARATOR
  * @public
  */
-export const subKeySeparator = "#";
+export const subkeySeparator = "#";
 
 /**
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME

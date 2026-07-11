@@ -4,7 +4,7 @@ import {
   defaultConfigFileName,
   packageJsonFileName,
   configDataKeyRegex,
-  configDataSubKeyRegex,
+  configDataSubkeyRegex,
   flattenedConfigDataKeyLocalRegex,
   flattenedConfigDataKeyGlobalRegex,
   flattenedConfigDataPlaceholderLocalRegex,
@@ -46,7 +46,7 @@ export type PackageJsonFileName = typeof packageJsonFileName;
 
 export type ConfigDataKeyRegex = typeof configDataKeyRegex;
 
-export type ConfigDataSubKeyRegex = typeof configDataSubKeyRegex;
+export type ConfigDataSubkeyRegex = typeof configDataSubkeyRegex;
 
 export type FlattenedConfigDataKeyLocalRegex =
   typeof flattenedConfigDataKeyLocalRegex;

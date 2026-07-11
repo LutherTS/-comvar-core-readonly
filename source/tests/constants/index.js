@@ -27,7 +27,7 @@ export const PACKAGE_JSON_FILE_NAME =
 export const CONFIG_DATA_KEY_REGEX =
   composedVariablesExclusives.variables.configDataKeyRegex.value;
 export const CONFIG_DATA_SUBKEY_REGEX =
-  composedVariablesExclusives.variables.configDataSubKeyRegex.value;
+  composedVariablesExclusives.variables.configDataSubkeyRegex.value;
 export const FLATTENED_CONFIG_DATA_KEY_LOCAL_REGEX =
   composedVariablesExclusives.variables.flattenedConfigDataKeyLocalRegex.value;
 export const FLATTENED_CONFIG_DATA_KEY_GLOBAL_REGEX =

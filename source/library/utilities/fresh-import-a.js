@@ -9,6 +9,8 @@ import { MODULE_TO_LOAD } from "../constants/index.js";
  * @typedef {import("../../types/index.ts").ConfigModule} ConfigModule
  */
 
+/* freshImport */
+
 const childScriptAbsolutePath = path.join(
   path.dirname(url.fileURLToPath(import.meta.url)),
   "fresh-import-b.js",

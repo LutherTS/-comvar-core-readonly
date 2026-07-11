@@ -6,6 +6,7 @@ export { resolveConfigReadonly } from "./utilities/resolve-config-readonly.js";
 
 export {
   $COMMENT,
+  subKeySeparator,
   defaultConfigFileName,
   packageJsonFileName,
 } from "./constants/index.js";
@@ -17,5 +18,7 @@ export {
   flattenedConfigDataPlaceholderLocalRegex,
   flattenedConfigDataPlaceholderGlobalRegex,
 } from "./constants/regexes.js";
+
+export { trimStringWithLimit } from "./utilities/index.js";
 
 export { commentVariablesData } from "../comment-variables/public.js";

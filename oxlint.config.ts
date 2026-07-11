@@ -4,16 +4,21 @@ export default defineConfig({
   categories: {
     correctness: "warn",
   },
-  rules: {
-    "eslint/no-unused-vars": "off", // for JSDoc
-    "typescript/no-useless-empty-export": "off", // for API Extractor
-  },
   ignorePatterns: ["source/tests/suites/input-operations/configs/fatal.js"],
   overrides: [
     {
+      files: ["source/library/utilities/fresh-import-b.js"],
+      rules: {
+        "eslint/no-unused-vars": "off",
+      },
+    },
+    {
       jsPlugins: ["eslint-plugin-tsdoc"],
-      files: ["core-readonly.public.d.ts"],
-      rules: { "tsdoc/syntax": "error" },
+      files: ["core-readonly.d.ts", "core-readonly.public.d.ts"],
+      rules: {
+        "tsdoc/syntax": "error",
+        "typescript/no-useless-empty-export": "off",
+      },
     },
   ],
 });

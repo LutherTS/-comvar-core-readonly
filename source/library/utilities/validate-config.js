@@ -19,22 +19,19 @@ import { LIBRARIES_INVALID } from "../../constants/errors/config/statuses.js";
 
 import { ConfigLibrariesSchema } from "../constants/schemas.js";
 
+import { subKeySeparator } from "../constants/index.js";
+
+import { trimStringWithLimit } from "../utilities/index.js";
+
 /**
  * @typedef {import("../../types/index.ts").Config} Config
  * @typedef {import("../../types/index.ts").LibrariesStaticErrorMessage} LibrariesStaticErrorMessage
  */
 
-const subKeySeparator = "#"; // from core // May be moved from core to core-readonly in the future. For now, especially in regex, "#" remains "arbitrarily" used.
-const normalizedKeyLengthLimit = 200; // from core
-const rawLengthLimit = 50; // from core
+/* validateConfig */
 
-const trimStringWithLimit = (
-  /** @type {string} */ string,
-  /** @type {number} */ limit,
-) =>
-  string.length > limit
-    ? string.slice(0, limit - ellipsis.length) + ellipsis
-    : string; // from core
+const libraryVariationKeyLengthLimit = 200;
+const libraryKeyLengthLimit = 50;
 
 const makeMisplacedLibraryVariationError = (
   /** @type {string} */ libraryVariationKey,
@@ -42,9 +39,12 @@ const makeMisplacedLibraryVariationError = (
 ) => {
   const trimmedLibraryVariationKey = trimStringWithLimit(
     libraryVariationKey,
-    normalizedKeyLengthLimit,
+    libraryVariationKeyLengthLimit,
   );
-  const trimmedLibraryKey = trimStringWithLimit(libraryKey, rawLengthLimit);
+  const trimmedLibraryKey = trimStringWithLimit(
+    libraryKey,
+    libraryKeyLengthLimit,
+  );
 
   const message = /** @type {const} */ (
     `ERROR. Library variation key ${trimmedLibraryVariationKey} does not start with its assigned library key (${trimmedLibraryKey}${subKeySeparator}), which suggests its library variation has been misplaced.`

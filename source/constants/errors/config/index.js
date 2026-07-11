@@ -5,7 +5,6 @@ import {
   librariesRecordMustBeRecords,
   librariesMustKey,
   librariesValuesMustBeStrings,
-  // librariesValuesCannotBeEmptyStrings,
   librariesValuesCannotBeEmptyTrimmed,
 } from "./messages.js";
 import {
@@ -15,7 +14,6 @@ import {
   LIBRARIES_RECORD_NOT_RECORDS,
   LIBRARIES_NOT_KEY_CONFORM,
   LIBRARIES_RECORD_RECORDS_VALUES_NOT_STRINGS,
-  // LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_STRINGS,
   LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_TRIMMED,
 } from "./statuses.js";
 
@@ -27,8 +25,6 @@ export const librariesStaticErrorMessages_errorStatuses = Object.freeze({
   [librariesRecordMustBeRecords]: LIBRARIES_RECORD_NOT_RECORDS,
   [librariesMustKey]: LIBRARIES_NOT_KEY_CONFORM,
   [librariesValuesMustBeStrings]: LIBRARIES_RECORD_RECORDS_VALUES_NOT_STRINGS,
-  // [librariesValuesCannotBeEmptyStrings]:
-  //   LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_STRINGS,
   [librariesValuesCannotBeEmptyTrimmed]:
     LIBRARIES_RECORD_RECORDS_VALUES_EMPTY_TRIMMED,
 });

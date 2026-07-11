@@ -9,6 +9,12 @@ import { composedVariablesExclusives } from "../../comment-variables/index.js";
 export const $COMMENT = composedVariablesExclusives.variables._COMMENT.value;
 
 /**
+ * $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#SUBKEYSEPARATOR
+ * @public
+ */
+export const subKeySeparator = "#";
+
+/**
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME
  * @public
  */

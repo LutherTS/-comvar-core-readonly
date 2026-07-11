@@ -64,10 +64,3 @@ export const getUserlandJsonImports = (
     userlandJsonImports__Relative,
   };
 };
-
-/* Notes
-// At this point the file is confirmed to be non-fatal JavaScript, meaning its SourceCode object can be obtained without checks.
-// ...
-// And there I can make sure it doesn't include the current Comment Variables config path as `.json` and as `.public.json`, since these are generated. If VS Code reacts to them, it is most likely to trigger an infinite refresh loop. (EDIT: Actually they can be included, by the extensions no longer generate public data.)
-// So that means for self-testing, it is only natural for people to refresh their window in order to avoid infinitely looping, when using VS-Code-generated `.mjs` files. But they still need that automated refresh on libraries they're importing (done via package.json), and on imported libraries they are modifying through their own copied JSON files (which this features will handle here).
-*/

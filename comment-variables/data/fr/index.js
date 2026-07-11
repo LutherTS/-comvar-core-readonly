@@ -8,6 +8,8 @@ export const frData = Object.freeze({
           public: Object.freeze({
             _COMMENT:
               "Le préfixe absolu de tout et chaque substitut $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#COMMENTVARIABLES." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT / core: $COMMENT#FR#TSDOC#SRC#LIB#CONSTS#PUBLIC#_COMMENT */,
+            subKeySeparator:
+              "Le caractère singulier qui sépare les segments (ou sous-clés) de clés et substituts Comment Variables." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#SUBKEYSEPARATOR / core: $COMMENT#FR#TSDOC#SRC#LIB#CONSTS#PUBLIC#SUBKEYSEPARATOR */,
             defaultConfigFileName:
               "Le nom de fichier considéré par défaut au dossier racine du projet pour la config de $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#COMMENTVARIABLES." /* variations: $COMMENT#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME / core: $COMMENT#FR#TSDOC#SRC#LIB#CONSTS#PUBLIC#DEFAULTCONFIGFILENAME */,
             packageJsonFileName:
@@ -35,6 +37,8 @@ export const frData = Object.freeze({
             public: Object.freeze({
               resolveConfigReadonly:
                 "Vérifie, valide et résout de façon initiale le chemin de la config pour en obtenir la config et en fournir les données de sa clé `libraries`." /* variations: $COMMENT#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY / core: $COMMENT#FR#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY */,
+              trimStringWithLimit:
+                "Tronque une chaîne de caractères par trois points de suspension en se basant sur la limite de longueur renseignée." /* variations: $COMMENT#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#TRIMSTRINGWITHLIMIT / core: $COMMENT#FR#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#TRIMSTRINGWITHLIMIT */,
             }),
           }),
         }),
@@ -43,6 +47,9 @@ export const frData = Object.freeze({
             public: Object.freeze({
               configPath:
                 "Le chemin absolu de la config qu'importe la manière dont il est fourni. Cela dit, $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#COMMENTVARIABLES requiert désormais par défaut un fichier `$COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#DEFAULTCONFIGFILENAME` au dossier racine du projet en cours, tant pour sa `@comvar/cli` que pour ses extensions pour VS Code." /* variations: $COMMENT#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH / core: $COMMENT#FR#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH */,
+              string: "La chaîne de caractères concernée." /* variations: $COMMENT#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#STRING / core: $COMMENT#FR#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#STRING */,
+              limit:
+                "La limite de longueur renseignée. La chaîne de caractères sera tronquée si sa longueur est strictement supérieure à celle de ce nombre donné." /* variations: $COMMENT#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#LIMIT / core: $COMMENT#FR#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#LIMIT */,
             }),
           }),
         }),
@@ -51,6 +58,8 @@ export const frData = Object.freeze({
             public: Object.freeze({
               resolveConfigReadonly:
                 "La config et ses données `libraries`, ou leur absence pour ces dernières via `null`, dans un objet `{success: true}` à ses clés `config` et `libraries` respectivement, avec aussi `libraryVariationKeys_libraryVariationValues` : une version aplatie et non-nulle de `libraries` pour en faciliter l'usage. Inclut aussi le `code` et le `SourceCode` ESLint du fichier de config, avec les listes de ses fichiers JSON importés pour en observer les changements. En cas d'erreur, un objet `{success: false}` est retourné à la place de sorte que les erreurs puissent être réutilisées de façons adéquates dans l'outil ligne de commande et dans les extensions pour VS Code." /* variations: $COMMENT#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY / core: $COMMENT#FR#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY */,
+              trimStringWithLimit:
+                "La chaîne de caractères renseignée si sa longueur est plus petite ou égale à celle de la limite de longueur renseignée ; une version tronquée le cas échéant." /* variations: $COMMENT#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#TRIMSTRINGWITHLIMIT / core: $COMMENT#FR#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#TRIMSTRINGWITHLIMIT */,
             }),
           }),
         }),

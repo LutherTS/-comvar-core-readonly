@@ -9,7 +9,7 @@ export default defineConfig({
     {
       files: ["source/library/utilities/fresh-import-b.js"],
       rules: {
-        "eslint/no-unused-vars": "off",
+        "eslint/no-unused-vars": "off", // for unused try-catch error
       },
     },
     {

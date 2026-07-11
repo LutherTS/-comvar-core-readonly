@@ -190,10 +190,6 @@ export declare const resolvedConfigData: {
                                     "key": "EN#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY";
                                     "value": "Initially verifies, validates and resolves the config path to retrieve the config and provide its `libraries` key data.";
                                 };
-                                "trimStringWithLimit": {
-                                    "key": "EN#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#TRIMSTRINGWITHLIMIT";
-                                    "value": "Trims a string with an ellipsis based on a provided length limit.";
-                                };
                             };
                             "freshImport": {
                                 "key": "EN#TSDOC#SRC#LIB#DEFS#UTILS#FRESHIMPORT";
@@ -208,14 +204,6 @@ export declare const resolvedConfigData: {
                                     "key": "EN#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH";
                                     "value": "The absolute path of the config regardless of the manner through which it is provided. That being said, Comment Variables now requires a default `comments.config.js` at the project's root directory for both its `@comvar/cli` and its extensions for VS Code.";
                                 };
-                                "string": {
-                                    "key": "EN#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#STRING";
-                                    "value": "The string at hand.";
-                                };
-                                "limit": {
-                                    "key": "EN#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#LIMIT";
-                                    "value": "The provided length limit. The string will be trimmed if its length is strictly superior to this given number.";
-                                };
                             };
                             "moduleUrl": {
                                 "key": "EN#TSDOC#SRC#LIB#PARAMS#UTILS#MODULEURL";
@@ -229,10 +217,6 @@ export declare const resolvedConfigData: {
                                 "resolveConfigReadonly": {
                                     "key": "EN#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY";
                                     "value": "The config and its `libraries` data, or lack thereof for the latter via `null`, inside a `{success: true}` object, at its `config` and `libraries` keys respectively, along with the flattened, non-null `libraryVariationKeys_libraryVariationValues` data for easier consumption. Also includes the `code` and the ESLint `SourceCode` of the config file, along with its lists of imported JSON files to be watched for changes. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extensions for VS Code.";
-                                };
-                                "trimStringWithLimit": {
-                                    "key": "EN#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#TRIMSTRINGWITHLIMIT";
-                                    "value": "The provided string if its length is lower or equal to the provided length limit; a trimmed version of that string otherwise.";
                                 };
                             };
                             "freshImport": {
@@ -477,10 +461,6 @@ export declare const resolvedConfigData: {
                                     "key": "FR#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#RESOLVECONFIGREADONLY";
                                     "value": "Vérifie, valide et résout de façon initiale le chemin de la config pour en obtenir la config et en fournir les données de sa clé `libraries`.";
                                 };
-                                "trimStringWithLimit": {
-                                    "key": "FR#TSDOC#SRC#LIB#DEFS#UTILS#PUBLIC#TRIMSTRINGWITHLIMIT";
-                                    "value": "Tronque une chaîne de caractères par trois points de suspension en se basant sur la limite de longueur renseignée.";
-                                };
                             };
                         };
                     };
@@ -491,14 +471,6 @@ export declare const resolvedConfigData: {
                                     "key": "FR#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#CONFIGPATH";
                                     "value": "Le chemin absolu de la config qu'importe la manière dont il est fourni. Cela dit, Comment Variables requiert désormais par défaut un fichier `comments.config.js` au dossier racine du projet en cours, tant pour sa `@comvar/cli` que pour ses extensions pour VS Code.";
                                 };
-                                "string": {
-                                    "key": "FR#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#STRING";
-                                    "value": "La chaîne de caractères concernée.";
-                                };
-                                "limit": {
-                                    "key": "FR#TSDOC#SRC#LIB#PARAMS#UTILS#PUBLIC#LIMIT";
-                                    "value": "La limite de longueur renseignée. La chaîne de caractères sera tronquée si sa longueur est strictement supérieure à celle de ce nombre donné.";
-                                };
                             };
                         };
                     };
@@ -508,10 +480,6 @@ export declare const resolvedConfigData: {
                                 "resolveConfigReadonly": {
                                     "key": "FR#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY";
                                     "value": "La config et ses données `libraries`, ou leur absence pour ces dernières via `null`, dans un objet `{success: true}` à ses clés `config` et `libraries` respectivement, avec aussi `libraryVariationKeys_libraryVariationValues` : une version aplatie et non-nulle de `libraries` pour en faciliter l'usage. Inclut aussi le `code` et le `SourceCode` ESLint du fichier de config, avec les listes de ses fichiers JSON importés pour en observer les changements. En cas d'erreur, un objet `{success: false}` est retourné à la place de sorte que les erreurs puissent être réutilisées de façons adéquates dans l'outil ligne de commande et dans les extensions pour VS Code.";
-                                };
-                                "trimStringWithLimit": {
-                                    "key": "FR#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#TRIMSTRINGWITHLIMIT";
-                                    "value": "La chaîne de caractères renseignée si sa longueur est plus petite ou égale à celle de la limite de longueur renseignée ; une version tronquée le cas échéant.";
                                 };
                             };
                         };

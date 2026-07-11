@@ -6,7 +6,7 @@ import { fork } from "child_process";
 import { MODULE_TO_LOAD } from "../constants/index.js";
 
 /**
- * @typedef {import("../../typedefs/index.js").ConfigModule} ConfigModule
+ * @typedef {import("../../types/index.ts").ConfigModule} ConfigModule
  */
 
 const childScriptAbsolutePath = path.join(

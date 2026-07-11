@@ -4,7 +4,7 @@ import assert from "node:assert";
 import { _COMMENT } from "../../constants/index.js";
 
 /**
- * @typedef {import("../../../typedefs/index.js").$COMMENT__Type} $COMMENT__Type
+ * @typedef {import("../../../types/index.ts").$COMMENT__Type} $COMMENT__Type
  */
 
 export const $COMMENTSuite = (/** @type {$COMMENT__Type} */ $COMMENT) => {

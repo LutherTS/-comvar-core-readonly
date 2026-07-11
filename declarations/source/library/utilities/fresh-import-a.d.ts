@@ -1,2 +1,2 @@
-export type ConfigModule = import("../../typedefs/index.js").ConfigModule;
-export declare function freshImport(moduleUrl: string): Promise<import("../../typedefs/index.js").ConfigModule | null>;
+export type ConfigModule = import("../../types/index.ts").ConfigModule;
+export declare function freshImport(moduleUrl: string): Promise<import("../../types/index.ts").ConfigModule | null>;

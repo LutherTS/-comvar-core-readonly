@@ -14,8 +14,8 @@ import { CONFIG_PRE_INVALID } from "../../constants/errors/input/statuses.js";
 import { ConfigPreSchema } from "../constants/schemas.js";
 
 /**
- * @typedef {import("../../typedefs/index.js").ConfigModule} ConfigModule
- * @typedef {import("../../typedefs/index.js").ConfigPreStaticErrorMessage} ConfigPreStaticErrorMessage
+ * @typedef {import("../../types/index.ts").ConfigModule} ConfigModule
+ * @typedef {import("../../types/index.ts").ConfigPreStaticErrorMessage} ConfigPreStaticErrorMessage
  */
 
 /* preValidateConfig */

@@ -4,7 +4,7 @@ import assert from "node:assert";
 import { PACKAGE_JSON_FILE_NAME } from "../../constants/index.js";
 
 /**
- * @typedef {import("../../../typedefs/index.js").PackageJsonFileName} PackageJsonFileName
+ * @typedef {import("../../../types/index.ts").PackageJsonFileName} PackageJsonFileName
  */
 
 export const packageJsonFileNameSuite = (

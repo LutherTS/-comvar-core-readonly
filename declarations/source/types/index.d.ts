@@ -1,0 +1,27 @@
+import { resolveConfigReadonly, $COMMENT, defaultConfigFileName, packageJsonFileName, configDataKeyRegex, configDataSubKeyRegex, flattenedConfigDataKeyLocalRegex, flattenedConfigDataKeyGlobalRegex, flattenedConfigDataPlaceholderLocalRegex, flattenedConfigDataPlaceholderGlobalRegex } from "../library/index.js";
+import { allStaticErrorMessages_errorStatuses } from "../constants/errors/index.js";
+import { configPreStaticErrorMessages } from "../constants/errors/input/messages.js";
+import { configPreStaticErrorStatuses } from "../constants/errors/input/statuses.js";
+import { librariesStaticErrorMessages } from "../constants/errors/config/messages.js";
+import { librariesStaticErrorStatuses } from "../constants/errors/config/statuses.js";
+export type ResolveConfigReadonly = typeof resolveConfigReadonly;
+export type ResolveConfigReadonlyReturnType = ReturnType<typeof resolveConfigReadonly>;
+export type AllStaticErrorMessages_ErrorStatuses__Key = keyof typeof allStaticErrorMessages_errorStatuses;
+export type ConfigPreStaticErrorMessage = (typeof configPreStaticErrorMessages)[number];
+export type ConfigPreStaticErrorStatus = (typeof configPreStaticErrorStatuses)[number];
+export type LibrariesStaticErrorMessage = (typeof librariesStaticErrorMessages)[number];
+export type LibrariesStaticErrorStatus = (typeof librariesStaticErrorStatuses)[number];
+export type $COMMENT__Type = typeof $COMMENT;
+export type DefaultConfigFileName = typeof defaultConfigFileName;
+export type PackageJsonFileName = typeof packageJsonFileName;
+export type ConfigDataKeyRegex = typeof configDataKeyRegex;
+export type ConfigDataSubKeyRegex = typeof configDataSubKeyRegex;
+export type FlattenedConfigDataKeyLocalRegex = typeof flattenedConfigDataKeyLocalRegex;
+export type FlattenedConfigDataKeyGlobalRegex = typeof flattenedConfigDataKeyGlobalRegex;
+export type FlattenedConfigDataPlaceholderLocalRegex = typeof flattenedConfigDataPlaceholderLocalRegex;
+export type FlattenedConfigDataPlaceholderGlobalRegex = typeof flattenedConfigDataPlaceholderGlobalRegex;
+export type ConfigModule = {
+    default: unknown;
+    code: string;
+};
+export type Config = Record<string, unknown>;

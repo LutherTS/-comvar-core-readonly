@@ -22,7 +22,7 @@ import {
 } from "../../utilities/index.js";
 
 /**
- * @typedef {import("../../../typedefs/index.js").ResolveConfigReadonly} ResolveConfigReadonly
+ * @typedef {import("../../../types/index.ts").ResolveConfigReadonly} ResolveConfigReadonly
  */
 
 const currentDirectoryPath = path.dirname(url.fileURLToPath(import.meta.url));

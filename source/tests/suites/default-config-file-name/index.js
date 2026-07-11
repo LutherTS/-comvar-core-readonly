@@ -4,7 +4,7 @@ import assert from "node:assert";
 import { DEFAULT_CONFIG_FILE_NAME } from "../../constants/index.js";
 
 /**
- * @typedef {import("../../../typedefs/index.js").DefaultConfigFileName} DefaultConfigFileName
+ * @typedef {import("../../../types/index.ts").DefaultConfigFileName} DefaultConfigFileName
  */
 
 export const defaultConfigFileNameSuite = (

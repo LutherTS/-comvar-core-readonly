@@ -1,5 +1,5 @@
-export type Config = import("../../typedefs/index.js").Config;
-export type LibrariesStaticErrorMessage = import("../../typedefs/index.js").LibrariesStaticErrorMessage;
+export type Config = import("../../types/index.ts").Config;
+export type LibrariesStaticErrorMessage = import("../../types/index.ts").LibrariesStaticErrorMessage;
 export declare const validateConfig: (config: Config) => {
     readonly success: false;
     readonly errors: readonly [{

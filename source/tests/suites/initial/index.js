@@ -4,7 +4,7 @@ import assert from "node:assert";
 import { RESOLVE_CONFIG_READONLY } from "../../constants/index.js";
 
 /**
- * @typedef {import("../../../typedefs/index.js").ResolveConfigReadonly} ResolveConfigReadonly
+ * @typedef {import("../../../types/index.ts").ResolveConfigReadonly} ResolveConfigReadonly
  */
 
 export const initialSuite = (

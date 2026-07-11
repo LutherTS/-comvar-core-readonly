@@ -12,7 +12,7 @@ import { RESOLVE_CONFIG_READONLY, CONFIG_PATH } from "../../constants/index.js";
 import { assertErrorWithMessage } from "../../utilities/index.js";
 
 /**
- * @typedef {import("../../../typedefs/index.js").ResolveConfigReadonly} ResolveConfigReadonly
+ * @typedef {import("../../../types/index.ts").ResolveConfigReadonly} ResolveConfigReadonly
  */
 
 export const inputValidationsSuite = (

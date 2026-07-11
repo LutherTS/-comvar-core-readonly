@@ -11,12 +11,12 @@ import {
 } from "../../constants/index.js";
 
 /**
- * @typedef {import("../../../typedefs/index.js").ConfigDataKeyRegex} ConfigDataKeyRegex
- * @typedef {import("../../../typedefs/index.js").ConfigDataSubKeyRegex} ConfigDataSubKeyRegex
- * @typedef {import("../../../typedefs/index.js").FlattenedConfigDataKeyLocalRegex} FlattenedConfigDataKeyLocalRegex
- * @typedef {import("../../../typedefs/index.js").FlattenedConfigDataKeyGlobalRegex} FlattenedConfigDataKeyGlobalRegex
- * @typedef {import("../../../typedefs/index.js").FlattenedConfigDataPlaceholderLocalRegex} FlattenedConfigDataPlaceholderLocalRegex
- * @typedef {import("../../../typedefs/index.js").FlattenedConfigDataPlaceholderGlobalRegex} FlattenedConfigDataPlaceholderGlobalRegex
+ * @typedef {import("../../../types/index.ts").ConfigDataKeyRegex} ConfigDataKeyRegex
+ * @typedef {import("../../../types/index.ts").ConfigDataSubKeyRegex} ConfigDataSubKeyRegex
+ * @typedef {import("../../../types/index.ts").FlattenedConfigDataKeyLocalRegex} FlattenedConfigDataKeyLocalRegex
+ * @typedef {import("../../../types/index.ts").FlattenedConfigDataKeyGlobalRegex} FlattenedConfigDataKeyGlobalRegex
+ * @typedef {import("../../../types/index.ts").FlattenedConfigDataPlaceholderLocalRegex} FlattenedConfigDataPlaceholderLocalRegex
+ * @typedef {import("../../../types/index.ts").FlattenedConfigDataPlaceholderGlobalRegex} FlattenedConfigDataPlaceholderGlobalRegex
  */
 
 export const regexSuites = (

@@ -20,8 +20,8 @@ import { LIBRARIES_INVALID } from "../../constants/errors/config/statuses.js";
 import { ConfigLibrariesSchema } from "../constants/schemas.js";
 
 /**
- * @typedef {import("../../typedefs/index.js").Config} Config
- * @typedef {import("../../typedefs/index.js").LibrariesStaticErrorMessage} LibrariesStaticErrorMessage
+ * @typedef {import("../../types/index.ts").Config} Config
+ * @typedef {import("../../types/index.ts").LibrariesStaticErrorMessage} LibrariesStaticErrorMessage
  */
 
 const subKeySeparator = "#"; // from core // May be moved from core to core-readonly in the future. For now, especially in regex, "#" remains "arbitrarily" used.

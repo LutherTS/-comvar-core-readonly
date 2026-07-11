@@ -3,8 +3,8 @@ import assert from "node:assert";
 import { allStaticErrorMessages_errorStatuses } from "../../constants/errors/index.js";
 
 /**
- * @typedef {import("../../typedefs/index.js").AllStaticErrorMessages_ErrorStatuses__Key} AllStaticErrorMessages_ErrorStatuses__Key
- * @typedef {import("../../typedefs/index.js").ResolveConfigReadonlyReturnType} ResolveConfigReadonlyReturnType
+ * @typedef {import("../../types/index.ts").AllStaticErrorMessages_ErrorStatuses__Key} AllStaticErrorMessages_ErrorStatuses__Key
+ * @typedef {import("../../types/index.ts").ResolveConfigReadonlyReturnType} ResolveConfigReadonlyReturnType
  */
 
 /* assert */

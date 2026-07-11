@@ -1,5 +1,5 @@
-export type ConfigModule = import("../../typedefs/index.js").ConfigModule;
-export type ConfigPreStaticErrorMessage = import("../../typedefs/index.js").ConfigPreStaticErrorMessage;
+export type ConfigModule = import("../../types/index.ts").ConfigModule;
+export type ConfigPreStaticErrorMessage = import("../../types/index.ts").ConfigPreStaticErrorMessage;
 export declare const preValidateConfig: (configModule: ConfigModule) => {
     readonly success: false;
     readonly errors: readonly [{

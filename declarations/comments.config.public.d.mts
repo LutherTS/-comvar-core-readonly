@@ -18,7 +18,6 @@ export declare const resolvedPublicData: {
             "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY": "The config and its `libraries` data, or lack thereof for the latter via `null`, inside a `{success: true}` object, at its `config` and `libraries` keys respectively, along with the flattened, non-null `libraryVariationKeys_libraryVariationValues` data for easier consumption. Also includes the `code` and the ESLint `SourceCode` of the config file, along with its lists of imported JSON files to be watched for changes. In case of an error, a `{success: false}` object is returned instead so that errors can be reused adequately on the CLI and in the extensions for VS Code.";
             "_COMVAR_CORE_READONLY#PUBLIC#RESOLVEDPUBLICDATA": "";
             "_COMVAR_CORE_READONLY#PUBLIC#RESOLVECONFIGREADONLY": "";
-            "_COMVAR_CORE_READONLY#PUBLIC#TRIMSTRINGWITHLIMIT": "";
             "_COMVAR_CORE_READONLY#PUBLIC#CONFIGDATAKEYREGEX": "";
             "_COMVAR_CORE_READONLY#PUBLIC#CONFIGDATASUBKEYREGEX": "";
             "_COMVAR_CORE_READONLY#PUBLIC#FLATTENEDCONFIGDATAKEYLOCALREGEX": "";
@@ -46,7 +45,6 @@ export declare const resolvedPublicData: {
             "_COMVAR_CORE_READONLY#TSDOC#SRC#LIB#RETURNS#UTILS#PUBLIC#RESOLVECONFIGREADONLY": "La config et ses données `libraries`, ou leur absence pour ces dernières via `null`, dans un objet `{success: true}` à ses clés `config` et `libraries` respectivement, avec aussi `libraryVariationKeys_libraryVariationValues` : une version aplatie et non-nulle de `libraries` pour en faciliter l'usage. Inclut aussi le `code` et le `SourceCode` ESLint du fichier de config, avec les listes de ses fichiers JSON importés pour en observer les changements. En cas d'erreur, un objet `{success: false}` est retourné à la place de sorte que les erreurs puissent être réutilisées de façons adéquates dans l'outil ligne de commande et dans les extensions pour VS Code.";
             "_COMVAR_CORE_READONLY#PUBLIC#RESOLVEDPUBLICDATA": "";
             "_COMVAR_CORE_READONLY#PUBLIC#RESOLVECONFIGREADONLY": "";
-            "_COMVAR_CORE_READONLY#PUBLIC#TRIMSTRINGWITHLIMIT": "";
             "_COMVAR_CORE_READONLY#PUBLIC#CONFIGDATAKEYREGEX": "";
             "_COMVAR_CORE_READONLY#PUBLIC#CONFIGDATASUBKEYREGEX": "";
             "_COMVAR_CORE_READONLY#PUBLIC#FLATTENEDCONFIGDATAKEYLOCALREGEX": "";

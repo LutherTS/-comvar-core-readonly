@@ -19,6 +19,4 @@ export {
   flattenedConfigDataPlaceholderGlobalRegex,
 } from "./constants/regexes.js";
 
-export { trimStringWithLimit } from "./utilities/index.js";
-
 export { commentVariablesData } from "../comment-variables/public.js";

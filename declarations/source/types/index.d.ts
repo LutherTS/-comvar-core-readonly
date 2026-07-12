@@ -1,4 +1,4 @@
-import { resolveConfigReadonly, $COMMENT, defaultConfigFileName, packageJsonFileName, configDataKeyRegex, configDataSubkeyRegex, flattenedConfigDataKeyLocalRegex, flattenedConfigDataKeyGlobalRegex, flattenedConfigDataPlaceholderLocalRegex, flattenedConfigDataPlaceholderGlobalRegex } from "../library/index.js";
+import { resolveConfigReadonly, $COMMENT, subkeySeparator, defaultConfigFileName, packageJsonFileName, configDataKeyRegex, configDataSubkeyRegex, flattenedConfigDataKeyLocalRegex, flattenedConfigDataKeyGlobalRegex, flattenedConfigDataPlaceholderLocalRegex, flattenedConfigDataPlaceholderGlobalRegex } from "../library/index.js";
 import { allStaticErrorMessages_errorStatuses } from "../constants/errors/index.js";
 import { configPreStaticErrorMessages } from "../constants/errors/input/messages.js";
 import { configPreStaticErrorStatuses } from "../constants/errors/input/statuses.js";
@@ -12,6 +12,7 @@ export type ConfigPreStaticErrorStatus = (typeof configPreStaticErrorStatuses)[n
 export type LibrariesStaticErrorMessage = (typeof librariesStaticErrorMessages)[number];
 export type LibrariesStaticErrorStatus = (typeof librariesStaticErrorStatuses)[number];
 export type $COMMENT__Type = typeof $COMMENT;
+export type SubkeySeparator = typeof subkeySeparator;
 export type DefaultConfigFileName = typeof defaultConfigFileName;
 export type PackageJsonFileName = typeof packageJsonFileName;
 export type ConfigDataKeyRegex = typeof configDataKeyRegex;

@@ -207,6 +207,10 @@ export declare const composedVariablesExclusives: {
             "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT";
             "value": "$COMMENT";
         };
+        "subkeySeparator": {
+            "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#SUBKEYSEPARATOR";
+            "value": "subkeySeparator";
+        };
         "defaultConfigFileName": {
             "key": "EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#DEFAULTCONFIGFILENAME";
             "value": "comments.config.js";

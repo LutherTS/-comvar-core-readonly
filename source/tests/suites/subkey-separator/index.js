@@ -1,7 +1,7 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
 
-import { _COMMENT } from "../../constants/index.js";
+import { SUBKEY_SEPARATOR } from "../../constants/index.js";
 
 /**
  * @typedef {import("../../../types/index.ts").SubkeySeparator} SubkeySeparator
@@ -10,7 +10,7 @@ import { _COMMENT } from "../../constants/index.js";
 export const subkeySeparatorSuite = (
   /** @type {SubkeySeparator} */ subkeySeparator,
 ) => {
-  describe(_COMMENT, () => {
+  describe(SUBKEY_SEPARATOR, () => {
     // initial tests
     it(`should be a string`, () => {
       const subkeySeparatorType = typeof subkeySeparator;

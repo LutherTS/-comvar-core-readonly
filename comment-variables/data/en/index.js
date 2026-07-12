@@ -188,6 +188,7 @@ export const enData = Object.freeze({
       // tsDoc.src.lib.consts
       _COMMENT:
         "$COMMENT" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#_COMMENT */,
+      subkeySeparator: "subkeySeparator",
       defaultConfigFileName:
         "comments.config.js" /* variations: $COMMENT#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#DEFAULTCONFIGFILENAME / core: $COMMENT#EN#COMPOSEDVARIABLESEXCLUSIVES#VARIABLES#DEFAULTCONFIGFILENAME */,
       packageJsonFileName:

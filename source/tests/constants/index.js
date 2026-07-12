@@ -36,5 +36,5 @@ export const FLATTENED_CONFIG_DATA_PLACEHOLDER_LOCAL_REGEX =
   composedVariablesExclusives.variables.flattenedConfigDataPlaceholderLocalRegex
     .value;
 export const FLATTENED_CONFIG_DATA_PLACEHOLDER_GLOBAL_REGEX =
-  composedVariablesExclusives.variables.flattenedConfigDataPlaceholderGlobalRegex
-    .value;
+  composedVariablesExclusives.variables
+    .flattenedConfigDataPlaceholderGlobalRegex.value;

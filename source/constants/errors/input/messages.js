@@ -12,7 +12,8 @@ export const configModuleCouldntResolve =
 
 /* messages for static errors - config (pre) */
 
-export const configCouldntPreZod = errorsInputMessages.configCouldntPreZod.value;
+export const configCouldntPreZod =
+  errorsInputMessages.configCouldntPreZod.value;
 
 // zod static error messages
 

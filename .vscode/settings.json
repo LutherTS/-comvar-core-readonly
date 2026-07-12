@@ -1,5 +1,6 @@
 {
   "files.associations": { "api-extractor.json": "jsonc" },
+  "js/ts.experimental.useTsgo": false,
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file"

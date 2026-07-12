@@ -68,7 +68,9 @@ export const assertFailureWithStatus = async (
 ) => {
   assert.strictEqual(resolveConfigReadonlyResults.success, false);
   assert.strictEqual(
-    resolveConfigReadonlyResults.errors.some((e) => e.status === expectedStatus),
+    resolveConfigReadonlyResults.errors.some(
+      (e) => e.status === expectedStatus,
+    ),
     true,
   );
 };

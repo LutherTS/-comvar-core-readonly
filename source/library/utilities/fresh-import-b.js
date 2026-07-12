@@ -6,6 +6,7 @@ try {
   const module = await import(process.env[MODULE_TO_LOAD]);
   const code = fs.readFileSync(process.env[MODULE_TO_LOAD], "utf8");
   process.send({ module: { default: module.default, code } });
+  // oxlint-disable-next-line eslint/no-unused-vars
 } catch (_error) {
   process.send({ module: null });
 }

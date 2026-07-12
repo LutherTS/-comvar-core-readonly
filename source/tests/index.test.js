@@ -3,6 +3,7 @@ import { describe } from "node:test";
 import {
   resolveConfigReadonly,
   $COMMENT,
+  subkeySeparator,
   defaultConfigFileName,
   packageJsonFileName,
   configDataKeyRegex,
@@ -23,6 +24,7 @@ import { inputOperationsSuite } from "./suites/input-operations/index.js";
 import { configValidationsSuite } from "./suites/config-validations/index.js";
 import { configOperationsSuite } from "./suites/config-operations/index.js";
 import { $COMMENT__Suite } from "./suites/_comment/index.js";
+import { subkeySeparatorSuite } from "./suites/subkey-separator/index.js";
 import { defaultConfigFileNameSuite } from "./suites/default-config-file-name/index.js";
 import { packageJsonFileNameSuite } from "./suites/package-json-file-name/index.js";
 import { regexSuites } from "./suites/regexes/index.js";
@@ -46,6 +48,7 @@ describe(RESOLVE_CONFIG_READONLY, () => {
 
 // constants tests
 $COMMENT__Suite($COMMENT);
+subkeySeparatorSuite(subkeySeparator);
 defaultConfigFileNameSuite(defaultConfigFileName);
 packageJsonFileNameSuite(packageJsonFileName);
 

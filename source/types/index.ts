@@ -1,6 +1,7 @@
 import {
   resolveConfigReadonly,
   $COMMENT,
+  subkeySeparator,
   defaultConfigFileName,
   packageJsonFileName,
   configDataKeyRegex,
@@ -39,6 +40,8 @@ export type LibrariesStaticErrorStatus =
   (typeof librariesStaticErrorStatuses)[number];
 
 export type $COMMENT__Type = typeof $COMMENT;
+
+export type SubkeySeparator = typeof subkeySeparator;
 
 export type DefaultConfigFileName = typeof defaultConfigFileName;
 

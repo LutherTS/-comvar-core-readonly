@@ -10,7 +10,8 @@ export const errorsConfigMessages =
 
 /* generals */
 
-export const forComposedVariables = commentVariablesData.en.forComposedVariables;
+export const forComposedVariables =
+  commentVariablesData.en.forComposedVariables;
 
 export const composedVariablesExclusives =
   commentVariablesData.en.composedVariablesExclusives;

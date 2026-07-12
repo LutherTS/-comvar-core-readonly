@@ -103,7 +103,9 @@ export const validateConfig = (/** @type {Config} */ config) => {
       for (const [libraryVariationKey, libraryVariationValue] of Object.entries(
         libraryVariation,
       )) {
-        if (!libraryVariationKey.startsWith(`${libraryKey}${subkeySeparator}`)) {
+        if (
+          !libraryVariationKey.startsWith(`${libraryKey}${subkeySeparator}`)
+        ) {
           const error = makeMisplacedLibraryVariationError(
             libraryVariationKey,
             libraryKey,

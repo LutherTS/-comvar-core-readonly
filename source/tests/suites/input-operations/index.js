@@ -48,12 +48,18 @@ export const inputOperationsSuite = (
     it(`should fail if the default exported config is not an object`, async () => {
       const resolveConfigReadonlyResults =
         await resolveConfigReadonly(defaultNotObjectPath);
-      assertFailureWithMessage(resolveConfigReadonlyResults, configMustBeObject);
+      assertFailureWithMessage(
+        resolveConfigReadonlyResults,
+        configMustBeObject,
+      );
     });
     it(`should fail the same if the config module doesn't have a default export`, async () => {
       const resolveConfigReadonlyResults =
         await resolveConfigReadonly(configNoDefaultPath);
-      assertFailureWithMessage(resolveConfigReadonlyResults, configMustBeObject);
+      assertFailureWithMessage(
+        resolveConfigReadonlyResults,
+        configMustBeObject,
+      );
     });
   });
 };

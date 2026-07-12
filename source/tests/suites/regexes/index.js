@@ -19,6 +19,8 @@ import {
  * @typedef {import("../../../types/index.ts").FlattenedConfigDataPlaceholderGlobalRegex} FlattenedConfigDataPlaceholderGlobalRegex
  */
 
+/* regexSuites */
+
 export const regexSuites = (
   /** @type {ConfigDataKeyRegex} */ configDataKeyRegex,
   /** @type {ConfigDataSubkeyRegex} */ configDataSubkeyRegex,

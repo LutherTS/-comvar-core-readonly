@@ -7,6 +7,8 @@ import { RESOLVE_CONFIG_READONLY } from "../../constants/index.js";
  * @typedef {import("../../../types/index.ts").ResolveConfigReadonly} ResolveConfigReadonly
  */
 
+/* initialSuite */
+
 export const initialSuite = (
   /** @type {ResolveConfigReadonly} */ resolveConfigReadonly,
 ) => {

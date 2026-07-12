@@ -19,6 +19,8 @@ import {
  * @typedef {import("../../../types/index.ts").ResolveConfigReadonly} ResolveConfigReadonly
  */
 
+/* inputOperationsSuite */
+
 const currentDirectoryPath = path.dirname(url.fileURLToPath(import.meta.url));
 
 const configFatalPath = path.join(currentDirectoryPath, "./configs/fatal.js");

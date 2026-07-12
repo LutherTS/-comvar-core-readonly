@@ -14,6 +14,8 @@ import {
  * @typedef {import("../../../types/index.ts").ResolveConfigReadonly} ResolveConfigReadonly
  */
 
+/* configOperationsSuite */
+
 const currentDirectoryPath = path.dirname(url.fileURLToPath(import.meta.url));
 
 const configSuccessEnPath = path.join(

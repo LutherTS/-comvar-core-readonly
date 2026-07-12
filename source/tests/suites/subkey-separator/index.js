@@ -7,6 +7,8 @@ import { SUBKEY_SEPARATOR } from "../../constants/index.js";
  * @typedef {import("../../../types/index.ts").SubkeySeparator} SubkeySeparator
  */
 
+/* subkeySeparatorSuite */
+
 export const subkeySeparatorSuite = (
   /** @type {SubkeySeparator} */ subkeySeparator,
 ) => {

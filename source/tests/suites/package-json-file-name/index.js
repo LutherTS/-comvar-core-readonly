@@ -7,6 +7,8 @@ import { PACKAGE_JSON_FILE_NAME } from "../../constants/index.js";
  * @typedef {import("../../../types/index.ts").PackageJsonFileName} PackageJsonFileName
  */
 
+/* packageJsonFileNameSuite */
+
 export const packageJsonFileNameSuite = (
   /** @type {PackageJsonFileName} */ packageJsonFileName,
 ) => {

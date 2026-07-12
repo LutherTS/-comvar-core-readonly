@@ -25,6 +25,8 @@ import {
  * @typedef {import("../../../types/index.ts").ResolveConfigReadonly} ResolveConfigReadonly
  */
 
+/* configValidationsSuite */
+
 const currentDirectoryPath = path.dirname(url.fileURLToPath(import.meta.url));
 
 const librariesKeyNotRecordPath = path.join(

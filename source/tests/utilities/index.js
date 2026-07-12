@@ -7,7 +7,7 @@ import { allStaticErrorMessages_errorStatuses } from "../../constants/errors/ind
  * @typedef {import("../../types/index.ts").ResolveConfigReadonlyReturnType} ResolveConfigReadonlyReturnType
  */
 
-/* assert */
+/* assertFailureWithMessage */
 
 /**
  * $COMMENT#TSDOC#SRC#TESTS#DEFS#UTILS#ASSERTFAILUREWITHMESSAGE
@@ -32,6 +32,8 @@ export const assertFailureWithMessage =
     );
   };
 
+/* assertErrorWithMessage */
+
 /**
  * $COMMENT#TSDOC#SRC#TESTS#DEFS#UTILS#ASSERTERRORWITHMESSAGE
  *
@@ -54,6 +56,8 @@ export const assertErrorWithMessage =
       true,
     );
   };
+
+/* assertFailureWithStatus */
 
 /**
  * $COMMENT#TSDOC#SRC#TESTS#DEFS#UTILS#ASSERTFAILUREWITHSTATUS

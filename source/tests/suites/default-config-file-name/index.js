@@ -7,6 +7,8 @@ import { DEFAULT_CONFIG_FILE_NAME } from "../../constants/index.js";
  * @typedef {import("../../../types/index.ts").DefaultConfigFileName} DefaultConfigFileName
  */
 
+/* defaultConfigFileNameSuite */
+
 export const defaultConfigFileNameSuite = (
   /** @type {DefaultConfigFileName} */ defaultConfigFileName,
 ) => {

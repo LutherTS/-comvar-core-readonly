@@ -68,6 +68,10 @@
                   "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESSHOULDBERECORD",
                   "value": "The config `libraries` key's value, if provided, should only be a record (representing library keys paired with their selected variations)."
                 },
+                "librariesMustNotBeEmpty": {
+                  "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESMUSTNOTBEEMPTY",
+                  "value": "The config `libraries` key's record must not be empty."
+                },
                 "librariesMustSubKey": {
                   "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESMUSTSUBKEY",
                   "value": "The config `libraries` key's record has one or more keys that do not conform with the Comment Variables subkey (`COMMENTVARIABLES_SUBKEY`) format. This cannot happen when using a `libraryKey` obtained from a conform external library's resolved public Comment Variables data."
@@ -75,6 +79,10 @@
                 "librariesRecordMustBeRecords": {
                   "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESRECORDMUSTBERECORDS",
                   "value": "The config `libraries` key's record's values must only be records as well (representing Comment Variables keys from external libraries paired with their actual values)."
+                },
+                "librariesRecordsMustNotBeEmpty": {
+                  "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESRECORDSMUSTNOTBEEMPTY",
+                  "value": "The config `libraries` key's record's records must not be empty."
                 },
                 "librariesMustKey": {
                   "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#MESSAGES#LIBRARIESMUSTKEY",
@@ -102,6 +110,10 @@
                   "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_NOT_RECORD",
                   "value": "\"The config `libraries` key's value, if provided, should only be a record (representing library keys paired with their selected variations).\""
                 },
+                "LIBRARIES_EMPTY": {
+                  "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_EMPTY",
+                  "value": "\"The config `libraries` key's record must not be empty.\""
+                },
                 "LIBRARIES_NOT_SUBKEY_CONFORM": {
                   "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_NOT_SUBKEY_CONFORM",
                   "value": "\"The config `libraries` key's record has one or more keys that do not conform with the Comment Variables subkey (`COMMENTVARIABLES_SUBKEY`) format. This cannot happen when using a `libraryKey` obtained from a conform external library's resolved public Comment Variables data.\""
@@ -109,6 +121,10 @@
                 "LIBRARIES_RECORD_NOT_RECORDS": {
                   "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_RECORD_NOT_RECORDS",
                   "value": "\"The config `libraries` key's record's values must only be records as well (representing Comment Variables keys from external libraries paired with their actual values).\""
+                },
+                "LIBRARIES_RECORDS_EMPTY": {
+                  "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_RECORDS_EMPTY",
+                  "value": "\"The config `libraries` key's record's records must not be empty.\""
                 },
                 "LIBRARIES_NOT_KEY_CONFORM": {
                   "key": "EN#TSDOC#SRC#CONSTS#ERRORS#CONFIG#STATUSES#LIBRARIES_NOT_KEY_CONFORM",

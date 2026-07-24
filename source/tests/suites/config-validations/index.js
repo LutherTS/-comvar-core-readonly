@@ -7,8 +7,10 @@ import assert from "node:assert";
 import { MISPLACED_LIBRARY_VARIATION } from "../../../constants/errors/index.js";
 import {
   librariesShouldBeRecord,
+  librariesMustNotBeEmpty,
   librariesMustSubKey,
   librariesRecordMustBeRecords,
+  librariesRecordsMustNotBeEmpty,
   librariesMustKey,
   librariesValuesMustBeStrings,
   librariesValuesCannotBeEmptyTrimmed,
@@ -33,6 +35,10 @@ const librariesKeyNotRecordPath = path.join(
   currentDirectoryPath,
   "./configs/libraries-key-not-record.js",
 );
+const librariesKeyEmptyPath = path.join(
+  currentDirectoryPath,
+  "./configs/libraries-key-empty.js",
+);
 const librariesKeyNotSubkeyPath = path.join(
   currentDirectoryPath,
   "./configs/libraries-key-not-subkey.js",
@@ -40,6 +46,10 @@ const librariesKeyNotSubkeyPath = path.join(
 const librariesKeyNotRecordsPath = path.join(
   currentDirectoryPath,
   "./configs/libraries-key-not-records.js",
+);
+const librariesKeyRecordsEmptyPath = path.join(
+  currentDirectoryPath,
+  "./configs/libraries-key-records-empty.js",
 );
 const librariesKeyNotKeyPath = path.join(
   currentDirectoryPath,
@@ -75,6 +85,15 @@ export const configValidationsSuite = (
         librariesShouldBeRecord,
       );
     });
+    it(`should fail if the config's \`${LIBRARIES}\` key's value is an empty record`, async () => {
+      const resolveConfigReadonlyResults = await resolveConfigReadonly(
+        librariesKeyEmptyPath,
+      );
+      assertFailureWithMessage(
+        resolveConfigReadonlyResults,
+        librariesMustNotBeEmpty,
+      );
+    });
     it(`should fail if the config's \`${LIBRARIES}\` key's record has keys not subkey-conform`, async () => {
       const resolveConfigReadonlyResults = await resolveConfigReadonly(
         librariesKeyNotSubkeyPath,
@@ -91,6 +110,15 @@ export const configValidationsSuite = (
       assertFailureWithMessage(
         resolveConfigReadonlyResults,
         librariesRecordMustBeRecords,
+      );
+    });
+    it(`should fail if any of the config's \`${LIBRARIES}\` key's record's records is empty`, async () => {
+      const resolveConfigReadonlyResults = await resolveConfigReadonly(
+        librariesKeyRecordsEmptyPath,
+      );
+      assertFailureWithMessage(
+        resolveConfigReadonlyResults,
+        librariesRecordsMustNotBeEmpty,
       );
     });
     it(`should fail if the config's \`${LIBRARIES}\` key's record's records have keys not key-conform`, async () => {

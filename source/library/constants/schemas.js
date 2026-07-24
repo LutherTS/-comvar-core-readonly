@@ -3,8 +3,10 @@ import * as z from "zod";
 import { configMustBeObject } from "../../constants/errors/input/messages.js";
 import {
   librariesShouldBeRecord,
+  librariesMustNotBeEmpty,
   librariesMustSubKey,
   librariesRecordMustBeRecords,
+  librariesRecordsMustNotBeEmpty,
   librariesMustKey,
   librariesValuesMustBeStrings,
   librariesValuesCannotBeEmptyTrimmed,
@@ -50,30 +52,48 @@ export const ConfigLibrariesSchema = z
           error: librariesRecordMustBeRecords,
         },
       )
-      .refine(
-        (record) => {
-          for (const key of Object.keys(record)) {
-            if (!flattenedConfigDataKeyLocalRegex.test(key)) return false;
+      .check((context) => {
+        const secondLevelRecord = context.value;
+
+        const secondLevelRecordKeys = Object.keys(secondLevelRecord);
+        if (secondLevelRecordKeys.length === 0) {
+          context.issues.push({
+            message: librariesRecordsMustNotBeEmpty,
+            input: context.value,
+          });
+        }
+
+        for (const key of secondLevelRecordKeys) {
+          if (!flattenedConfigDataKeyLocalRegex.test(key)) {
+            context.issues.push({
+              message: librariesMustKey,
+              input: context.value,
+            });
           }
-          return true;
-        },
-        {
-          error: librariesMustKey,
-        },
-      ),
+        }
+      }),
     {
       error: librariesShouldBeRecord,
     },
   )
-  .refine(
-    (record) => {
-      for (const key of Object.keys(record)) {
-        if (!configDataSubkeyRegex.test(key)) return false;
+  .check((context) => {
+    const topLevelRecord = context.value;
+
+    const topLevelRecordKeys = Object.keys(topLevelRecord);
+    if (topLevelRecordKeys.length === 0) {
+      context.issues.push({
+        message: librariesMustNotBeEmpty,
+        input: context.value,
+      });
+    }
+
+    for (const key of topLevelRecordKeys) {
+      if (!configDataSubkeyRegex.test(key)) {
+        context.issues.push({
+          message: librariesMustSubKey,
+          input: context.value,
+        });
       }
-      return true;
-    },
-    {
-      error: librariesMustSubKey,
-    },
-  )
+    }
+  })
   .optional();

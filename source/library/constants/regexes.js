@@ -10,7 +10,8 @@ import { $COMMENT, subkeySeparator } from "./index.js";
  *
  * @public
  */
-export const configDataKeyRegex = /^[\p{Ll}\p{Lu}\p{Lo}\p{Pd}\p{Pc}\p{N}\s]+$/u;
+export const configDataKeyRegex =
+  /^(?!\s*$)[\p{Ll}\p{Lu}\p{Lo}\p{Pd}\p{Pc}\p{N}\s]+$/u; // prevents empty strings of all kinds too
 
 /**
  * $COMMENT#TSDOC#SRC#LIB#CONSTS#REGEXES#PUBLIC#CONFIGDATASUBKEY

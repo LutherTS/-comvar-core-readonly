@@ -13,6 +13,7 @@ import {
   configPathSupposedToBeString,
   configPathSupposedToBeDotJs,
   noConfigFileFound,
+  configPathSupposedToBeFile,
   configModuleCouldntResolve,
 } from "../../constants/errors/input/messages.js";
 
@@ -43,6 +44,15 @@ export const validateInput = async (/** @type {string} */ configPath) => {
     return makeSuccessFalseTypeError(
       `ERROR. ${noConfigFileFound}`,
       inputStaticErrorMessages_errorStatuses[noConfigFileFound], // This effectively never happens when using @comvar/cli. The CLI tool intercepts the configPath and creates a template path if no config path is found.
+    );
+  }
+
+  // Actually needs to check if the file, is actually a file, because it is entirely possible to name a folder "folder.js".
+  const isFile = fs.statSync(configPath).isFile();
+  if (!isFile) {
+    return makeSuccessFalseTypeError(
+      `ERROR. ${configPathSupposedToBeFile}`,
+      inputStaticErrorMessages_errorStatuses[configPathSupposedToBeFile],
     );
   }
 

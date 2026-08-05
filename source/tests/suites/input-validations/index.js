@@ -1,3 +1,6 @@
+import url from "url";
+import path from "path";
+
 import { describe, it } from "node:test";
 
 import { DOT_JS } from "../../../constants/index.js";
@@ -5,6 +8,7 @@ import {
   configPathSupposedToBeString,
   configPathSupposedToBeDotJs,
   noConfigFileFound,
+  configPathSupposedToBeFile,
 } from "../../../constants/errors/input/messages.js";
 
 import { RESOLVE_CONFIG_READONLY, CONFIG_PATH } from "../../constants/index.js";
@@ -16,6 +20,10 @@ import { assertErrorWithMessage } from "../../utilities/index.js";
  */
 
 /* inputValidationsSuite */
+
+const currentDirectoryPath = path.dirname(url.fileURLToPath(import.meta.url));
+
+const folderJsPath = path.join(currentDirectoryPath, "./configs/folder.js");
 
 export const inputValidationsSuite = (
   /** @type {ResolveConfigReadonly} */ resolveConfigReadonly,
@@ -42,6 +50,15 @@ export const inputValidationsSuite = (
       const resolveConfigReadonlyResults =
         await resolveConfigReadonly("does-not-exist.js");
       assertErrorWithMessage(resolveConfigReadonlyResults, noConfigFileFound);
+    });
+
+    it(`should error if \`${CONFIG_PATH}\` is not a file`, async () => {
+      const resolveConfigReadonlyResults =
+        await resolveConfigReadonly(folderJsPath);
+      assertErrorWithMessage(
+        resolveConfigReadonlyResults,
+        configPathSupposedToBeFile,
+      );
     });
   });
 };

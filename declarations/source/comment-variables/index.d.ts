@@ -9,9 +9,17 @@ export declare const errors: {
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#CONFIGPATHSUPPOSEDTOBEDOTJS";
                 "value": "`configPath` is supposed to be strictly JavaScript (`.js` only).";
             };
+            "configPathSupposedToBeAbsolute": {
+                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#CONFIGPATHSUPPOSEDTOBEABSOLUTE";
+                "value": "`configPath` is supposed to be absolute.";
+            };
             "noConfigFileFound": {
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#NOCONFIGFILEFOUND";
                 "value": "No config file found for Comment Variables.";
+            };
+            "configPathSupposedToBeFile": {
+                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#CONFIGPATHSUPPOSEDTOBEFILE";
+                "value": "`configPath` is supposed to be a file.";
             };
             "configModuleCouldntResolve": {
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#CONFIGMODULECOULDNTRESOLVE";
@@ -35,9 +43,17 @@ export declare const errors: {
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#CONFIGPATH_NOT_DOT_JS";
                 "value": "\"`configPath` is supposed to be strictly JavaScript (`.js` only).\"";
             };
+            "CONFIGPATH_NOT_ABSOLUTE": {
+                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#CONFIGPATH_NOT_ABSOLUTE";
+                "value": "\"`configPath` is supposed to be absolute.\"";
+            };
             "CONFIG_FILE_NOT_FOUND": {
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#CONFIG_FILE_NOT_FOUND";
                 "value": "\"No config file found for Comment Variables.\"";
+            };
+            "CONFIGPATH_NOT_FILE": {
+                "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#CONFIGPATH_NOT_FILE";
+                "value": "\"`configPath` is supposed to be a file.\"";
             };
             "CONFIG_MODULE_NOT_RESOLVED": {
                 "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#CONFIG_MODULE_NOT_RESOLVED";
@@ -149,9 +165,17 @@ export declare const errorsInputMessages: {
         "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#CONFIGPATHSUPPOSEDTOBEDOTJS";
         "value": "`configPath` is supposed to be strictly JavaScript (`.js` only).";
     };
+    configPathSupposedToBeAbsolute: {
+        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#CONFIGPATHSUPPOSEDTOBEABSOLUTE";
+        "value": "`configPath` is supposed to be absolute.";
+    };
     noConfigFileFound: {
         "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#NOCONFIGFILEFOUND";
         "value": "No config file found for Comment Variables.";
+    };
+    configPathSupposedToBeFile: {
+        "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#CONFIGPATHSUPPOSEDTOBEFILE";
+        "value": "`configPath` is supposed to be a file.";
     };
     configModuleCouldntResolve: {
         "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#CONFIGMODULECOULDNTRESOLVE";

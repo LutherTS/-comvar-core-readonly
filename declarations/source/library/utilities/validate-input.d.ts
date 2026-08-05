@@ -16,8 +16,22 @@ export declare const validateInput: (configPath: string) => Promise<{
     readonly success: false;
     readonly errors: readonly [{
         readonly type: "error";
+        readonly message: "ERROR. `configPath` is supposed to be a file.";
+        readonly status: "CONFIGPATH_NOT_FILE";
+    }];
+} | {
+    readonly success: false;
+    readonly errors: readonly [{
+        readonly type: "error";
         readonly message: "ERROR. `configPath` is supposed to be a string.";
         readonly status: "CONFIGPATH_NOT_STRING";
+    }];
+} | {
+    readonly success: false;
+    readonly errors: readonly [{
+        readonly type: "error";
+        readonly message: "ERROR. `configPath` is supposed to be absolute.";
+        readonly status: "CONFIGPATH_NOT_ABSOLUTE";
     }];
 } | {
     readonly success: false;

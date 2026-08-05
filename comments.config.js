@@ -11,6 +11,7 @@ const myIgnoresOnly = false; // can be omitted
 const ignores = [
   "**/typedefs/**",
   "source/tests/suites/input-operations/configs/fatal.js",
+  "source/tests/suites/input-validations/configs/folder.js",
 ]; // can be omitted
 
 /* lintConfigImports */

@@ -1,6 +1,7 @@
 import {
   configPathSupposedToBeString,
   configPathSupposedToBeDotJs,
+  configPathSupposedToBeAbsolute,
   noConfigFileFound,
   configPathSupposedToBeFile,
   configModuleCouldntResolve,
@@ -10,6 +11,7 @@ import {
 import {
   CONFIGPATH_NOT_STRING,
   CONFIGPATH_NOT_DOT_JS,
+  CONFIGPATH_NOT_ABSOLUTE,
   CONFIG_FILE_NOT_FOUND,
   CONFIGPATH_NOT_FILE,
   CONFIG_MODULE_NOT_RESOLVED,
@@ -28,6 +30,7 @@ export const inputStaticErrorMessages_errorStatuses = Object.freeze({
 
   [configPathSupposedToBeString]: CONFIGPATH_NOT_STRING,
   [configPathSupposedToBeDotJs]: CONFIGPATH_NOT_DOT_JS,
+  [configPathSupposedToBeAbsolute]: CONFIGPATH_NOT_ABSOLUTE,
   [noConfigFileFound]: CONFIG_FILE_NOT_FOUND,
   [configPathSupposedToBeFile]: CONFIGPATH_NOT_FILE,
   [configModuleCouldntResolve]: CONFIG_MODULE_NOT_RESOLVED,

@@ -12,6 +12,7 @@ import { inputStaticErrorMessages_errorStatuses } from "../../constants/errors/i
 import {
   configPathSupposedToBeString,
   configPathSupposedToBeDotJs,
+  configPathSupposedToBeAbsolute,
   noConfigFileFound,
   configPathSupposedToBeFile,
   configModuleCouldntResolve,
@@ -36,6 +37,15 @@ export const validateInput = async (/** @type {string} */ configPath) => {
     return makeSuccessFalseTypeError(
       `ERROR. ${configPathSupposedToBeDotJs}`,
       inputStaticErrorMessages_errorStatuses[configPathSupposedToBeDotJs],
+    );
+  }
+
+  // Also checks if the config path is actually absolute.
+  const isAbsolute = path.isAbsolute(configPath);
+  if (!isAbsolute) {
+    return makeSuccessFalseTypeError(
+      `ERROR. ${configPathSupposedToBeAbsolute}`,
+      inputStaticErrorMessages_errorStatuses[configPathSupposedToBeAbsolute],
     );
   }
 

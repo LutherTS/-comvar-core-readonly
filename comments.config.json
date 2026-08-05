@@ -14,6 +14,10 @@
                   "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#CONFIGPATHSUPPOSEDTOBEDOTJS",
                   "value": "`configPath` is supposed to be strictly JavaScript (`.js` only)."
                 },
+                "configPathSupposedToBeAbsolute": {
+                  "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#CONFIGPATHSUPPOSEDTOBEABSOLUTE",
+                  "value": "`configPath` is supposed to be absolute."
+                },
                 "noConfigFileFound": {
                   "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#MESSAGES#NOCONFIGFILEFOUND",
                   "value": "No config file found for Comment Variables."
@@ -43,6 +47,10 @@
                 "CONFIGPATH_NOT_DOT_JS": {
                   "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#CONFIGPATH_NOT_DOT_JS",
                   "value": "\"`configPath` is supposed to be strictly JavaScript (`.js` only).\""
+                },
+                "CONFIGPATH_NOT_ABSOLUTE": {
+                  "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#CONFIGPATH_NOT_ABSOLUTE",
+                  "value": "\"`configPath` is supposed to be absolute.\""
                 },
                 "CONFIG_FILE_NOT_FOUND": {
                   "key": "EN#TSDOC#SRC#CONSTS#ERRORS#INPUT#STATUSES#CONFIG_FILE_NOT_FOUND",

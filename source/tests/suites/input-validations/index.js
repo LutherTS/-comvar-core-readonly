@@ -7,6 +7,7 @@ import { DOT_JS } from "../../../constants/index.js";
 import {
   configPathSupposedToBeString,
   configPathSupposedToBeDotJs,
+  configPathSupposedToBeAbsolute,
   noConfigFileFound,
   configPathSupposedToBeFile,
 } from "../../../constants/errors/input/messages.js";
@@ -23,6 +24,7 @@ import { assertErrorWithMessage } from "../../utilities/index.js";
 
 const currentDirectoryPath = path.dirname(url.fileURLToPath(import.meta.url));
 
+const notFoundPath = path.join(currentDirectoryPath, "./configs/not-found.js");
 const folderJsPath = path.join(currentDirectoryPath, "./configs/folder.js");
 
 export const inputValidationsSuite = (
@@ -46,9 +48,18 @@ export const inputValidationsSuite = (
       );
     });
 
+    it(`should error if \`${CONFIG_PATH}\` param is not absolute`, async () => {
+      const resolveConfigReadonlyResults =
+        await resolveConfigReadonly("not-absolute.js");
+      assertErrorWithMessage(
+        resolveConfigReadonlyResults,
+        configPathSupposedToBeAbsolute,
+      );
+    });
+
     it(`should error if \`${CONFIG_PATH}\` is not found`, async () => {
       const resolveConfigReadonlyResults =
-        await resolveConfigReadonly("does-not-exist.js");
+        await resolveConfigReadonly(notFoundPath);
       assertErrorWithMessage(resolveConfigReadonlyResults, noConfigFileFound);
     });
 

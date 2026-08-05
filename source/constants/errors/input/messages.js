@@ -6,6 +6,8 @@ export const configPathSupposedToBeString =
   errorsInputMessages.configPathSupposedToBeString.value;
 export const configPathSupposedToBeDotJs =
   errorsInputMessages.configPathSupposedToBeDotJs.value;
+export const configPathSupposedToBeAbsolute =
+  errorsInputMessages.configPathSupposedToBeAbsolute.value;
 export const noConfigFileFound = errorsInputMessages.noConfigFileFound.value;
 export const configPathSupposedToBeFile =
   errorsInputMessages.configPathSupposedToBeFile.value;

@@ -14,29 +14,28 @@
     "url": "git+https://github.com/LutherTS/-comvar-core-readonly.git"
   },
   "files": [
-    "source/comment-variables",
-    "source/constants",
-    "source/library",
-    "comments.config.mjs",
-    "comments.config.public.mjs",
+    "tsdown/library/index.mjs",
     "core-readonly.public.d.ts",
     "comments.config.public.json"
   ],
   "type": "module",
-  "main": "source/library/index.js",
+  "main": "tsdown/library/index.mjs",
   "types": "core-readonly.public.d.ts",
   "scripts": {
     "types": "tsc",
     "doc": "comvar doc",
     "api": "api-extractor run",
+    "build": "tsdown",
     "test": "node --test",
     "lint": "oxlint",
-    "prepare": "npm run types && npm run doc && npm run api && npm run test && npm run lint",
+    "prepare": "npm run types && npm run doc && npm run api && npm run build && npm run test && npm run lint",
+    "manual": "node source/tests/manual.js",
     "latest": "npm i @lutherts/error-handling@latest"
   },
   "dependencies": {
     "@lutherts/error-handling": "^0.1.26",
     "eslint": "^10.6.0",
+    "import-fresh": "^4.0.0",
     "oxc-resolver": "^11.23.0",
     "zod": "^4.4.3"
   },

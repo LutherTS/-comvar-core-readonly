@@ -6,6 +6,8 @@ import {
   makeSuccessFalseTypeError,
 } from "@lutherts/error-handling";
 
+import createImportFresh from "import-fresh";
+
 import { DOT_JS } from "../../constants/index.js";
 
 import { inputStaticErrorMessages_errorStatuses } from "../../constants/errors/input/index.js";
@@ -18,9 +20,15 @@ import {
   configModuleCouldntResolve,
 } from "../../constants/errors/input/messages.js";
 
-import { freshImport } from "./fresh-import-a.js";
+// import { freshImport } from "./fresh-import-a.js";
+
+/**
+ * @typedef {import("../../types/index.ts").ConfigModule} ConfigModule
+ */
 
 /* validateInput */
+
+const importFresh = createImportFresh(import.meta.url);
 
 export const validateInput = async (/** @type {string} */ configPath) => {
   // Checks if the input argument is a string.
@@ -66,14 +74,29 @@ export const validateInput = async (/** @type {string} */ configPath) => {
     );
   }
 
-  // Acquires the config from the file through a fresh import (cache-free).
-  const configModule = await freshImport(configPath);
-  if (configModule === null) {
+  // Acquires the config from the file through a fresh import (cache-free). This updated version does not use serialization, allowing for functions (notably "template functions") to be passed.
+  let configModule = /** @type {ConfigModule} */ ({});
+
+  try {
+    const importFreshResults = await importFresh(configPath);
+    configModule.default = importFreshResults.default;
+    configModule.code = fs.readFileSync(configPath, "utf8");
+    // oxlint-disable-next-line eslint/no-unused-vars
+  } catch (_error) {
     return makeSuccessFalseTypeError(
       `ERROR. ${configModuleCouldntResolve}`,
       inputStaticErrorMessages_errorStatuses[configModuleCouldntResolve],
     );
   }
+
+  // // Acquires the config from the file through a fresh import (cache-free).
+  // const configModule = await freshImport(configPath);
+  // if (configModule === null) {
+  //   return makeSuccessFalseTypeError(
+  //     `ERROR. ${configModuleCouldntResolve}`,
+  //     inputStaticErrorMessages_errorStatuses[configModuleCouldntResolve],
+  //   );
+  // }
 
   return /** @type {const} */ ({
     configModule,

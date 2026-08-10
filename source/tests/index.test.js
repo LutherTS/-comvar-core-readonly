@@ -12,9 +12,20 @@ import {
   flattenedConfigDataKeyGlobalRegex,
   flattenedConfigDataPlaceholderLocalRegex,
   flattenedConfigDataPlaceholderGlobalRegex,
-} from "../../source/library/index.js"; // dev
-// } from "../../tsdown/index.mjs"; // prod // DOESN'T WORK BECAUSE OF freshImport. BUNDLING MIGHT NOT BE A GOOD IDEA HERE.
-// This also means being selective about the `files` key in `package.json` in order to include neither tests nor types.
+  // } from "../../source/library/index.js"; // dev
+} from "../../tsdown/library/index.mjs"; // prod // DOESN'T WORK BECAUSE OF freshImport. BUNDLING MIGHT NOT BE A GOOD IDEA HERE. // Now replaced by the `import-fresh` library.
+// This also means being selective about the `files` key in `package.json` in order to include neither tests nor types. // Not anymore.
+/*
+  "files": [
+    "source/comment-variables",
+    "source/constants",
+    "source/library",
+    "comments.config.mjs",
+    "comments.config.public.mjs",
+    "core-readonly.public.d.ts",
+    "comments.config.public.json"
+  ],
+*/
 
 import { RESOLVE_CONFIG_READONLY } from "./constants/index.js";
 

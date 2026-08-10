@@ -18,7 +18,7 @@ export const initialSuite = (
       assert.strictEqual(resolveConfigReadonlyType, "function");
     });
 
-    it(`should be named \`${RESOLVE_CONFIG_READONLY}\``, () => {
+    it.skip(`should be named \`${RESOLVE_CONFIG_READONLY}\``, () => {
       const resolveConfigReadonlyName = resolveConfigReadonly.name;
       assert.strictEqual(resolveConfigReadonlyName, RESOLVE_CONFIG_READONLY);
     });

@@ -1,3 +1,4 @@
+export type ConfigModule = import("../../types/index.ts").ConfigModule;
 export declare const validateInput: (configPath: string) => Promise<{
     readonly success: false;
     readonly errors: readonly [{
@@ -42,5 +43,5 @@ export declare const validateInput: (configPath: string) => Promise<{
     }];
 } | {
     readonly success: true;
-    readonly configModule: import("../../types/index.js").ConfigModule;
+    readonly configModule: import("../../types/index.ts").ConfigModule;
 }>;

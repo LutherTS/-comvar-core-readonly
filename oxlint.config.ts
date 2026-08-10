@@ -4,7 +4,11 @@ export default defineConfig({
   categories: {
     correctness: "warn",
   },
-  ignorePatterns: ["source/tests/suites/input-operations/configs/fatal.js"],
+  ignorePatterns: [
+    "tsdown/library/index.mjs",
+    "source/tests/suites/input-operations/configs/fatal.js",
+    "not-comments.config.js",
+  ],
   overrides: [
     {
       jsPlugins: ["eslint-plugin-tsdoc"],

@@ -55,14 +55,24 @@ const variations = Object.freeze({
 import { resolvedPublicData as coreReadonlyCommentVariablesData } from "./comments.config.public.mjs";
 
 import { commentVariablesData as errorHandlingCommentVariablesData } from "@lutherts/error-handling";
+import errorHandlingCommentVariablesDataIntl from "./comment-variables/miscellaneous/librairies/error-handling-0.1.28.intl.json" with { type: "json" };
 
 const libraries = {
   [coreReadonlyCommentVariablesData.libraryKey]:
     coreReadonlyCommentVariablesData.libraryVariations.FR,
 
   [errorHandlingCommentVariablesData.libraryKey]:
-    errorHandlingCommentVariablesData.libraryVariations.EN,
+    // errorHandlingCommentVariablesData.libraryVariations.EN,
+    errorHandlingCommentVariablesDataIntl.EN,
 }; // can be omitted
+
+/* sharedVariables */
+
+const sharedVariables = undefined; // can be omitted
+
+/* templateFunctions */
+
+const templateFunctions = undefined; // can be omitted
 
 /* config */
 
@@ -74,6 +84,8 @@ const config = {
   composedVariablesExclusives,
   variations,
   libraries,
+  sharedVariables,
+  templateFunctions,
 };
 
 export default config;

@@ -1,7 +1,7 @@
 import { resolvedPublicData as coreReadonlyCommentVariablesData } from "../../../../../comments.config.public.mjs";
 
 import { commentVariablesData as errorHandlingCommentVariablesData } from "@lutherts/error-handling";
-import errorHandlingCommentVariablesDataIntl from "../../../../../comment-variables/miscellaneous/librairies/error-handling.intl.json" with { type: "json" };
+import errorHandlingCommentVariablesDataIntl from "../../../../../comment-variables/miscellaneous/librairies/error-handling-0.1.28.intl.json" with { type: "json" };
 
 const libraries = {
   [coreReadonlyCommentVariablesData.libraryKey]:
